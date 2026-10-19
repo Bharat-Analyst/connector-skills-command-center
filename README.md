@@ -24,7 +24,7 @@ This project is a working command center that turns all of it into one weekly, m
 | First-party plugins (future) | Same SKILL.md, QA and listing path | Skill ports |
 | 90-day success metrics | SLA, owner / decision / reply coverage, cadence, attribution, audit coverage | Weekly status |
 
-The interview's practical assessment is covered too: ranked triage of connector requests (Intake), a port plan for a trending skill (sketchwright on Skill ports), and two listing rewrites (Granite Docs and Chartcraft on Listings).
+Three worked examples run through the site: ranked triage of connector requests (Intake), a port plan for a trending skill (sketchwright on Skill ports), and two listing rewrites (Granite Docs and Chartcraft on Listings).
 
 ## How the scoring works
 

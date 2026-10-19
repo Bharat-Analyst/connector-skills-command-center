@@ -28,7 +28,7 @@ Personal project. All company names, people, repos and handles are fictional. Al
 Three featured items flow through every page:
 - **Brightpath Analytics** connector request: asked 6 times through 3 channels → merged → scored Urgent → Build → engineering brief → launched with a clean listing.
 - **sketchwright** (technical illustration skill on GitHub): trending → passes every compliance gate → ported to SKILL.md → QA'd → launched.
-- **Two listing rewrites** of high-traffic entries that fail the template (mirrors the interview's practical assessment).
+- **Two listing rewrites** of high-traffic entries that fail the template.
 Plus one featured request per decision: Larkspur Payments (Partner), Pebblework Notes (Decline), an unnamed "HR tool" ask (Need info).
 
 ## Technical constraints (do not deviate without asking)

@@ -514,7 +514,7 @@ def make_listings(catalog, hist_skills):
                         monthly_views=int(np.clip(rng.lognormal(7.0, 1.1), 40, 90000))))
     df = pd.DataFrame(out)
 
-    # Featured: two high-traffic listings that break the template (the interview's rewrite task).
+    # Featured: two high-traffic listings that break the template.
     granite = df.index[df.name == "Granite Docs"][0]
     df.loc[granite, ["title", "summary", "capabilities", "permissions", "try_asking", "author", "monthly_views"]] = [
         "Granite Docs MCP Integration",
