@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intake &amp; Triage</title>
   <meta name="description" content="Weekly connector triage: dedupe, weighted priority score, build / partner / decline / need info, owners, replies and Linear.">
-  <link rel="stylesheet" href="assets/style.css?v=2026101902">
+  <link rel="stylesheet" href="assets/style.css?v=2026101903">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
 </head>
 <body>
@@ -72,7 +72,7 @@
     <p class="howto"><strong>How to read this:</strong> the pipeline writes <a href="files/linear_import.csv">linear_import.csv</a> in Linear's import shape. Existing issues keep their ID and get a priority, owner and status; new tools get new issues. Build briefs for Urgent and High builds go to engineering (<a href="files/brief-brightpath-analytics.md">example</a>).</p>
   </main>
 
-  <script src="assets/common.js?v=2026101902"></script>
+  <script src="assets/common.js?v=2026101903"></script>
   <script>
   (async () => {
     CC.init("intake.html");
@@ -158,10 +158,10 @@
         { label: "API / MCP", key: "api_type" },
         { label: "Score", num: true, key: "priority_score" },
         { label: "Tier", render: (t) => CC.pill(t.tier) },
-        { label: "Decision", render: (t) => CC.pill(t.decision) + (t.escalation ? ` <span class="small muted" title="${CC.esc(t.escalation)}">↑ PL</span>` : "") },
+        { label: "Decision", render: (t) => CC.pill(t.decision) + (t.escalation ? ` <span class="small muted" style="white-space:nowrap" title="${CC.esc(t.escalation)}">↑ PL</span>` : "") },
         { label: "Owner", key: "owner" },
-        { label: "Issue", key: "issue_id" },
-      ], { rowKey: (t) => t.slug, selected: (t) => t === current, onClick: (s) => {
+        { label: "Issue", render: (t) => `<span style="white-space:nowrap">${CC.esc(t.issue_id)}</span>` },
+      ], { pageSize: 10, rowKey: (t) => t.slug, selected: (t) => t === current, onClick: (s) => {
         current = bySlug[s]; CC.setParam("tool", s); renderSelected(); renderTable();
         document.getElementById("selected").scrollIntoView({ behavior: "smooth", block: "start" });
       } });

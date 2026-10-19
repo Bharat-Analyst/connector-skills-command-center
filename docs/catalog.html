@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Listing Standard</title>
   <meta name="description" content="Marketplace listing template, catalog audit, rewrites of high-traffic listings and the pre-launch checklist.">
-  <link rel="stylesheet" href="assets/style.css?v=2026101902">
+  <link rel="stylesheet" href="assets/style.css?v=2026101903">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
 </head>
 <body>
@@ -69,7 +69,7 @@
     </div>
   </main>
 
-  <script src="assets/common.js?v=2026101902"></script>
+  <script src="assets/common.js?v=2026101903"></script>
   <script>
   (async () => {
     CC.init("catalog.html");
@@ -118,7 +118,7 @@
       const rows = L.filter((l) => (!fk.value || l.kind === fk.value) && (!fs.value || l.status === fs.value)
         && (!q || `${l.title} ${l.name}`.toLowerCase().includes(q))).sort((a, b) => b.priority - a.priority);
       document.getElementById("count").textContent = `${rows.length} of ${L.length}`;
-      CC.table(document.getElementById("all"), rows, cols);
+      CC.table(document.getElementById("all"), rows, cols, { pageSize: 10, rowKey: (l) => l.listing_id });
     }
     [fk, fs, fq].forEach((el) => el.addEventListener("input", renderAll));
     renderAll();

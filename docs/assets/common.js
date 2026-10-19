@@ -12,7 +12,7 @@ const PAGES = [
 
 const CC = {
   async load(name) {
-    const res = await fetch(`data/${name}.json?v=2026101902`);
+    const res = await fetch(`data/${name}.json?v=2026101903`);
     if (!res.ok) throw new Error(`Could not load data/${name}.json (${res.status})`);
     return res.json();
   },
@@ -90,9 +90,19 @@ const CC = {
 
   // ---------- tables ----------
   // cols: [{ key, label, num?, render?(row) }]
+  // opts.pageSize turns on paging: Prev / Next under the table. The page resets
+  // when the rows change (a filter or search) and is kept when only the selection changes.
   table(el, rows, cols, opts = {}) {
+    let shown = rows, pages = 1;
+    if (opts.pageSize) {
+      const sig = `${rows.length}|${opts.rowKey ? rows.map(opts.rowKey).join(",") : ""}`;
+      if (el._sig !== sig) { el._sig = sig; el._page = 0; }
+      pages = Math.max(1, Math.ceil(rows.length / opts.pageSize));
+      el._page = Math.min(el._page, pages - 1);
+      shown = rows.slice(el._page * opts.pageSize, (el._page + 1) * opts.pageSize);
+    }
     const head = `<thead><tr>${cols.map((c) => `<th${c.num ? ' class="num"' : ""}>${c.label}</th>`).join("")}</tr></thead>`;
-    const body = rows.map((r) => {
+    const body = shown.map((r) => {
       const cls = [opts.selected && opts.selected(r) ? "is-selected" : "", opts.onClick ? "clickable" : ""].join(" ").trim();
       return `<tr${cls ? ` class="${cls}"` : ""}${opts.rowKey ? ` data-key="${CC.esc(opts.rowKey(r))}"` : ""}>${cols.map((c) =>
         `<td${c.num ? ' class="num"' : ""}>${c.render ? c.render(r) : CC.esc(r[c.key])}</td>`).join("")}</tr>`;
@@ -101,6 +111,23 @@ const CC = {
     if (opts.onClick) {
       el.querySelectorAll("tr[data-key]").forEach((tr) => tr.addEventListener("click", () => opts.onClick(tr.dataset.key)));
     }
+    if (!opts.pageSize) return;
+    let pager = el.nextElementSibling;
+    if (!pager || !pager.classList.contains("pager")) {
+      pager = document.createElement("div");
+      pager.className = "pager";
+      el.after(pager);
+    }
+    const from = rows.length ? el._page * opts.pageSize + 1 : 0, to = Math.min(rows.length, (el._page + 1) * opts.pageSize);
+    pager.innerHTML = pages > 1 ? `
+      <button type="button" class="btn" data-go="-1" ${el._page === 0 ? "disabled" : ""}>← Prev</button>
+      <span class="small muted">${from}–${to} of ${rows.length} · page ${el._page + 1} of ${pages}</span>
+      <button type="button" class="btn" data-go="1" ${el._page === pages - 1 ? "disabled" : ""}>Next →</button>` : "";
+    pager.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+      el._page += +b.dataset.go;
+      CC.table(el, rows, cols, opts);
+      el.scrollIntoView({ block: "nearest" });
+    }));
   },
 
   kpi(label, value, sub = "") {
