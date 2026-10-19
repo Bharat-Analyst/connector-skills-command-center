@@ -20,43 +20,43 @@
  "model": {
   "n_train": 67,
   "n_test": 23,
-  "holdout_r2": 0.9216855238162243,
-  "holdout_spearman": 0.9239130434782609,
+  "holdout_r2": 0.9228402929770632,
+  "holdout_spearman": 0.9288537549407114,
   "baseline_spearman": 0.48122529644268774,
   "coefficients": [
    {
     "feature": "Intercept",
     "label": "Baseline",
-    "coef": 3.081073227844876,
-    "se": 0.279507649152857
+    "coef": -0.790479694264239,
+    "se": 0.27777292788674435
    },
    {
     "feature": "log_stars_7d",
     "label": "GitHub stars, last 7 days",
-    "coef": 0.6701217318636955,
-    "se": 0.09112977780536471,
-    "z": 7.353488047506752
+    "coef": 0.6848786169416051,
+    "se": 0.09056419484541992,
+    "z": 7.562355278602042
    },
    {
     "feature": "log_x_mentions",
     "label": "X mentions, last 7 days",
-    "coef": 0.34535009543491635,
-    "se": 0.06724711556813605,
-    "z": 5.135537673508109
+    "coef": 0.3415871915657368,
+    "se": 0.06682975668076986,
+    "z": 5.1113038342698
    },
    {
     "feature": "log_community",
     "label": "Community mentions, last 7 days",
-    "coef": 0.2535319742514115,
-    "se": 0.0453101906136238,
-    "z": 5.5954735748822895
+    "coef": 0.24858365425349657,
+    "se": 0.04502897987943711,
+    "z": 5.5205260016786335
    },
    {
     "feature": "log_total_stars",
     "label": "Total GitHub stars",
-    "coef": 0.09241269861821119,
-    "se": 0.05551039363886466,
-    "z": 1.664781900474761
+    "coef": 0.09637965409987276,
+    "se": 0.055165876912301084,
+    "z": 1.7470882272585009
    }
   ]
  },
@@ -75,7 +75,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "inkline",
    "first_seen": "2026-09-29",
-   "predicted_installs_30d": 652860,
+   "predicted_installs_30d": 14950,
    "rank": 1,
    "gates": {
     "License": {
@@ -122,7 +122,7 @@
    "sandbox_needs": "Host binaries (ghidra, radare2)",
    "creator": "hexwren",
    "first_seen": "2026-10-02",
-   "predicted_installs_30d": 553170,
+   "predicted_installs_30d": 12660,
    "rank": 2,
    "gates": {
     "License": {
@@ -164,7 +164,7 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "fennick",
    "first_seen": "2026-10-08",
-   "predicted_installs_30d": 365930,
+   "predicted_installs_30d": 8290,
    "rank": 3,
    "gates": {
     "License": {
@@ -206,7 +206,7 @@
    "sandbox_needs": "None",
    "creator": "j0hanna",
    "first_seen": "2026-09-18",
-   "predicted_installs_30d": 320370,
+   "predicted_installs_30d": 7300,
    "rank": 4,
    "gates": {
     "License": {
@@ -253,7 +253,7 @@
    "sandbox_needs": "Host binaries",
    "creator": "arclight-oss",
    "first_seen": "2026-10-14",
-   "predicted_installs_30d": 182190,
+   "predicted_installs_30d": 4200,
    "rank": 5,
    "gates": {
     "License": {
@@ -295,7 +295,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "rhea-builds",
    "first_seen": "2026-09-03",
-   "predicted_installs_30d": 149060,
+   "predicted_installs_30d": 3350,
    "rank": 6,
    "gates": {
     "License": {
@@ -342,7 +342,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "j0hanna",
    "first_seen": "2026-10-01",
-   "predicted_installs_30d": 98590,
+   "predicted_installs_30d": 2240,
    "rank": 7,
    "gates": {
     "License": {
@@ -384,7 +384,7 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "rhea-builds",
    "first_seen": "2026-09-22",
-   "predicted_installs_30d": 95390,
+   "predicted_installs_30d": 2150,
    "rank": 8,
    "gates": {
     "License": {
@@ -431,7 +431,7 @@
    "sandbox_needs": "GPU",
    "creator": "sprocketeer",
    "first_seen": "2026-09-10",
-   "predicted_installs_30d": 42380,
+   "predicted_installs_30d": 940,
    "rank": 9,
    "gates": {
     "License": {
@@ -473,7 +473,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "ogunlabs",
    "first_seen": "2026-10-05",
-   "predicted_installs_30d": 39400,
+   "predicted_installs_30d": 880,
    "rank": 10,
    "gates": {
     "License": {
@@ -515,7 +515,7 @@
    "sandbox_needs": "None",
    "creator": "inkline",
    "first_seen": "2026-09-20",
-   "predicted_installs_30d": 35480,
+   "predicted_installs_30d": 800,
    "rank": 11,
    "gates": {
     "License": {
@@ -557,7 +557,7 @@
    "sandbox_needs": "Host binaries",
    "creator": "lowtide",
    "first_seen": "2026-09-07",
-   "predicted_installs_30d": 35040,
+   "predicted_installs_30d": 790,
    "rank": 12,
    "gates": {
     "License": {
@@ -599,7 +599,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "lowtide",
    "first_seen": "2026-09-05",
-   "predicted_installs_30d": 33130,
+   "predicted_installs_30d": 750,
    "rank": 13,
    "gates": {
     "License": {
@@ -641,7 +641,7 @@
    "sandbox_needs": "None",
    "creator": "sprocketeer",
    "first_seen": "2026-10-05",
-   "predicted_installs_30d": 29490,
+   "predicted_installs_30d": 670,
    "rank": 14,
    "gates": {
     "License": {
@@ -683,7 +683,7 @@
    "sandbox_needs": "None",
    "creator": "sprocketeer",
    "first_seen": "2026-10-10",
-   "predicted_installs_30d": 28300,
+   "predicted_installs_30d": 630,
    "rank": 15,
    "gates": {
     "License": {
@@ -725,7 +725,7 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "nullpointer_nia",
    "first_seen": "2026-09-16",
-   "predicted_installs_30d": 20360,
+   "predicted_installs_30d": 450,
    "rank": 16,
    "gates": {
     "License": {
@@ -767,7 +767,7 @@
    "sandbox_needs": "None",
    "creator": "ogunlabs",
    "first_seen": "2026-08-18",
-   "predicted_installs_30d": 18050,
+   "predicted_installs_30d": 400,
    "rank": 17,
    "gates": {
     "License": {
@@ -809,7 +809,7 @@
    "sandbox_needs": "GPU",
    "creator": "inkline",
    "first_seen": "2026-08-24",
-   "predicted_installs_30d": 16930,
+   "predicted_installs_30d": 380,
    "rank": 18,
    "gates": {
     "License": {
@@ -851,7 +851,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "mkellner",
    "first_seen": "2026-08-25",
-   "predicted_installs_30d": 14110,
+   "predicted_installs_30d": 320,
    "rank": 19,
    "gates": {
     "License": {
@@ -893,7 +893,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "tamsin_t",
    "first_seen": "2026-08-18",
-   "predicted_installs_30d": 10650,
+   "predicted_installs_30d": 240,
    "rank": 20,
    "gates": {
     "License": {
@@ -935,7 +935,7 @@
    "sandbox_needs": "None",
    "creator": "kaizen_kit",
    "first_seen": "2026-09-10",
-   "predicted_installs_30d": 9760,
+   "predicted_installs_30d": 210,
    "rank": 21,
    "gates": {
     "License": {
@@ -977,7 +977,7 @@
    "sandbox_needs": "None",
    "creator": "kaizen_kit",
    "first_seen": "2026-10-08",
-   "predicted_installs_30d": 8380,
+   "predicted_installs_30d": 180,
    "rank": 22,
    "gates": {
     "License": {
@@ -1019,7 +1019,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "lowtide",
    "first_seen": "2026-09-14",
-   "predicted_installs_30d": 8290,
+   "predicted_installs_30d": 180,
    "rank": 23,
    "gates": {
     "License": {
@@ -1061,7 +1061,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "fennick",
    "first_seen": "2026-10-04",
-   "predicted_installs_30d": 6660,
+   "predicted_installs_30d": 150,
    "rank": 24,
    "gates": {
     "License": {
@@ -1090,6 +1090,48 @@
    "qa": null
   },
   {
+   "repo": "marisol-codes/relayforge",
+   "skill_name": "relayforge",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "GPL-3.0",
+   "stars": 462,
+   "stars_7d": 120,
+   "x_mentions_7d": 19,
+   "community_mentions_7d": 21,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "marisol-codes",
+   "first_seen": "2026-10-06",
+   "predicted_installs_30d": 130,
+   "rank": 25,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @marisol-codes"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
    "repo": "lowtide/patchsketch",
    "skill_name": "patchsketch",
    "category": "Docs & writing",
@@ -1103,8 +1145,8 @@
    "sandbox_needs": "None",
    "creator": "lowtide",
    "first_seen": "2026-08-31",
-   "predicted_installs_30d": 6110,
-   "rank": 25,
+   "predicted_installs_30d": 130,
+   "rank": 26,
    "gates": {
     "License": {
      "result": "Pass",
@@ -1145,8 +1187,8 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "lowtide",
    "first_seen": "2026-09-05",
-   "predicted_installs_30d": 6000,
-   "rank": 26,
+   "predicted_installs_30d": 130,
+   "rank": 27,
    "gates": {
     "License": {
      "result": "Pass",
@@ -1174,62 +1216,20 @@
    "qa": null
   },
   {
-   "repo": "marisol-codes/relayforge",
-   "skill_name": "relayforge",
-   "category": "Spreadsheets",
-   "description": "An agent skill for spreadsheets.",
-   "license": "GPL-3.0",
-   "stars": 462,
-   "stars_7d": 120,
-   "x_mentions_7d": 19,
-   "community_mentions_7d": 21,
-   "transport": "Remote MCP (HTTP)",
-   "sandbox_needs": "Network (allow-listed APIs)",
-   "creator": "marisol-codes",
-   "first_seen": "2026-10-06",
-   "predicted_installs_30d": 5880,
-   "rank": 27,
-   "gates": {
-    "License": {
-     "result": "Action",
-     "detail": "GPL-3.0: legal review before redistributing"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Ask @marisol-codes"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "Remote MCP (HTTP)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "Network (allow-listed APIs)"
-    }
-   },
-   "status": "Needs action",
-   "next_step": "License: GPL-3.0: legal review before redistributing",
-   "qa": null
-  },
-  {
-   "repo": "marisol-codes/auditloom",
-   "skill_name": "auditloom",
-   "category": "Testing",
-   "description": "An agent skill for testing.",
+   "repo": "tessaroo/mapsketch",
+   "skill_name": "mapsketch",
+   "category": "Research",
+   "description": "An agent skill for research.",
    "license": "MIT",
-   "stars": 342,
-   "stars_7d": 98,
-   "x_mentions_7d": 16,
-   "community_mentions_7d": 42,
+   "stars": 1162,
+   "stars_7d": 92,
+   "x_mentions_7d": 38,
+   "community_mentions_7d": 8,
    "transport": "None (instructions + scripts)",
-   "sandbox_needs": "None",
-   "creator": "marisol-codes",
-   "first_seen": "2026-09-05",
-   "predicted_installs_30d": 5610,
+   "sandbox_needs": "Host binaries",
+   "creator": "tessaroo",
+   "first_seen": "2026-10-14",
+   "predicted_installs_30d": 120,
    "rank": 28,
    "gates": {
     "License": {
@@ -1237,24 +1237,24 @@
      "detail": "MIT"
     },
     "Creator permission": {
-     "result": "Action",
-     "detail": "Asked 2026-09-26; waiting on @marisol-codes"
+     "result": "Pass",
+     "detail": "Granted 2026-10-08"
     },
     "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
+     "result": "Pass",
+     "detail": "Ported from tessaroo/mapsketch by @tessaroo (MIT)."
     },
     "Transport": {
      "result": "Pass",
      "detail": "None (instructions + scripts)"
     },
     "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
     }
    },
-   "status": "Needs action",
-   "next_step": "Creator permission: Asked 2026-09-26; waiting on @marisol-codes",
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
    "qa": null
   },
   {
@@ -1271,7 +1271,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "tessaroo",
    "first_seen": "2026-08-20",
-   "predicted_installs_30d": 5460,
+   "predicted_installs_30d": 120,
    "rank": 29,
    "gates": {
     "License": {
@@ -1300,20 +1300,20 @@
    "qa": null
   },
   {
-   "repo": "tessaroo/mapsketch",
-   "skill_name": "mapsketch",
-   "category": "Research",
-   "description": "An agent skill for research.",
+   "repo": "marisol-codes/auditloom",
+   "skill_name": "auditloom",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
    "license": "MIT",
-   "stars": 1162,
-   "stars_7d": 92,
-   "x_mentions_7d": 38,
-   "community_mentions_7d": 8,
+   "stars": 342,
+   "stars_7d": 98,
+   "x_mentions_7d": 16,
+   "community_mentions_7d": 42,
    "transport": "None (instructions + scripts)",
-   "sandbox_needs": "Host binaries",
-   "creator": "tessaroo",
-   "first_seen": "2026-10-14",
-   "predicted_installs_30d": 5390,
+   "sandbox_needs": "None",
+   "creator": "marisol-codes",
+   "first_seen": "2026-09-05",
+   "predicted_installs_30d": 120,
    "rank": 30,
    "gates": {
     "License": {
@@ -1321,24 +1321,24 @@
      "detail": "MIT"
     },
     "Creator permission": {
-     "result": "Pass",
-     "detail": "Granted 2026-10-08"
+     "result": "Action",
+     "detail": "Asked 2026-09-26; waiting on @marisol-codes"
     },
     "Attribution": {
-     "result": "Pass",
-     "detail": "Ported from tessaroo/mapsketch by @tessaroo (MIT)."
+     "result": "Action",
+     "detail": "Write attribution line"
     },
     "Transport": {
      "result": "Pass",
      "detail": "None (instructions + scripts)"
     },
     "Sandbox": {
-     "result": "Fail",
-     "detail": "Needs host binaries, not available in the sandbox"
+     "result": "Pass",
+     "detail": "None"
     }
    },
-   "status": "Blocked",
-   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-26; waiting on @marisol-codes",
    "qa": null
   },
   {
@@ -1355,7 +1355,7 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "lowtide",
    "first_seen": "2026-09-07",
-   "predicted_installs_30d": 4790,
+   "predicted_installs_30d": 110,
    "rank": 31,
    "gates": {
     "License": {
@@ -1397,7 +1397,7 @@
    "sandbox_needs": "None",
    "creator": "nullpointer_nia",
    "first_seen": "2026-09-12",
-   "predicted_installs_30d": 4590,
+   "predicted_installs_30d": 100,
    "rank": 32,
    "gates": {
     "License": {
@@ -1426,45 +1426,45 @@
    "qa": null
   },
   {
-   "repo": "lowtide/schemascribe",
-   "skill_name": "schemascribe",
-   "category": "Spreadsheets",
-   "description": "An agent skill for spreadsheets.",
-   "license": "MIT",
-   "stars": 1446,
-   "stars_7d": 52,
-   "x_mentions_7d": 39,
-   "community_mentions_7d": 4,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "Host binaries",
-   "creator": "lowtide",
-   "first_seen": "2026-09-17",
-   "predicted_installs_30d": 3280,
+   "repo": "tessaroo/proofsketch",
+   "skill_name": "proofsketch",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "Apache-2.0",
+   "stars": 2740,
+   "stars_7d": 50,
+   "x_mentions_7d": 14,
+   "community_mentions_7d": 11,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "tessaroo",
+   "first_seen": "2026-09-05",
+   "predicted_installs_30d": 70,
    "rank": 33,
    "gates": {
     "License": {
      "result": "Pass",
-     "detail": "MIT"
+     "detail": "Apache-2.0"
     },
     "Creator permission": {
-     "result": "Pass",
-     "detail": "Granted 2026-10-06"
+     "result": "Action",
+     "detail": "Asked 2026-09-30; waiting on @tessaroo"
     },
     "Attribution": {
-     "result": "Pass",
-     "detail": "Ported from lowtide/schemascribe by @lowtide (MIT)."
+     "result": "Action",
+     "detail": "Write attribution line"
     },
     "Transport": {
      "result": "Pass",
-     "detail": "None (instructions + scripts)"
+     "detail": "Remote MCP (HTTP)"
     },
     "Sandbox": {
-     "result": "Fail",
-     "detail": "Needs host binaries, not available in the sandbox"
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
     }
    },
-   "status": "Blocked",
-   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-30; waiting on @tessaroo",
    "qa": null
   },
   {
@@ -1481,7 +1481,7 @@
    "sandbox_needs": "Host binaries",
    "creator": "mkellner",
    "first_seen": "2026-08-25",
-   "predicted_installs_30d": 3130,
+   "predicted_installs_30d": 70,
    "rank": 34,
    "gates": {
     "License": {
@@ -1510,45 +1510,45 @@
    "qa": null
   },
   {
-   "repo": "tessaroo/proofsketch",
-   "skill_name": "proofsketch",
-   "category": "Data analysis",
-   "description": "An agent skill for data analysis.",
-   "license": "Apache-2.0",
-   "stars": 2740,
-   "stars_7d": 50,
-   "x_mentions_7d": 14,
-   "community_mentions_7d": 11,
-   "transport": "Remote MCP (HTTP)",
-   "sandbox_needs": "Network (allow-listed APIs)",
-   "creator": "tessaroo",
-   "first_seen": "2026-09-05",
-   "predicted_installs_30d": 3020,
+   "repo": "lowtide/schemascribe",
+   "skill_name": "schemascribe",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "MIT",
+   "stars": 1446,
+   "stars_7d": 52,
+   "x_mentions_7d": 39,
+   "community_mentions_7d": 4,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Host binaries",
+   "creator": "lowtide",
+   "first_seen": "2026-09-17",
+   "predicted_installs_30d": 70,
    "rank": 35,
    "gates": {
     "License": {
      "result": "Pass",
-     "detail": "Apache-2.0"
+     "detail": "MIT"
     },
     "Creator permission": {
-     "result": "Action",
-     "detail": "Asked 2026-09-30; waiting on @tessaroo"
+     "result": "Pass",
+     "detail": "Granted 2026-10-06"
     },
     "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
+     "result": "Pass",
+     "detail": "Ported from lowtide/schemascribe by @lowtide (MIT)."
     },
     "Transport": {
      "result": "Pass",
-     "detail": "Remote MCP (HTTP)"
+     "detail": "None (instructions + scripts)"
     },
     "Sandbox": {
-     "result": "Pass",
-     "detail": "Network (allow-listed APIs)"
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
     }
    },
-   "status": "Needs action",
-   "next_step": "Creator permission: Asked 2026-09-30; waiting on @tessaroo",
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
    "qa": null
   },
   {
@@ -1565,7 +1565,7 @@
    "sandbox_needs": "GPU",
    "creator": "hexwren",
    "first_seen": "2026-08-27",
-   "predicted_installs_30d": 2880,
+   "predicted_installs_30d": 60,
    "rank": 36,
    "gates": {
     "License": {
@@ -1594,6 +1594,48 @@
    "qa": null
   },
   {
+   "repo": "j0hanna/auditsketch",
+   "skill_name": "auditsketch",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "MIT",
+   "stars": 2269,
+   "stars_7d": 48,
+   "x_mentions_7d": 8,
+   "community_mentions_7d": 6,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "j0hanna",
+   "first_seen": "2026-10-08",
+   "predicted_installs_30d": 50,
+   "rank": 37,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @j0hanna"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @j0hanna",
+   "qa": null
+  },
+  {
    "repo": "byteforager/slidelens",
    "skill_name": "slidelens",
    "category": "Security review",
@@ -1607,8 +1649,8 @@
    "sandbox_needs": "None",
    "creator": "byteforager",
    "first_seen": "2026-09-07",
-   "predicted_installs_30d": 2490,
-   "rank": 37,
+   "predicted_installs_30d": 50,
+   "rank": 38,
    "gates": {
     "License": {
      "result": "Pass",
@@ -1649,8 +1691,8 @@
    "sandbox_needs": "None",
    "creator": "rhea-builds",
    "first_seen": "2026-08-31",
-   "predicted_installs_30d": 2400,
-   "rank": 38,
+   "predicted_installs_30d": 50,
+   "rank": 39,
    "gates": {
     "License": {
      "result": "Pass",
@@ -1691,8 +1733,8 @@
    "sandbox_needs": "None",
    "creator": "ogunlabs",
    "first_seen": "2026-09-03",
-   "predicted_installs_30d": 2190,
-   "rank": 39,
+   "predicted_installs_30d": 50,
+   "rank": 40,
    "gates": {
     "License": {
      "result": "Pass",
@@ -1720,90 +1762,6 @@
    "qa": null
   },
   {
-   "repo": "j0hanna/auditsketch",
-   "skill_name": "auditsketch",
-   "category": "Security review",
-   "description": "An agent skill for security review.",
-   "license": "MIT",
-   "stars": 2269,
-   "stars_7d": 48,
-   "x_mentions_7d": 8,
-   "community_mentions_7d": 6,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "None",
-   "creator": "j0hanna",
-   "first_seen": "2026-10-08",
-   "predicted_installs_30d": 2110,
-   "rank": 40,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "MIT"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Ask @j0hanna"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
-    }
-   },
-   "status": "Needs action",
-   "next_step": "Creator permission: Ask @j0hanna",
-   "qa": null
-  },
-  {
-   "repo": "hexwren/graphlens",
-   "skill_name": "graphlens",
-   "category": "Testing",
-   "description": "An agent skill for testing.",
-   "license": "No license",
-   "stars": 3372,
-   "stars_7d": 35,
-   "x_mentions_7d": 8,
-   "community_mentions_7d": 5,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "None",
-   "creator": "hexwren",
-   "first_seen": "2026-10-01",
-   "predicted_installs_30d": 1710,
-   "rank": 41,
-   "gates": {
-    "License": {
-     "result": "Fail",
-     "detail": "No license: no right to redistribute"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Asked 2026-10-07; waiting on @hexwren"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
-    }
-   },
-   "status": "Blocked",
-   "next_step": "License: No license: no right to redistribute",
-   "qa": null
-  },
-  {
    "repo": "nullpointer_nia/framepilot",
    "skill_name": "framepilot",
    "category": "Testing",
@@ -1817,8 +1775,8 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "nullpointer_nia",
    "first_seen": "2026-09-02",
-   "predicted_installs_30d": 1620,
-   "rank": 42,
+   "predicted_installs_30d": 40,
+   "rank": 41,
    "gates": {
     "License": {
      "result": "Action",
@@ -1846,6 +1804,48 @@
    "qa": null
   },
   {
+   "repo": "hexwren/graphlens",
+   "skill_name": "graphlens",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "No license",
+   "stars": 3372,
+   "stars_7d": 35,
+   "x_mentions_7d": 8,
+   "community_mentions_7d": 5,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "hexwren",
+   "first_seen": "2026-10-01",
+   "predicted_installs_30d": 40,
+   "rank": 42,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-07; waiting on @hexwren"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
    "repo": "tessaroo/mapsmith",
    "skill_name": "mapsmith",
    "category": "Spreadsheets",
@@ -1859,7 +1859,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "tessaroo",
    "first_seen": "2026-09-02",
-   "predicted_installs_30d": 1360,
+   "predicted_installs_30d": 30,
    "rank": 43,
    "gates": {
     "License": {
@@ -1888,174 +1888,6 @@
    "qa": null
   },
   {
-   "repo": "hexwren/schemasketch",
-   "skill_name": "schemasketch",
-   "category": "Security review",
-   "description": "An agent skill for security review.",
-   "license": "Apache-2.0",
-   "stars": 1399,
-   "stars_7d": 29,
-   "x_mentions_7d": 9,
-   "community_mentions_7d": 1,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "Network (allow-listed APIs)",
-   "creator": "hexwren",
-   "first_seen": "2026-10-14",
-   "predicted_installs_30d": 1100,
-   "rank": 44,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "Apache-2.0"
-    },
-    "Creator permission": {
-     "result": "Fail",
-     "detail": "@hexwren declined"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "Network (allow-listed APIs)"
-    }
-   },
-   "status": "Blocked",
-   "next_step": "Creator permission: @hexwren declined",
-   "qa": null
-  },
-  {
-   "repo": "tessaroo/proofwright",
-   "skill_name": "proofwright",
-   "category": "Data analysis",
-   "description": "An agent skill for data analysis.",
-   "license": "MIT",
-   "stars": 2167,
-   "stars_7d": 25,
-   "x_mentions_7d": 13,
-   "community_mentions_7d": 0,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "Network (allow-listed APIs)",
-   "creator": "tessaroo",
-   "first_seen": "2026-10-02",
-   "predicted_installs_30d": 980,
-   "rank": 45,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "MIT"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Asked 2026-10-13; waiting on @tessaroo"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "Network (allow-listed APIs)"
-    }
-   },
-   "status": "Needs action",
-   "next_step": "Creator permission: Asked 2026-10-13; waiting on @tessaroo",
-   "qa": null
-  },
-  {
-   "repo": "lowtide/schemawright",
-   "skill_name": "schemawright",
-   "category": "Data analysis",
-   "description": "An agent skill for data analysis.",
-   "license": "GPL-3.0",
-   "stars": 623,
-   "stars_7d": 16,
-   "x_mentions_7d": 10,
-   "community_mentions_7d": 5,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "None",
-   "creator": "lowtide",
-   "first_seen": "2026-10-03",
-   "predicted_installs_30d": 950,
-   "rank": 46,
-   "gates": {
-    "License": {
-     "result": "Action",
-     "detail": "GPL-3.0: legal review before redistributing"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Asked 2026-10-01; waiting on @lowtide"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
-    }
-   },
-   "status": "Needs action",
-   "next_step": "License: GPL-3.0: legal review before redistributing",
-   "qa": null
-  },
-  {
-   "repo": "fennick/queryloom",
-   "skill_name": "queryloom",
-   "category": "Spreadsheets",
-   "description": "An agent skill for spreadsheets.",
-   "license": "MIT",
-   "stars": 240,
-   "stars_7d": 21,
-   "x_mentions_7d": 6,
-   "community_mentions_7d": 5,
-   "transport": "Remote MCP (HTTP)",
-   "sandbox_needs": "None",
-   "creator": "fennick",
-   "first_seen": "2026-09-02",
-   "predicted_installs_30d": 880,
-   "rank": 47,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "MIT"
-    },
-    "Creator permission": {
-     "result": "Pass",
-     "detail": "Granted 2026-10-13"
-    },
-    "Attribution": {
-     "result": "Pass",
-     "detail": "Ported from fennick/queryloom by @fennick (MIT)."
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "Remote MCP (HTTP)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
-    }
-   },
-   "status": "Ready to port",
-   "next_step": "Package as SKILL.md and run QA",
-   "qa": null
-  },
-  {
    "repo": "lowtide/sheetsmith",
    "skill_name": "sheetsmith",
    "category": "Research",
@@ -2069,8 +1901,8 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "lowtide",
    "first_seen": "2026-09-16",
-   "predicted_installs_30d": 830,
-   "rank": 48,
+   "predicted_installs_30d": 20,
+   "rank": 44,
    "gates": {
     "License": {
      "result": "Fail",
@@ -2111,8 +1943,8 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "vectorvale",
    "first_seen": "2026-09-14",
-   "predicted_installs_30d": 820,
-   "rank": 49,
+   "predicted_installs_30d": 20,
+   "rank": 45,
    "gates": {
     "License": {
      "result": "Fail",
@@ -2140,6 +1972,90 @@
    "qa": null
   },
   {
+   "repo": "hexwren/schemasketch",
+   "skill_name": "schemasketch",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "Apache-2.0",
+   "stars": 1399,
+   "stars_7d": 29,
+   "x_mentions_7d": 9,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "hexwren",
+   "first_seen": "2026-10-14",
+   "predicted_installs_30d": 20,
+   "rank": 46,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@hexwren declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @hexwren declined",
+   "qa": null
+  },
+  {
+   "repo": "fennick/queryloom",
+   "skill_name": "queryloom",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "MIT",
+   "stars": 240,
+   "stars_7d": 21,
+   "x_mentions_7d": 6,
+   "community_mentions_7d": 5,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "None",
+   "creator": "fennick",
+   "first_seen": "2026-09-02",
+   "predicted_installs_30d": 20,
+   "rank": 47,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-13"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from fennick/queryloom by @fennick (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
    "repo": "marisol-codes/probesmith",
    "skill_name": "probesmith",
    "category": "Security review",
@@ -2153,8 +2069,8 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "marisol-codes",
    "first_seen": "2026-09-29",
-   "predicted_installs_30d": 750,
-   "rank": 50,
+   "predicted_installs_30d": 20,
+   "rank": 48,
    "gates": {
     "License": {
      "result": "Pass",
@@ -2182,6 +2098,90 @@
    "qa": null
   },
   {
+   "repo": "lowtide/schemawright",
+   "skill_name": "schemawright",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "GPL-3.0",
+   "stars": 623,
+   "stars_7d": 16,
+   "x_mentions_7d": 10,
+   "community_mentions_7d": 5,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "lowtide",
+   "first_seen": "2026-10-03",
+   "predicted_installs_30d": 20,
+   "rank": 49,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-01; waiting on @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "tessaroo/proofwright",
+   "skill_name": "proofwright",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "MIT",
+   "stars": 2167,
+   "stars_7d": 25,
+   "x_mentions_7d": 13,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "tessaroo",
+   "first_seen": "2026-10-02",
+   "predicted_installs_30d": 20,
+   "rank": 50,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-13; waiting on @tessaroo"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-10-13; waiting on @tessaroo",
+   "qa": null
+  },
+  {
    "repo": "inkline/relaysmith",
    "skill_name": "relaysmith",
    "category": "Testing",
@@ -2195,7 +2195,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "inkline",
    "first_seen": "2026-08-23",
-   "predicted_installs_30d": 750,
+   "predicted_installs_30d": 20,
    "rank": 51,
    "gates": {
     "License": {
@@ -2224,90 +2224,6 @@
    "qa": null
   },
   {
-   "repo": "byteforager/patchwright",
-   "skill_name": "patchwright",
-   "category": "Security review",
-   "description": "An agent skill for security review.",
-   "license": "MIT",
-   "stars": 367,
-   "stars_7d": 17,
-   "x_mentions_7d": 13,
-   "community_mentions_7d": 0,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "File write (outputs folder)",
-   "creator": "byteforager",
-   "first_seen": "2026-09-12",
-   "predicted_installs_30d": 650,
-   "rank": 52,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "MIT"
-    },
-    "Creator permission": {
-     "result": "Pass",
-     "detail": "Granted 2026-09-28"
-    },
-    "Attribution": {
-     "result": "Pass",
-     "detail": "Ported from byteforager/patchwright by @byteforager (MIT)."
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "File write (outputs folder)"
-    }
-   },
-   "status": "Ready to port",
-   "next_step": "Package as SKILL.md and run QA",
-   "qa": null
-  },
-  {
-   "repo": "tamsin_t/specscribe",
-   "skill_name": "specscribe",
-   "category": "Reverse engineering",
-   "description": "An agent skill for reverse engineering.",
-   "license": "MIT",
-   "stars": 446,
-   "stars_7d": 16,
-   "x_mentions_7d": 12,
-   "community_mentions_7d": 0,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "GPU",
-   "creator": "tamsin_t",
-   "first_seen": "2026-09-13",
-   "predicted_installs_30d": 620,
-   "rank": 53,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "MIT"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Ask @tamsin_t"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Fail",
-     "detail": "Needs gpu, not available in the sandbox"
-    }
-   },
-   "status": "Blocked",
-   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
-   "qa": null
-  },
-  {
    "repo": "kaizen_kit/lintscribe",
    "skill_name": "lintscribe",
    "category": "Reverse engineering",
@@ -2321,8 +2237,8 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "kaizen_kit",
    "first_seen": "2026-09-20",
-   "predicted_installs_30d": 590,
-   "rank": 54,
+   "predicted_installs_30d": 10,
+   "rank": 52,
    "gates": {
     "License": {
      "result": "Action",
@@ -2350,6 +2266,90 @@
    "qa": null
   },
   {
+   "repo": "byteforager/patchwright",
+   "skill_name": "patchwright",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "MIT",
+   "stars": 367,
+   "stars_7d": 17,
+   "x_mentions_7d": 13,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "byteforager",
+   "first_seen": "2026-09-12",
+   "predicted_installs_30d": 10,
+   "rank": 53,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-28"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from byteforager/patchwright by @byteforager (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "rhea-builds/framekit",
+   "skill_name": "framekit",
+   "category": "Illustration & diagrams",
+   "description": "An agent skill for illustration & diagrams.",
+   "license": "MIT",
+   "stars": 79,
+   "stars_7d": 15,
+   "x_mentions_7d": 6,
+   "community_mentions_7d": 1,
+   "transport": "Local stdio only",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "rhea-builds",
+   "first_seen": "2026-08-23",
+   "predicted_installs_30d": 10,
+   "rank": 54,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-08"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  },
+  {
    "repo": "vectorvale/plotpilot",
    "skill_name": "plotpilot",
    "category": "Data analysis",
@@ -2363,7 +2363,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "vectorvale",
    "first_seen": "2026-09-15",
-   "predicted_installs_30d": 590,
+   "predicted_installs_30d": 10,
    "rank": 55,
    "gates": {
     "License": {
@@ -2392,6 +2392,48 @@
    "qa": null
   },
   {
+   "repo": "tamsin_t/specscribe",
+   "skill_name": "specscribe",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "MIT",
+   "stars": 446,
+   "stars_7d": 16,
+   "x_mentions_7d": 12,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "GPU",
+   "creator": "tamsin_t",
+   "first_seen": "2026-09-13",
+   "predicted_installs_30d": 10,
+   "rank": 56,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @tamsin_t"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs gpu, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
+   "qa": null
+  },
+  {
    "repo": "dunmore/chartwright",
    "skill_name": "chartwright",
    "category": "Spreadsheets",
@@ -2405,8 +2447,8 @@
    "sandbox_needs": "None",
    "creator": "dunmore",
    "first_seen": "2026-08-23",
-   "predicted_installs_30d": 580,
-   "rank": 56,
+   "predicted_installs_30d": 10,
+   "rank": 57,
    "gates": {
     "License": {
      "result": "Fail",
@@ -2434,90 +2476,6 @@
    "qa": null
   },
   {
-   "repo": "rhea-builds/framekit",
-   "skill_name": "framekit",
-   "category": "Illustration & diagrams",
-   "description": "An agent skill for illustration & diagrams.",
-   "license": "MIT",
-   "stars": 79,
-   "stars_7d": 15,
-   "x_mentions_7d": 6,
-   "community_mentions_7d": 1,
-   "transport": "Local stdio only",
-   "sandbox_needs": "File write (outputs folder)",
-   "creator": "rhea-builds",
-   "first_seen": "2026-08-23",
-   "predicted_installs_30d": 490,
-   "rank": 57,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "MIT"
-    },
-    "Creator permission": {
-     "result": "Pass",
-     "detail": "Granted 2026-10-08"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Fail",
-     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "File write (outputs folder)"
-    }
-   },
-   "status": "Blocked",
-   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
-   "qa": null
-  },
-  {
-   "repo": "vectorvale/lintcraft",
-   "skill_name": "lintcraft",
-   "category": "Design",
-   "description": "An agent skill for design.",
-   "license": "Apache-2.0",
-   "stars": 174,
-   "stars_7d": 12,
-   "x_mentions_7d": 4,
-   "community_mentions_7d": 3,
-   "transport": "None (instructions + scripts)",
-   "sandbox_needs": "None",
-   "creator": "vectorvale",
-   "first_seen": "2026-09-29",
-   "predicted_installs_30d": 480,
-   "rank": 58,
-   "gates": {
-    "License": {
-     "result": "Pass",
-     "detail": "Apache-2.0"
-    },
-    "Creator permission": {
-     "result": "Action",
-     "detail": "Asked 2026-09-28; waiting on @vectorvale"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Pass",
-     "detail": "None (instructions + scripts)"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
-    }
-   },
-   "status": "Needs action",
-   "next_step": "Creator permission: Asked 2026-09-28; waiting on @vectorvale",
-   "qa": null
-  },
-  {
    "repo": "sprocketeer/queryscribe",
    "skill_name": "queryscribe",
    "category": "Spreadsheets",
@@ -2531,8 +2489,8 @@
    "sandbox_needs": "GPU",
    "creator": "sprocketeer",
    "first_seen": "2026-10-01",
-   "predicted_installs_30d": 420,
-   "rank": 59,
+   "predicted_installs_30d": 10,
+   "rank": 58,
    "gates": {
     "License": {
      "result": "Pass",
@@ -2560,48 +2518,6 @@
    "qa": null
   },
   {
-   "repo": "marisol-codes/sheetscribe",
-   "skill_name": "sheetscribe",
-   "category": "DevOps",
-   "description": "An agent skill for devops.",
-   "license": "GPL-3.0",
-   "stars": 271,
-   "stars_7d": 12,
-   "x_mentions_7d": 2,
-   "community_mentions_7d": 1,
-   "transport": "Local stdio only",
-   "sandbox_needs": "None",
-   "creator": "marisol-codes",
-   "first_seen": "2026-09-06",
-   "predicted_installs_30d": 350,
-   "rank": 60,
-   "gates": {
-    "License": {
-     "result": "Action",
-     "detail": "GPL-3.0: legal review before redistributing"
-    },
-    "Creator permission": {
-     "result": "Pass",
-     "detail": "Granted 2026-10-03"
-    },
-    "Attribution": {
-     "result": "Action",
-     "detail": "Write attribution line"
-    },
-    "Transport": {
-     "result": "Fail",
-     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
-    },
-    "Sandbox": {
-     "result": "Pass",
-     "detail": "None"
-    }
-   },
-   "status": "Blocked",
-   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
-   "qa": null
-  },
-  {
    "repo": "lowtide/briefscribe",
    "skill_name": "briefscribe",
    "category": "Testing",
@@ -2615,8 +2531,8 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "lowtide",
    "first_seen": "2026-09-11",
-   "predicted_installs_30d": 330,
-   "rank": 61,
+   "predicted_installs_30d": 10,
+   "rank": 59,
    "gates": {
     "License": {
      "result": "Pass",
@@ -2644,6 +2560,90 @@
    "qa": null
   },
   {
+   "repo": "vectorvale/lintcraft",
+   "skill_name": "lintcraft",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "Apache-2.0",
+   "stars": 174,
+   "stars_7d": 12,
+   "x_mentions_7d": 4,
+   "community_mentions_7d": 3,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "vectorvale",
+   "first_seen": "2026-09-29",
+   "predicted_installs_30d": 10,
+   "rank": 60,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-28; waiting on @vectorvale"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-28; waiting on @vectorvale",
+   "qa": null
+  },
+  {
+   "repo": "marisol-codes/sheetscribe",
+   "skill_name": "sheetscribe",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "GPL-3.0",
+   "stars": 271,
+   "stars_7d": 12,
+   "x_mentions_7d": 2,
+   "community_mentions_7d": 1,
+   "transport": "Local stdio only",
+   "sandbox_needs": "None",
+   "creator": "marisol-codes",
+   "first_seen": "2026-09-06",
+   "predicted_installs_30d": 10,
+   "rank": 61,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-03"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  },
+  {
    "repo": "marisol-codes/plotsmith",
    "skill_name": "plotsmith",
    "category": "Data analysis",
@@ -2657,7 +2657,7 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "marisol-codes",
    "first_seen": "2026-10-09",
-   "predicted_installs_30d": 260,
+   "predicted_installs_30d": 0,
    "rank": 62,
    "gates": {
     "License": {
@@ -2699,7 +2699,7 @@
    "sandbox_needs": "Network (allow-listed APIs)",
    "creator": "hexwren",
    "first_seen": "2026-08-27",
-   "predicted_installs_30d": 110,
+   "predicted_installs_30d": 0,
    "rank": 63,
    "gates": {
     "License": {
@@ -2741,7 +2741,7 @@
    "sandbox_needs": "File write (outputs folder)",
    "creator": "inkline",
    "first_seen": "2026-08-21",
-   "predicted_installs_30d": 100,
+   "predicted_installs_30d": 0,
    "rank": 64,
    "gates": {
     "License": {

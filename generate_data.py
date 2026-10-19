@@ -331,7 +331,7 @@ CREATORS = ["inkline", "tessaroo", "byteforager", "mkellner", "pallas-dev", "qui
 
 # Truth for skill installs (pipeline re-fits it): fast-rising repos that people talk
 # about on X and in communities get installed; total stars matter less than momentum.
-TRUE_INSTALLS = {"intercept": 3.2, "log_stars_7d": 0.62, "log_x_mentions": 0.35,
+TRUE_INSTALLS = {"intercept": -0.6, "log_stars_7d": 0.62, "log_x_mentions": 0.35,
                  "log_community": 0.22, "log_total_stars": 0.10, "noise": 0.45}
 
 

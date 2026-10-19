@@ -867,6 +867,7 @@ def main():
     # ---- Site JSON ----
     write_site(req, t, model, briefs, esc, linear, cands, smodel, cal, listings, after, n_checks,
                sw_listing, sw_check, bp_check, metrics, raw, backlog)
+    publish_files(t)
     print_summary(req, t, model, smodel, cands, listings, metrics, n_checks)
 
     import validate
@@ -935,6 +936,25 @@ def write_site(req, t, model, briefs, esc, linear, cands, smodel, cal, listings,
 
     to_json({"as_of": str(AS_OF_DATE.date()), **metrics,
              "status_markdown": (OUTPUT / f"weekly_status_{AS_OF_DATE.date()}.md").read_text()}, SITE / "status.json")
+
+
+def publish_files(t):
+    """Copy the files people would open (Linear CSV, briefs, SKILL.md, status) next to the site."""
+    files = SITE.parent / "files"
+    files.mkdir(exist_ok=True)
+    bp = t.set_index("tool").loc[FEATURED["build"]]
+    copies = {
+        OUTPUT / "linear_import.csv": "linear_import.csv",
+        OUTPUT / "escalations.md": "escalations.md",
+        OUTPUT / f"weekly_status_{AS_OF_DATE.date()}.md": "weekly_status.md",
+        OUTPUT / "briefs" / f"{bp.issue_id}-{slug(FEATURED['build'])}.md": "brief-brightpath-analytics.md",
+        OUTPUT / "skills" / FEATURED["skill"] / "SKILL.md": "sketchwright-SKILL.md",
+        OUTPUT / "skills" / FEATURED["skill"] / "qa_log.md": "sketchwright-qa_log.md",
+        ROOT / "content" / "how_this_works.md": "how_this_works.md",
+    }
+    for src, name in copies.items():
+        if src.exists():
+            (files / name).write_text(src.read_text())
 
 
 def print_summary(req, t, model, smodel, cands, listings, metrics, n_checks):
