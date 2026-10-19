@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intake &amp; Triage</title>
+  <meta name="description" content="Weekly connector triage: dedupe, fitted priority score, build / partner / decline / need info, owners, replies and Linear.">
+  <link rel="stylesheet" href="assets/style.css?v=2026101601">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Connector &amp; Skills Command Center</a>
+      <nav aria-label="Main" id="nav"></nav>
+    </div>
+  </header>
+
+  <main>
+    <span class="responsibility">1 · Connector intake &amp; prioritization</span>
+    <h1>Intake &amp; triage</h1>
+    <p class="lede">Every Friday, every new ask from the form, the request channel and direct asks is matched to a tool, deduped against the live catalog and the Linear backlog, scored, and given an owner, a decision and a reply.</p>
+
+    <div class="funnel" id="funnel"></div>
+    <p class="howto"><strong>How to read this:</strong> the same tool arrives under different spellings ("Brightpath", "brightpath.io", "Bright Path"). Matching folds them into one tool, so the backlog has one issue per tool, not one per message.</p>
+
+    <h2>Asks per weekly triage, by channel</h2>
+    <div class="card">
+      <div id="weekly" class="chart" style="height:300px" role="img" aria-label="Stacked bar chart of asks triaged each Friday, split by form, Slack and direct ask."></div>
+      <p class="howto"><strong>How to read this:</strong> each bar is one Friday triage pass. Because the pass runs every week, no ask waits more than <span id="sla"></span> business days for a decision.</p>
+    </div>
+
+    <h2>Selected tool</h2>
+    <section class="card callout" id="selected"></section>
+
+    <h2>Every open tool, ranked</h2>
+    <div class="controls">
+      <label>Tier <select id="f-tier"><option value="">All</option><option>Urgent</option><option>High</option><option>Medium</option><option>Low</option></select></label>
+      <label>Decision <select id="f-dec"><option value="">All</option><option>Build</option><option>Partner</option><option>Decline</option><option>Need info</option></select></label>
+      <label>Source <select id="f-src"><option value="">All</option><option>New asks</option><option>Historical backlog</option><option>Backlog + new asks</option></select></label>
+      <label><input type="search" id="f-q" placeholder="Search tool" aria-label="Search tool"></label>
+      <span class="small muted" id="count"></span>
+    </div>
+    <div class="table-wrap" id="tools"></div>
+    <p class="howto"><strong>How to read this:</strong> click a row to see why it scored that way, the decision, the reply sent and the Linear issue. "Historical backlog" rows are old Linear issues that had no priority or owner until this sweep.</p>
+
+    <h2>How the priority score is fitted</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>What predicts adoption</h3>
+        <p class="small muted" id="model-lede"></p>
+        <div class="table-wrap" id="coefs"></div>
+        <p class="howto"><strong>How to read this:</strong> logistic regression on past connector launches. Label: 50+ weekly active orgs 90 days after launch. A coefficient is the change in log-odds per unit of the signal; z above 2 means the effect is clearly not noise.</p>
+      </div>
+      <div class="card">
+        <h3>Does it work on launches it never saw?</h3>
+        <div class="grid grid-2" id="model-kpis" style="margin-bottom:8px"></div>
+        <div id="calib" class="chart" style="height:250px" role="img" aria-label="Calibration chart: predicted versus actual adoption rate in five bands of held-out launches."></div>
+        <p class="howto"><strong>How to read this:</strong> held-out launches split into five bands by predicted chance. Dots near the diagonal mean a score of 70 really does adopt about 70% of the time.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <h3>The rubric</h3>
+      <div id="rubric"></div>
+    </div>
+
+    <h2>Escalations to the Product Lead</h2>
+    <div class="table-wrap" id="esc"></div>
+    <p class="howto"><strong>How to read this:</strong> partnerships (the vendor runs its own MCP server) and hard calls (strong demand but no API, or a big blocked deal on a low-scoring tool) go to the Product Lead. Everything else is decided in triage.</p>
+
+    <h2>Linear: the single source of truth</h2>
+    <div class="table-wrap" id="linear"></div>
+    <p class="howto"><strong>How to read this:</strong> the pipeline writes <a href="files/linear_import.csv">linear_import.csv</a> in Linear's import shape. Existing issues keep their ID and get a priority, owner and status; new tools get new issues. Build briefs for Urgent and High builds go to engineering (<a href="files/brief-brightpath-analytics.md">example</a>).</p>
+  </main>
+
+  <script src="assets/common.js?v=2026101601"></script>
+  <script>
+  (async () => {
+    CC.init("intake.html");
+    const D = await CC.load("intake");
+    const tools = D.tools, c = D.counts;
+    document.getElementById("sla").textContent = D.config.sla_days;
+
+    // ---- funnel ----
+    const backlogOnly = tools.filter((t) => t.source === "Historical backlog").length;
+    document.getElementById("funnel").innerHTML = [
+      CC.kpi("Asks received (8 weeks)", CC.num(c.raw_asks), `${c.by_channel.Form} form · ${c.by_channel.Slack} Slack · ${c.by_channel["Direct ask"]} direct`),
+      CC.kpi("Repeats merged", CC.num(c.duplicates), "same tool, different message"),
+      CC.kpi("Already live", CC.num(c.already_live), "answered with a link, no new issue"),
+      CC.kpi("Tool not named", CC.num(c.unnamed), "Need info: we ask which tool"),
+      CC.kpi("Open tools scored", CC.num(tools.length), `incl. ${backlogOnly} from the old backlog`),
+    ].join("");
+
+    // ---- weekly chart ----
+    const wk = D.weekly;
+    const colors = { Form: CC.css("--accent"), Slack: CC.css("--series-2"), "Direct ask": CC.css("--highlight") };
+    CC.plot("weekly", ["Form", "Slack", "Direct ask"].map((ch) => ({
+      type: "bar", name: ch, x: wk.map((w) => w.week), y: wk.map((w) => w[ch] || 0), marker: { color: colors[ch] },
+      hovertemplate: `Triage %{x}<br>${ch}: %{y}<extra></extra>`,
+    })), { barmode: "stack", xaxis: { type: "category", tickformat: "", gridcolor: "rgba(0,0,0,0)" }, yaxis: { title: "Asks" } });
+
+    // ---- selected tool ----
+    const bySlug = Object.fromEntries(tools.map((t) => [t.slug, t]));
+    let current = bySlug[CC.param("tool")] || bySlug["brightpath-analytics"];
+    const labels = { log_employees: "Company size", headcount_growth: "Growth", log_mentions: "Online traction",
+      log_requesting_orgs: "Customers asking", enterprise_share: "Enterprise share" };
+
+    function renderSelected() {
+      const t = current;
+      const asks = D.requests.filter((r) => r.tool === t.tool);
+      const reply = asks.length ? asks[asks.length - 1].reply : null;
+      const brief = D.briefs[t.tool];
+      document.getElementById("selected").innerHTML = `
+        <h3>${CC.esc(t.tool)} ${CC.pill(t.tier)} ${CC.pill(t.decision)}</h3>
+        <p class="small muted" style="margin:0">${CC.esc(t.category)} · ${CC.esc(t.domain)} · ${CC.esc(t.issue_id)} (${CC.esc(t.linear_status)}) · Owner: ${CC.esc(t.owner)}</p>
+        <dl class="facts">
+          <div><dt>Priority score</dt><dd>${t.priority_score}/100</dd></div>
+          <div><dt>Customers asking</dt><dd>${t.requesting_orgs} (${t.enterprise_orgs} Enterprise)</dd></div>
+          <div><dt>Blocked deals</dt><dd>${CC.usd(t.blocked_deal_arr)}</dd></div>
+          <div><dt>API / MCP</dt><dd>${CC.esc(t.api_type)}</dd></div>
+          <div><dt>Employees · growth</dt><dd>${CC.num(t.employees)} · ${CC.pct(t.headcount_growth_12m)}</dd></div>
+          <div><dt>Mentions (90 days)</dt><dd>${CC.num(t.mentions_90d)}</dd></div>
+        </dl>
+        <div class="grid grid-2" style="margin-top:12px">
+          <div>
+            <div id="contrib" style="height:210px" role="img" aria-label="Bar chart of how each signal moved this tool's score versus an average past launch."></div>
+            <p class="howto"><strong>How to read this:</strong> how each signal pushes this tool's odds up (right) or down (left) versus an average past launch.</p>
+          </div>
+          <div>
+            <p class="small" style="margin:0"><strong>Decision:</strong> ${CC.esc(t.decision)}: ${CC.esc(t.decision_reason)}.${t.escalation ? ` <strong>Escalated:</strong> ${CC.esc(t.escalation)}.` : ""}${t.build_week ? ` Build week ${t.build_week}.` : ""}</p>
+            ${reply ? `<p class="small" style="margin:8px 0 0"><strong>Reply sent to every requester:</strong></p><div class="reply">${CC.esc(reply)}</div>` : `<p class="small muted">Old backlog issue with no new asks: the reply goes on the Linear issue.</p>`}
+            ${asks.length ? `<p class="small" style="margin:10px 0 2px"><strong>${asks.length} asks merged into this issue:</strong></p>
+              <ul class="tight small">${asks.slice(0, 8).map((r) => `<li>${CC.date(r.received_at)} · ${CC.esc(r.channel)} · ${CC.esc(r.plan)}: “${CC.esc(r.tool_text)}”</li>`).join("")}${asks.length > 8 ? `<li class="muted">…and ${asks.length - 8} more</li>` : ""}</ul>` : ""}
+            ${brief ? `<p class="small" style="margin:10px 0 0">Engineering brief written with a draft listing that passes the template.</p>` : ""}
+          </div>
+        </div>`;
+      const keys = Object.keys(labels);
+      const vals = keys.map((k) => t[`pts_${k}`]);
+      CC.plot("contrib", [{
+        type: "bar", orientation: "h", y: keys.map((k) => labels[k]), x: vals,
+        marker: { color: vals.map((v) => (v >= 0 ? CC.css("--accent") : CC.css("--out"))) },
+        hovertemplate: "%{y}: %{x:+.2f} log-odds<extra></extra>",
+      }], { margin: { l: 120, r: 12, t: 4, b: 28 }, xaxis: { zeroline: true, zerolinecolor: CC.css("--axis"), gridcolor: CC.css("--grid") } });
+    }
+
+    // ---- ranked table ----
+    const f = { tier: document.getElementById("f-tier"), dec: document.getElementById("f-dec"),
+      src: document.getElementById("f-src"), q: document.getElementById("f-q") };
+    function renderTable() {
+      const q = f.q.value.trim().toLowerCase();
+      const rows = tools.filter((t) => (!f.tier.value || t.tier === f.tier.value) && (!f.dec.value || t.decision === f.dec.value)
+        && (!f.src.value || t.source === f.src.value) && (!q || t.tool.toLowerCase().includes(q)));
+      document.getElementById("count").textContent = `${rows.length} of ${tools.length}`;
+      CC.table(document.getElementById("tools"), rows, [
+        { label: "Tool", render: (t) => `<strong>${CC.esc(t.tool)}</strong><span class="breakdown">${CC.esc(t.category)}</span>` },
+        { label: "Source", key: "source" },
+        { label: "Customers", num: true, render: (t) => `${t.requesting_orgs}<span class="breakdown">${t.enterprise_orgs} Ent.</span>` },
+        { label: "Blocked deals", num: true, render: (t) => (t.blocked_deal_arr ? CC.usd(t.blocked_deal_arr) : "–") },
+        { label: "API / MCP", key: "api_type" },
+        { label: "Score", num: true, key: "priority_score" },
+        { label: "Tier", render: (t) => CC.pill(t.tier) },
+        { label: "Decision", render: (t) => CC.pill(t.decision) + (t.escalation ? ` <span class="small muted" title="${CC.esc(t.escalation)}">↑ PL</span>` : "") },
+        { label: "Owner", key: "owner" },
+        { label: "Issue", key: "issue_id" },
+      ], { rowKey: (t) => t.slug, selected: (t) => t === current, onClick: (s) => {
+        current = bySlug[s]; CC.setParam("tool", s); renderSelected(); renderTable();
+        document.getElementById("selected").scrollIntoView({ behavior: "smooth", block: "start" });
+      } });
+    }
+    Object.values(f).forEach((el) => el.addEventListener("input", renderTable));
+
+    // ---- model ----
+    const M = D.model;
+    document.getElementById("model-lede").textContent =
+      `Fitted on ${M.n_train + M.n_test} past launches (${CC.pct(M.base_rate)} reached adoption).`;
+    CC.table(document.getElementById("coefs"), M.coefficients.filter((r) => r.feature !== "Intercept"), [
+      { label: "Signal", key: "label" },
+      { label: "Coefficient", num: true, render: (r) => r.coef.toFixed(2) },
+      { label: "Std. error", num: true, render: (r) => r.se.toFixed(2) },
+      { label: "z", num: true, render: (r) => r.z.toFixed(1) },
+    ]);
+    document.getElementById("model-kpis").innerHTML =
+      CC.kpi("Holdout AUC: model", M.holdout_auc.toFixed(2), `${M.n_test} launches it never saw`) +
+      CC.kpi("Holdout AUC: “most asks wins”", M.baseline_auc.toFixed(2), "ranking by request count alone");
+    const cal = M.calibration;
+    CC.plot("calib", [
+      { type: "scatter", mode: "lines", x: [0, 1], y: [0, 1], line: { color: CC.css("--axis"), dash: "dot" }, hoverinfo: "skip", showlegend: false },
+      { type: "scatter", mode: "markers+lines", x: cal.map((b) => b.predicted), y: cal.map((b) => b.actual),
+        marker: { size: cal.map((b) => 6 + b.n / 3), color: CC.css("--accent") }, line: { color: CC.css("--accent") }, showlegend: false,
+        hovertemplate: "Predicted %{x:.0%}<br>Actual %{y:.0%}<extra></extra>" },
+    ], { margin: { l: 48, r: 12, t: 4, b: 40 }, xaxis: { title: "Predicted", tickformat: ".0%", range: [0, 1] }, yaxis: { title: "Actual", tickformat: ".0%", range: [0, 1] } });
+    const C = D.config;
+    document.getElementById("rubric").innerHTML = `
+      <div class="table-wrap"><table><thead><tr><th>Tier</th><th>Rule</th><th>What happens</th></tr></thead><tbody>
+      <tr><td>${CC.pill("Urgent")}</td><td>Score ${C.tier_urgent}+, or ${C.tier_high}+ with a blocked deal of ${CC.usd(C.urgent_blocked_arr)}+</td><td>Build brief this week; first in the build queue</td></tr>
+      <tr><td>${CC.pill("High")}</td><td>Score ${C.tier_high}–${C.tier_urgent - 1}</td><td>Build brief; queued by score (${C.build_slots} build starts a week)</td></tr>
+      <tr><td>${CC.pill("Medium")}</td><td>Score ${C.tier_medium}–${C.tier_high - 1}</td><td>Approved, stays in Backlog until a slot opens</td></tr>
+      <tr><td>${CC.pill("Low")}</td><td>Below ${C.tier_medium}</td><td>Declined for now; reviewed again each quarter</td></tr>
+      </tbody></table></div>
+      <p class="howto"><strong>Decision order:</strong> API unknown → Need info · vendor runs its own MCP server → Partner · no public API → Decline · Low tier → Decline · otherwise → Build. Escalate partnerships, strong demand with no API, and blocked deals of ${CC.usd(C.escalate_blocked_arr)}+ on Medium/Low tools.</p>`;
+
+    // ---- escalations + linear ----
+    CC.table(document.getElementById("esc"), D.escalations, [
+      { label: "Issue", key: "issue_id" }, { label: "Tool", render: (r) => `<strong>${CC.esc(r.tool)}</strong>` },
+      { label: "Why", key: "escalation" }, { label: "Score", num: true, render: (r) => `${r.priority_score} ${CC.pill(r.tier)}` },
+      { label: "Customers", num: true, key: "requesting_orgs" },
+      { label: "Blocked deals", num: true, render: (r) => (r.blocked_deal_arr ? CC.usd(r.blocked_deal_arr) : "–") },
+    ]);
+    CC.table(document.getElementById("linear"), D.linear.slice(0, 8), [
+      { label: "ID", key: "ID" }, { label: "Title", key: "Title" }, { label: "Status", key: "Status" },
+      { label: "Priority", render: (r) => CC.pill(r.Priority) }, { label: "Assignee", key: "Assignee" },
+      { label: "Labels", render: (r) => r.Labels.split(",").map((l) => `<span class="chip">${CC.esc(l)}</span>`).join("") },
+    ]);
+
+    renderSelected();
+    renderTable();
+  })();
+  </script>
+</body>
+</html>

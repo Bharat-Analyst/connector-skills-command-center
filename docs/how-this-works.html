@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How This Works</title>
+  <meta name="description" content="The method behind the command center: matching, the fitted models, the rubric, decision rules, skill gates, the listing template and the decision log.">
+  <link rel="stylesheet" href="assets/style.css?v=2026101601">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Connector &amp; Skills Command Center</a>
+      <nav aria-label="Main" id="nav"></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-layout">
+      <details class="toc" open><summary>Contents</summary><ol id="toc"></ol></details>
+      <article class="doc" id="doc"></article>
+    </div>
+  </main>
+
+  <script src="assets/common.js?v=2026101601"></script>
+  <script>
+  (async () => {
+    CC.init("how-this-works.html");
+    const md = await (await fetch("files/how_this_works.md?v=2026101601")).text();
+    const doc = document.getElementById("doc");
+    doc.innerHTML = marked.parse(md.replace(/<!--[\s\S]*?-->/, ""));
+    doc.querySelectorAll("table").forEach((t) => { const w = document.createElement("div"); w.className = "table-wrap"; t.replaceWith(w); w.appendChild(t); });
+    const toc = [];
+    doc.querySelectorAll("h2").forEach((h) => {
+      h.id = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      toc.push(`<li><a href="#${h.id}">${CC.esc(h.textContent)}</a></li>`);
+    });
+    document.getElementById("toc").innerHTML = toc.join("");
+    if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+    if (matchMedia("(max-width: 900px)").matches) document.querySelector(".toc").open = false;
+  })();
+  </script>
+</body>
+</html>

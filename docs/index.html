@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connector &amp; Skills Command Center</title>
+  <meta name="description" content="A weekly, measurable pipeline for connector requests, open-source skill ports and marketplace listing quality.">
+  <link rel="stylesheet" href="assets/style.css?v=2026101601">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Connector &amp; Skills Command Center</a>
+      <nav aria-label="Main" id="nav"></nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>One weekly cycle for connectors, skills and listings</h1>
+    <p class="lede">Connector requests and trending open-source skills arrive faster than ad-hoc triage can handle. This command center turns them into a weekly, measurable pipeline: every ask gets matched, scored, decided and answered; the best skills get qualified, ported and launched; and every listing meets one standard.</p>
+
+    <div class="grid grid-metrics" id="kpis"></div>
+
+    <h2>The weekly cycle</h2>
+    <div class="legend">
+      <span><span class="sw" style="background:var(--type-data)"></span>Data</span>
+      <span><span class="sw" style="background:var(--type-decision)"></span>Decision</span>
+      <span><span class="sw" style="background:var(--type-action)"></span>Action</span>
+    </div>
+    <ol class="steps" id="steps"></ol>
+    <section class="card step-panel" id="panel" aria-live="polite"></section>
+
+    <h2>Interview practical, already done</h2>
+    <div class="grid grid-3">
+      <a class="card" href="intake.html" style="text-decoration:none;color:inherit"><h3>Triage and rank connector requests</h3><p class="small muted" style="margin:0" id="prac1"></p></a>
+      <a class="card" href="skills.html?skill=sketchwright#selected" style="text-decoration:none;color:inherit"><h3>Port plan for a trending skill</h3><p class="small muted" style="margin:0">sketchwright: licensing, creator permission, compatibility, QA log, SKILL.md and listing copy.</p></a>
+      <a class="card" href="catalog.html" style="text-decoration:none;color:inherit"><h3>Rewrite two listings to the standard</h3><p class="small muted" style="margin:0">Granite Docs and Chartcraft, before and after, checked against all eight template rules.</p></a>
+    </div>
+
+    <h2>Role responsibility → page</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Responsibility</th><th>What we built</th><th>Page</th></tr></thead>
+      <tbody>
+        <tr><td>Weekly triage</td><td>One queue from form, request channel and direct asks; spellings matched; repeats merged; deduped against the live catalog and Linear</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
+        <tr><td>Research &amp; scoring</td><td>Adoption model fitted on past launches (size, growth, traction, customers asking, Enterprise share) → Urgent / High / Medium / Low rubric</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
+        <tr><td>Backlog management</td><td>Every ask has an owner, a decision (build / partner / decline / need info) and a reply; Linear import CSV</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
+        <tr><td>Escalations &amp; reporting</td><td>Product Lead escalations, engineering build briefs, weekly written status</td><td><a href="intake.html">Intake</a> · <a href="status.html">Weekly status</a></td></tr>
+        <tr><td>Trend spotting</td><td>Candidates from GitHub, X and communities, ranked by an installs model that weights momentum</td><td><a href="skills.html">Skill ports</a></td></tr>
+        <tr><td>Qualification &amp; compliance</td><td>Five gates: license, creator permission, attribution, remote transport, sandbox</td><td><a href="skills.html">Skill ports</a></td></tr>
+        <tr><td>Porting, publishing, launch</td><td>SKILL.md package, listing copy, QA log on representative prompts, GitHub export workflow, launch calendar</td><td><a href="skills.html">Skill ports</a></td></tr>
+        <tr><td>Listing consistency</td><td>Template as eight checks, full catalog audit, rewrites of high-traffic listings, pre-launch checklist</td><td><a href="catalog.html">Listings</a></td></tr>
+        <tr><td>First-party plugins (future)</td><td>Same SKILL.md, QA and listing path for SME-authored recipes</td><td><a href="skills.html">Skill ports</a></td></tr>
+        <tr><td>90-day success metrics</td><td>SLA, owner / decision / reply coverage, cadence, attribution, audit coverage</td><td><a href="status.html">Weekly status</a></td></tr>
+      </tbody>
+    </table></div>
+  </main>
+
+  <script src="assets/common.js?v=2026101601"></script>
+  <script>
+  (async () => {
+    CC.init("index.html");
+    const [I, S, C, T] = await Promise.all(["intake", "skills", "catalog", "status"].map(CC.load));
+    const c = I.counts;
+    const bp = I.tools.find((t) => t.tool === "Brightpath Analytics");
+    const lp = I.tools.find((t) => t.tool === "Larkspur Payments");
+    const pb = I.tools.find((t) => t.tool === "Pebblework Notes");
+    const bpAsks = I.requests.filter((r) => r.tool === "Brightpath Analytics");
+    const sw = S.candidates.find((x) => x.skill_name === "sketchwright");
+    const bc = S.candidates.find((x) => x.skill_name === "bincrack");
+    const swPlan = S.calendar.plan.find((p) => p.skill_name === "sketchwright");
+    const swQa = S.qa.filter((q) => q.skill_name === "sketchwright");
+    const qaR = (r) => `${swQa.filter((q) => q.round === r && q.passed).length}/${swQa.filter((q) => q.round === r).length}`;
+    const meets = C.listings.filter((l) => l.score === C.n_checks).length;
+
+    document.getElementById("kpis").innerHTML = [
+      CC.kpi("Asks triaged on time", CC.pct(T.sla_within), `${c.raw_asks} asks, within ${I.config.sla_days} business days`),
+      CC.kpi("Old backlog decided", `${T.backlog_dispositioned}/${T.backlog_total}`, "every issue scored and owned"),
+      CC.kpi("Skills ready to launch", S.status_counts["Ready to launch"] || 0, `${S.candidates.length} candidates ranked`),
+      CC.kpi("Listings meeting template", `${meets}/${C.listings.length}`, "top-priority rewrites queued"),
+    ].join("");
+    document.getElementById("prac1").textContent = `${I.tools.length} open tools scored, ranked and decided, each with the reasons behind its score.`;
+
+    const STEPS = [
+      { name: "Collect", type: "data", page: "intake.html",
+        what: `Every ask from the request form, the #connector-requests channel and direct asks from sales and CS lands in one queue: ${c.raw_asks} asks in 8 weeks (${c.by_channel.Form} form, ${c.by_channel.Slack} Slack, ${c.by_channel["Direct ask"]} direct). The old Linear backlog (${T.backlog_total} issues) and ${S.candidates.length} skill candidates spotted on GitHub, X and communities come in too.`,
+        featured: `Brightpath Analytics was asked for ${bpAsks.length} times through ${new Set(bpAsks.map((r) => r.channel)).size} channels in three weeks.`,
+        jd: ["Review incoming submissions across forms, request channels, and direct asks"] },
+      { name: "Match and dedupe", type: "data", page: "intake.html",
+        what: `Each ask is matched to a tool, whatever the spelling. ${c.duplicates} repeats are merged into one issue per tool; ${c.already_live} asks for tools already live get a link instead of an issue; ${c.merged_backlog} join an existing Linear issue; ${c.unnamed} asks that never name a tool get Need info.`,
+        featured: `“${bpAsks.slice(0, 4).map((r) => r.tool_text.length > 40 ? r.tool_text.slice(0, 40) + "…" : r.tool_text).join("”, “")}” → one issue, ${bp.issue_id}.`,
+        jd: ["Deduplicate requests against the live catalog and active backlog issues"] },
+      { name: "Score", type: "decision", page: "intake.html",
+        what: `A logistic regression fitted on past launches predicts each tool's chance of reaching 50+ weekly active orgs by day 90, from company size, growth, online traction, customers asking and Enterprise share. Holdout AUC ${I.model.holdout_auc.toFixed(2)} vs ${I.model.baseline_auc.toFixed(2)} for “most asks wins”. The score sets the tier.`,
+        featured: `Brightpath Analytics scores ${bp.priority_score}/100 (top reasons: ${bp.top_reasons.join(", ").toLowerCase()}) → ${bp.tier}.`,
+        jd: ["company size, growth trajectory, online traction, customer context, and API/MCP availability", "Urgent / High / Medium / Low using a standard rubric"] },
+      { name: "Decide and reply", type: "decision", page: "intake.html",
+        what: `Every tool gets a decision, an owner and a Linear status: ${I.counts.decisions.Build} build, ${I.counts.decisions.Partner} partner, ${I.counts.decisions.Decline} decline, ${I.counts.decisions["Need info"]} need info. Every requester gets a reply that says what happens next.`,
+        featured: `Brightpath → Build (${bp.owner}). Larkspur Payments → Partner (runs its own MCP server). Pebblework Notes → Decline (no public API). “The HR tool we use” → Need info.`,
+        jd: ["owner, a status decision (build / partner / decline / need info), and a response", "Linear as the single source of truth"] },
+      { name: "Escalate and brief", type: "action", page: "intake.html",
+        what: `${I.escalations.length} hard calls and partnerships go to the Product Lead. Every Urgent and High build gets a complete brief for engineering: demand, API and auth, use cases, acceptance criteria and a draft listing that already passes the template.`,
+        featured: `Brightpath's brief: ${bp.requesting_orgs} customers (${bp.enterprise_orgs} Enterprise), ${CC.usd(bp.blocked_deal_arr)} blocked, OAuth 2.0, build week ${bp.build_week}. Larkspur goes to the Product Lead as a partnership.`,
+        jd: ["Escalate hard calls and partnership opportunities to the Product Lead", "complete technical briefs for approved builds"] },
+      { name: "Spot and qualify skills", type: "decision", page: "skills.html",
+        what: `Open-source skills are ranked by predicted installs (a regression that weights this week's momentum over lifetime stars), then checked against five gates: license, creator permission, attribution, remote transport and sandbox.`,
+        featured: `sketchwright (#${sw.rank}, +${CC.num(sw.stars_7d)} stars this week) passes all five. bincrack is trending too, but it's ${bc.license}, local stdio only and needs host binaries → Blocked.`,
+        jd: ["Monitor X (Twitter), GitHub, and creator communities", "Verify open-source licenses, secure creator permissions, confirm attribution"] },
+      { name: "Port, test, launch", type: "action", page: "skills.html",
+        what: `Qualified skills are packaged as SKILL.md with listing copy and “Try asking” prompts, tested on representative prompts (bar: ${CC.pct(S.config.qa_pass_bar)}), and shipped through the GitHub export workflow at ${S.config.launches_per_week} launches a week.`,
+        featured: `sketchwright QA: round 1 ${qaR(1)} (layout overlap, sandbox path) → fixed → round 2 ${qaR(2)}. Launches ${swPlan ? CC.date(swPlan.launch_on) : "next"}, crediting @${sw.creator}.`,
+        jd: ["Package skills into standard plugin/skill formats (SKILL.md)", "quality assurance testing across representative prompts", "GitHub-based export workflows"] },
+      { name: "Keep listings consistent and report", type: "action", page: "catalog.html",
+        what: `All ${C.listings.length} listings are audited against an eight-rule template; only ${meets} pass today. The most-viewed broken listings are rewritten first, every new release must pass before launch, and a written status goes out every Friday.`,
+        featured: `Granite Docs (41K views a month) and Chartcraft rewritten to ${C.n_checks}/${C.n_checks}. Weekly status: ${CC.pct(T.sla_within)} of asks triaged on time.`,
+        jd: ["standardized structure guidelines", "rewrite high-traffic entries", "publish weekly status summaries"] },
+    ];
+
+    let cur = Math.min(Math.max(parseInt(CC.param("step") || "1", 10), 1), STEPS.length) - 1;
+    const stepsEl = document.getElementById("steps");
+    function render() {
+      stepsEl.innerHTML = STEPS.map((s, i) => `<li><button type="button" class="type-${s.type}" data-i="${i}"${i === cur ? ' aria-current="step"' : ""}>
+        <span class="num">Step ${i + 1}</span><span class="nm">${s.name}</span><span class="ty">${s.type}</span></button></li>`).join("");
+      stepsEl.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { cur = +b.dataset.i; CC.setParam("step", cur + 1); render(); }));
+      const s = STEPS[cur];
+      document.getElementById("panel").innerHTML = `
+        <h2>${cur + 1}. ${s.name}</h2>
+        <dl>
+          <div><dt>What happens</dt><dd>${CC.esc(s.what)}</dd></div>
+          <div class="nw-box"><dt>Featured</dt><dd>${CC.esc(s.featured)}</dd></div>
+          <div><dt>From the role</dt><dd>${s.jd.map((k) => `<span class="kw">${CC.esc(k)}</span>`).join(" ")}</dd></div>
+        </dl>
+        <div class="panel-actions">
+          <a href="${s.page}">See it on the ${s.page.replace(".html", "").replace("index", "cycle")} page →</a>
+          <div class="group">
+            <button class="btn" ${cur === 0 ? "disabled" : ""} id="prev">← Back</button>
+            <button class="btn btn-primary" ${cur === STEPS.length - 1 ? "disabled" : ""} id="next">Next →</button>
+          </div>
+        </div>`;
+      document.getElementById("prev").onclick = () => { cur--; CC.setParam("step", cur + 1); render(); };
+      document.getElementById("next").onclick = () => { cur++; CC.setParam("step", cur + 1); render(); };
+    }
+    render();
+  })();
+  </script>
+</body>
+</html>

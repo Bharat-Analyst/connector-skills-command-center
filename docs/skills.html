@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill Ports</title>
+  <meta name="description" content="Trending open-source agent skills: ranked, qualified (license, permission, attribution, transport, sandbox), ported to SKILL.md, QA'd and launched.">
+  <link rel="stylesheet" href="assets/style.css?v=2026101601">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Connector &amp; Skills Command Center</a>
+      <nav aria-label="Main" id="nav"></nav>
+    </div>
+  </header>
+
+  <main>
+    <span class="responsibility">2 · Porting open-source skills &amp; integrations · 4 · First-party plugins</span>
+    <h1>Skill ports</h1>
+    <p class="lede">Skills trending on GitHub, X and builder communities are ranked by how many installs they would likely get, checked against five gates, packaged as SKILL.md, tested on representative prompts, and launched on a steady cadence.</p>
+
+    <div class="grid grid-metrics" id="kpis"></div>
+
+    <h2>Selected skill</h2>
+    <section class="card callout" id="selected"></section>
+
+    <h2>Ranked candidates</h2>
+    <div class="controls">
+      <label>Status <select id="f-status"><option value="">All</option><option>Ready to launch</option><option>Ready to port</option><option>In QA</option><option>Needs action</option><option>Blocked</option></select></label>
+      <label><input type="search" id="f-q" placeholder="Search skill" aria-label="Search skill"></label>
+      <span class="small muted" id="count"></span>
+    </div>
+    <div class="table-wrap" id="cands"></div>
+    <p class="howto"><strong>How to read this:</strong> rank comes from predicted 30-day installs. Gate pills, in order: License · Creator permission · Attribution · Transport · Sandbox. Green passes, amber is something we can fix (ask the creator, legal review), red stops the port. Click a row for its port plan.</p>
+
+    <h2>How candidates are ranked</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>What predicts installs</h3>
+        <p class="small muted" id="model-lede"></p>
+        <div class="table-wrap" id="coefs"></div>
+        <p class="howto"><strong>How to read this:</strong> a regression of log installs on log signals. Coefficients are elasticities: +10% stars in the last week ≈ +<span id="el"></span>% installs, all else equal.</p>
+      </div>
+      <div class="card">
+        <h3>Momentum beats total stars</h3>
+        <div class="grid grid-2" id="model-kpis"></div>
+        <p class="howto"><strong>How to read this:</strong> rank correlation between predicted and actual installs for ported skills the model never saw, compared with ranking by total GitHub stars. Spotting skills before they peak means weighting this week's momentum, not lifetime popularity.</p>
+      </div>
+    </div>
+
+    <h2>Launch cadence</h2>
+    <div class="card">
+      <div id="cadence" class="chart" style="height:280px" role="img" aria-label="Bar chart of skill launches per week for the last 12 weeks and the plan for the next 4 weeks."></div>
+      <p class="howto"><strong>How to read this:</strong> grey bars are past launches; blue bars are the plan. The plan launches what has passed QA first, then what is ready to port (one week to package and test), at <span id="lpw"></span> a week.</p>
+      <div id="plan"></div>
+    </div>
+
+    <h2>How a port ships</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>1. Package</h3><p class="small">One folder per skill: <code>SKILL.md</code> (instructions + attribution), <code>listing.json</code> (marketplace copy), <code>qa_log.md</code> (every test prompt and result).</p></div>
+      <div class="card"><h3>2. Pull request</h3><p class="small">The folder goes to the marketplace repo as a PR. The GitHub export workflow runs the license, attribution and listing-template checks; a failing check blocks the merge.</p></div>
+      <div class="card"><h3>3. Launch</h3><p class="small">Merge exports the skill to the marketplace. Launch notes credit the creator by handle and link the source repo, the same day.</p></div>
+    </div>
+
+    <h2>Future scope: first-party plugins</h2>
+    <div class="card">
+      <p class="small" style="margin:0">First-party plugins use the same path. A subject-matter expert writes the SKILL.md recipe, we run the same QA prompts, and the listing goes through the same template checks. Only the attribution line changes ("Built by the Marketplace team with <em>team name</em>").</p>
+    </div>
+  </main>
+
+  <script src="assets/common.js?v=2026101601"></script>
+  <script>
+  (async () => {
+    CC.init("skills.html");
+    const D = await CC.load("skills");
+    const cands = D.candidates, sc = D.status_counts;
+    document.getElementById("lpw").textContent = D.config.launches_per_week;
+    const next = D.calendar.plan.filter((p) => p.week === 1).map((p) => p.skill_name);
+    document.getElementById("kpis").innerHTML = [
+      CC.kpi("Candidates ranked", cands.length, "GitHub · X · communities"),
+      CC.kpi("Ready to launch", sc["Ready to launch"] || 0, "gates + QA passed"),
+      CC.kpi("Ready to port", sc["Ready to port"] || 0, "gates passed, QA next"),
+      CC.kpi("Needs action", sc["Needs action"] || 0, "permission, attribution or legal"),
+      CC.kpi("Blocked", sc.Blocked || 0, "transport, sandbox or no license"),
+      CC.kpi("Next launches", next.length, next.join(", ")),
+    ].join("");
+
+    const by = Object.fromEntries(cands.map((c) => [c.skill_name, c]));
+    let current = by[CC.param("skill")] || by.sketchwright;
+    const GATES = ["License", "Creator permission", "Attribution", "Transport", "Sandbox"];
+    const gatePills = (c) => `<span class="gates">${GATES.map((g) => CC.pill(c.gates[g].result, `${g}: ${c.gates[g].detail}`)).join("")}</span>`;
+    let skillMd = null;
+
+    async function renderSelected() {
+      const c = current;
+      const qaRows = D.qa.filter((q) => q.skill_name === c.skill_name);
+      const rounds = [...new Set(qaRows.map((q) => q.round))];
+      const isSw = c.skill_name === "sketchwright";
+      if (isSw && skillMd === null) {
+        try { skillMd = await (await fetch("files/sketchwright-SKILL.md")).text(); } catch { skillMd = ""; }
+      }
+      document.getElementById("selected").innerHTML = `
+        <h3>${CC.esc(c.skill_name)} ${CC.pill(c.status)} <span class="small muted">#${c.rank} · github.com/${CC.esc(c.repo)}</span></h3>
+        <p class="small" style="margin:0">${CC.esc(c.description)}</p>
+        <dl class="facts">
+          <div><dt>Predicted installs (30 days)</dt><dd>${CC.num(c.predicted_installs_30d)}</dd></div>
+          <div><dt>Stars · last 7 days</dt><dd>${CC.num(c.stars)} · +${CC.num(c.stars_7d)}</dd></div>
+          <div><dt>X · community (7 days)</dt><dd>${CC.num(c.x_mentions_7d)} · ${CC.num(c.community_mentions_7d)}</dd></div>
+          <div><dt>Next step</dt><dd>${CC.esc(c.next_step)}</dd></div>
+        </dl>
+        <h3 style="margin-top:16px">Qualification and compliance</h3>
+        <div class="table-wrap"><table><thead><tr><th>Gate</th><th>Result</th><th>Detail</th></tr></thead><tbody>
+          ${GATES.map((g) => `<tr><td>${g}</td><td>${CC.pill(c.gates[g].result)}</td><td class="small">${CC.esc(c.gates[g].detail)}</td></tr>`).join("")}
+        </tbody></table></div>
+        ${rounds.length ? `<h3 style="margin-top:16px">QA: representative prompts</h3>
+          <p class="small" style="margin:0 0 6px">${rounds.map((r) => { const rr = qaRows.filter((q) => q.round === r); const p = rr.filter((q) => q.passed).length;
+            return `Round ${r} (${CC.date(rr[0].tested_on)}): <strong>${p}/${rr.length}</strong> passed`; }).join(" → ")}. Bar: ${CC.pct(D.config.qa_pass_bar)}.</p>
+          <div class="table-wrap"><table><thead><tr><th>ID</th><th>Type</th><th>Prompt</th>${rounds.map((r) => `<th>Round ${r}</th>`).join("")}<th>Notes</th></tr></thead><tbody>
+          ${[...new Set(qaRows.map((q) => q.prompt_id))].map((id) => { const rr = qaRows.filter((q) => q.prompt_id === id);
+            return `<tr><td style="white-space:nowrap">${id}</td><td>${CC.esc(rr[0].prompt_type)}</td><td class="small">${CC.esc(rr[0].prompt)}</td>${rounds.map((r) => { const x = rr.find((q) => q.round === r); return `<td>${x ? CC.pill(x.passed ? "Pass" : "Fail") : ""}</td>`; }).join("")}<td class="small">${CC.esc(rr.map((q) => q.notes || "").join(" "))}</td></tr>`; }).join("")}
+          </tbody></table></div>` : ""}
+        ${isSw ? `<div class="grid grid-2" style="margin-top:16px">
+            <div><h3>Marketplace listing</h3>${CC.listingCard(D.sketchwright_listing)}${CC.checklist(D.sketchwright_checks)}</div>
+            <div><h3>SKILL.md</h3><pre class="file">${CC.esc(skillMd)}</pre><p class="small"><a href="files/sketchwright-SKILL.md">SKILL.md</a> · <a href="files/sketchwright-qa_log.md">qa_log.md</a></p></div>
+          </div>
+          <h3 style="margin-top:16px">Launch note (draft)</h3>
+          <div class="reply">New skill: <strong>Sketchwright</strong> turns a plain-English description into a clean, labeled technical illustration. Ported from github.com/${CC.esc(c.repo)}. Thanks to @${CC.esc(c.creator)} for building it and letting us bring it to the marketplace.</div>` : ""}
+        ${c.skill_name !== "bincrack" ? `<p class="small muted" style="margin-top:12px">Compare: <a href="?skill=bincrack#selected">bincrack</a>, a trending reverse-engineering skill that fails transport and sandbox.</p>` : ""}`;
+      document.querySelectorAll('#selected a[href^="?skill="]').forEach((a) => a.addEventListener("click", (e) => {
+        e.preventDefault(); select(new URL(a.href).searchParams.get("skill"));
+      }));
+    }
+
+    function select(name) {
+      current = by[name]; CC.setParam("skill", name); renderSelected(); renderTable();
+      document.getElementById("selected").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    const fs = document.getElementById("f-status"), fq = document.getElementById("f-q");
+    function renderTable() {
+      const q = fq.value.trim().toLowerCase();
+      const rows = cands.filter((c) => (!fs.value || c.status === fs.value) && (!q || c.repo.toLowerCase().includes(q)));
+      document.getElementById("count").textContent = `${rows.length} of ${cands.length}`;
+      CC.table(document.getElementById("cands"), rows, [
+        { label: "#", num: true, key: "rank" },
+        { label: "Skill", render: (c) => `<strong>${CC.esc(c.skill_name)}</strong><span class="breakdown">${CC.esc(c.repo)} · ${CC.esc(c.category)}</span>` },
+        { label: "Stars (7d)", num: true, render: (c) => `+${CC.num(c.stars_7d)}` },
+        { label: "X (7d)", num: true, render: (c) => CC.num(c.x_mentions_7d) },
+        { label: "Predicted installs", num: true, render: (c) => CC.num(c.predicted_installs_30d) },
+        { label: "Gates", render: gatePills },
+        { label: "Status", render: (c) => CC.pill(c.status) },
+        { label: "Next step", render: (c) => `<span class="small">${CC.esc(c.next_step)}</span>` },
+      ], { rowKey: (c) => c.skill_name, selected: (c) => c === current, onClick: select });
+    }
+    fs.addEventListener("input", renderTable); fq.addEventListener("input", renderTable);
+
+    // model
+    const M = D.model;
+    document.getElementById("model-lede").textContent = `Fitted on ${M.n_train + M.n_test} skills we ported before, using their signals on port day.`;
+    const s7 = M.coefficients.find((r) => r.feature === "log_stars_7d");
+    document.getElementById("el").textContent = (s7.coef * 10).toFixed(0);
+    CC.table(document.getElementById("coefs"), M.coefficients.filter((r) => r.feature !== "Intercept"), [
+      { label: "Signal", key: "label" }, { label: "Coefficient", num: true, render: (r) => r.coef.toFixed(2) },
+      { label: "Std. error", num: true, render: (r) => r.se.toFixed(2) }, { label: "z", num: true, render: (r) => r.z.toFixed(1) },
+    ]);
+    document.getElementById("model-kpis").innerHTML =
+      CC.kpi("Model rank correlation", M.holdout_spearman.toFixed(2), `${M.n_test} held-out ports · R² ${M.holdout_r2.toFixed(2)}`) +
+      CC.kpi("Total stars rank correlation", M.baseline_spearman.toFixed(2), "the usual “most stars” list");
+
+    // cadence
+    const past = D.calendar.past_weeks, plan = D.calendar.plan;
+    const planWeeks = {};
+    plan.forEach((p) => { planWeeks[p.launch_on] = (planWeeks[p.launch_on] || []).concat(p.skill_name); });
+    CC.plot("cadence", [
+      { type: "bar", name: "Launched", x: past.map((w) => w.week_ending), y: past.map((w) => w.launches), marker: { color: CC.css("--out") },
+        hovertemplate: "Week ending %{x}<br>%{y} launches<extra></extra>" },
+      { type: "bar", name: "Planned", x: Object.keys(planWeeks), y: Object.values(planWeeks).map((v) => v.length),
+        text: Object.values(planWeeks).map((v) => v.join(", ")), textposition: "none", marker: { color: CC.css("--accent") },
+        hovertemplate: "Launch %{x}<br>%{text}<extra></extra>" },
+    ], { xaxis: { type: "category" }, yaxis: { title: "Launches", dtick: 1 } });
+    document.getElementById("plan").innerHTML = `<ul class="plan-list small">${Object.entries(planWeeks).map(([d, v]) =>
+      `<li><strong>${CC.date(d)}:</strong> ${v.map((n) => `${CC.esc(n)} ${CC.pill(by[n].status)}`).join(", ")}</li>`).join("")}</ul>`;
+
+    renderSelected();
+    renderTable();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listing Standard</title>
+  <meta name="description" content="Marketplace listing template, catalog audit, rewrites of high-traffic listings and the pre-launch checklist.">
+  <link rel="stylesheet" href="assets/style.css?v=2026101601">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Connector &amp; Skills Command Center</a>
+      <nav aria-label="Main" id="nav"></nav>
+    </div>
+  </header>
+
+  <main>
+    <span class="responsibility">3 · Marketplace listing consistency</span>
+    <h1>Listing standard</h1>
+    <p class="lede">One template for every connector, skill and plugin listing, written as eight checks a script can run. Every listing is audited against it, the most-viewed broken listings are rewritten first, and every new release must pass all eight before launch.</p>
+
+    <div class="grid grid-metrics" id="kpis"></div>
+
+    <h2>The template</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="table-wrap"><table>
+          <thead><tr><th>Field</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>Title</td><td>Product name only, up to 30 characters. No "Connector", "MCP", "Integration", "Plugin", "Skill", no superlatives, no all caps.</td></tr>
+            <tr><td>One-line summary</td><td>One sentence, up to 90 characters, ending in a period. Leads with what the user can do, not with the company's name.</td></tr>
+            <tr><td>Capabilities</td><td>3–5 bullets, each starting with a capitalized verb, up to 60 characters.</td></tr>
+            <tr><td>Permissions</td><td>Always stated (e.g. "Read", "Read and write (pages you can already access)").</td></tr>
+            <tr><td>Required connectors</td><td>Always stated; "None" when there are none.</td></tr>
+            <tr><td>"Try asking"</td><td>3+ prompts a user could paste, 15–80 characters each.</td></tr>
+            <tr><td>Author</td><td>Always shown.</td></tr>
+            <tr><td>Attribution</td><td>Ports name the source repo, the creator's handle and the license: "Ported from owner/repo by @creator (MIT)".</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="card">
+        <h3>Where the catalog falls short</h3>
+        <div id="bycheck" style="height:300px" role="img" aria-label="Bar chart of the share of listings passing each of the eight template checks."></div>
+        <p class="howto"><strong>How to read this:</strong> share of all listings that pass each check today. The shortest bars are where a sweep pays off most.</p>
+      </div>
+    </div>
+
+    <h2>Rewrites of high-traffic listings</h2>
+    <div id="rewrites"></div>
+
+    <h2>Top-priority listings</h2>
+    <div class="table-wrap" id="top"></div>
+    <p class="howto"><strong>How to read this:</strong> priority = monthly views × share of checks failed, so a popular, broken listing comes first. The top <span id="ntop"></span> are rewritten at <span id="rpw"></span> a week; the rest are fixed in the next catalog sweep.</p>
+
+    <h2>Every listing</h2>
+    <div class="controls">
+      <label>Type <select id="f-kind"><option value="">All</option><option value="connector">Connector</option><option value="skill">Skill</option><option value="plugin">Plugin</option></select></label>
+      <label>Status <select id="f-status"><option value="">All</option><option>Rewritten</option><option>Queued for rewrite</option><option>Fix in next sweep</option><option>Meets template</option></select></label>
+      <label><input type="search" id="f-q" placeholder="Search listing" aria-label="Search listing"></label>
+      <span class="small muted" id="count"></span>
+    </div>
+    <div class="table-wrap" id="all"></div>
+
+    <h2>Pre-launch checklist</h2>
+    <div class="card">
+      <p class="small" style="margin:0">The same eight checks run on every new release before it ships, so new listings never add to the cleanup. This week: the <a href="skills.html?skill=sketchwright#selected">sketchwright</a> listing and the draft listing in the <a href="intake.html?tool=brightpath-analytics#selected">Brightpath Analytics</a> build brief both pass 8/8. In the GitHub export workflow, a failing check blocks the merge.</p>
+    </div>
+  </main>
+
+  <script src="assets/common.js?v=2026101601"></script>
+  <script>
+  (async () => {
+    CC.init("catalog.html");
+    const D = await CC.load("catalog");
+    const L = D.listings, n = D.n_checks, sc = D.status_counts;
+    document.getElementById("ntop").textContent = D.config.top_priority;
+    document.getElementById("rpw").textContent = D.config.rewrites_per_week;
+    const meets = L.filter((l) => l.score === n).length;
+    const top = L.filter((l) => l.top_priority);
+    document.getElementById("kpis").innerHTML = [
+      CC.kpi("Listings audited", `${L.length}/${L.length}`, "connectors, skills, plugins"),
+      CC.kpi("Meet the template", meets, `${CC.pct(meets / L.length)} of the catalog`),
+      CC.kpi("Average checks passed", (L.reduce((s, l) => s + l.score, 0) / L.length).toFixed(1) + `/${n}`, "before rewrites"),
+      CC.kpi("Top-priority rewritten", `${top.filter((l) => l.status === "Rewritten").length}/${top.length}`, `${sc["Queued for rewrite"] || 0} queued`),
+    ].join("");
+
+    const names = D.check_names, rates = names.map((k) => D.pass_rate_by_check[k]);
+    CC.plot("bycheck", [{ type: "bar", orientation: "h", y: names, x: rates, marker: { color: CC.css("--accent") },
+      text: rates.map((r) => CC.pct(r)), textposition: "outside", cliponaxis: false, hovertemplate: "%{y}<br>%{x:.0%} pass<extra></extra>" }],
+      { margin: { l: 250, r: 40, t: 4, b: 28 }, xaxis: { tickformat: ".0%", range: [0, 1.05] }, yaxis: { autorange: "reversed", automargin: true } });
+
+    // before / after
+    const byId = Object.fromEntries(L.map((l) => [l.listing_id, l]));
+    document.getElementById("rewrites").innerHTML = Object.values(D.rewrites).map((a) => {
+      const b = byId[a.listing_id];
+      return `<div class="card" style="margin-bottom:12px">
+        <h3>${CC.esc(b.name)} <span class="small muted">${CC.esc(b.kind)} · ${CC.num(b.monthly_views)} views a month</span></h3>
+        <div class="grid grid-2">
+          <div><p class="small" style="margin:0 0 6px"><strong>Before:</strong> ${b.score}/${n} checks</p>${CC.listingCard(b)}${CC.checklist(b.checks)}</div>
+          <div><p class="small" style="margin:0 0 6px"><strong>After:</strong> ${a.score_after}/${n} checks</p>${CC.listingCard(a.after)}${CC.checklist(a.checks_after)}</div>
+        </div></div>`;
+    }).join("");
+
+    const cols = [
+      { label: "Listing", render: (l) => `<strong>${CC.esc(l.title || l.name)}</strong><span class="breakdown">${CC.esc(l.kind)} · ${CC.esc(l.listing_id)}</span>` },
+      { label: "Views / month", num: true, render: (l) => CC.num(l.monthly_views) },
+      { label: "Checks", num: true, render: (l) => `${l.score}/${n}` },
+      { label: "Failing", render: (l) => (l.failing.length ? `<ul class="reasons">${l.failing.map((f) => `<li>${CC.esc(f)}</li>`).join("")}</ul>` : "–") },
+      { label: "Status", render: (l) => CC.pill(l.status) + (l.rewrite_week ? `<span class="breakdown">week ${l.rewrite_week}</span>` : "") },
+    ];
+    CC.table(document.getElementById("top"), top.sort((a, b) => b.priority - a.priority), cols);
+
+    const fk = document.getElementById("f-kind"), fs = document.getElementById("f-status"), fq = document.getElementById("f-q");
+    function renderAll() {
+      const q = fq.value.trim().toLowerCase();
+      const rows = L.filter((l) => (!fk.value || l.kind === fk.value) && (!fs.value || l.status === fs.value)
+        && (!q || `${l.title} ${l.name}`.toLowerCase().includes(q))).sort((a, b) => b.priority - a.priority);
+      document.getElementById("count").textContent = `${rows.length} of ${L.length}`;
+      CC.table(document.getElementById("all"), rows, cols);
+    }
+    [fk, fs, fq].forEach((el) => el.addEventListener("input", renderAll));
+    renderAll();
+  })();
+  </script>
+</body>
+</html>
