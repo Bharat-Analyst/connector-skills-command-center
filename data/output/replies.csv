@@ -1,0 +1,343 @@
+request_id,channel,requester_org,issue_id,decision,reply
+F-0001,Form,Oakum Systems,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0001,Slack,Kestrel Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0001,Direct ask,Driftwood Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0002,Form,Kestrel Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0002,Direct ask,Driftwood Media,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0003,Form,Upland Retail,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0002,Slack,Lumen Systems,,Already live,Good news: Quarry Boards is already in the marketplace. You can enable it today from the connectors page.
+S-0003,Slack,Tidewater Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0004,Form,Pinecrest Co,,Already live,Good news: Fernhill HR is already in the marketplace. You can enable it today from the connectors page.
+F-0005,Form,Prism Labs,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0003,Direct ask,Acme Media,,Already live,Good news: Elmstead Notes is already in the marketplace. You can enable it today from the connectors page.
+S-0004,Slack,Elmstead Labs,CON-103,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-103."
+F-0006,Form,Alder Media,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0005,Slack,Gullwing Systems,CON-195,Decline,Thanks for asking. We're not building Maple Metrics right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-195 if this changes.
+S-0006,Slack,Kestrel Labs,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0007,Form,Prism Group,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0007,Slack,Zephyr Co,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0008,Form,Fernhill Labs,,Already live,Good news: Foxglove Logs is already in the marketplace. You can enable it today from the connectors page.
+S-0008,Slack,Harbor Media,CON-115,Decline,Thanks for asking. We're not building Vantage Wiki right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-115 if this changes.
+D-0004,Direct ask,Upland Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0009,Slack,Elmstead Health,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0009,Form,Saltmarsh Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0010,Slack,Nimbus Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0010,Form,Harbor Group,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+S-0011,Slack,Indigo Health,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0012,Slack,Prism Systems,CON-171,Partner,"Thanks for asking. Driftwood Wiki already runs its own MCP server, so we're working with their team to list it. Tracking in CON-171."
+D-0005,Direct ask,Cinder Bank,CON-118,Decline,Thanks for asking. We're not building Ember Projects right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-118 if this changes.
+S-0013,Slack,Heron Labs,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0011,Form,Acme Partners,,Already live,Good news: Harbor Payments is already in the marketplace. You can enable it today from the connectors page.
+S-0014,Slack,Indigo Media,CON-178,Partner,"Thanks for asking. Granite Vault already runs its own MCP server, so we're working with their team to list it. Tracking in CON-178."
+D-0006,Direct ask,Driftwood Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0007,Direct ask,Harbor Systems,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0015,Slack,Pinecrest Works,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0016,Slack,Driftwood Co,CON-181,Build,Thanks for asking. Harbor Data is approved to build (priority: Medium). Tracking in CON-181; we'll update this thread when it ships.
+F-0012,Form,Elmstead Works,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0017,Slack,Foxglove Group,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+F-0013,Form,Upland Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0008,Direct ask,Cinder Health,,Already live,Good news: Pinecrest People is already in the marketplace. You can enable it today from the connectors page.
+F-0014,Form,Elmstead Retail,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0018,Slack,Lattice Co,,Already live,Good news: Saltmarsh Data is already in the marketplace. You can enable it today from the connectors page.
+F-0015,Form,Acme Labs,CON-131,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-131."
+F-0016,Form,Cinder Bank,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+S-0019,Slack,Juniper Media,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0020,Slack,Tidewater Systems,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0017,Form,Bluefin Labs,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0009,Direct ask,Basalt Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0018,Form,Granite Systems,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0019,Form,Redwood Health,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+D-0010,Direct ask,Dovetail Health,CON-180,Decline,Thanks for asking. We're not building Gullwing Payroll right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-180 if this changes.
+D-0011,Direct ask,Indigo Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0021,Slack,Zephyr Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0012,Direct ask,Foxglove Retail,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0020,Form,Meridian Bank,CON-900,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-900."
+F-0021,Form,Northgate Group,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0022,Form,Vantage Works,,Already live,Good news: Bluefin HR is already in the marketplace. You can enable it today from the connectors page.
+F-0023,Form,Pinecrest Group,CON-202,Decline,Thanks for asking. We're not building Orchard Tasks right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-202 if this changes.
+F-0024,Form,Tidewater Health,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0025,Form,Bluefin Bank,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0013,Direct ask,Jetty Group,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0022,Slack,Lattice Retail,CON-122,Decline,Thanks for asking. We're not building Prism Data right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-122 if this changes.
+S-0023,Slack,Dovetail Labs,,Already live,Good news: Elmstead Notes is already in the marketplace. You can enable it today from the connectors page.
+F-0026,Form,Dovetail Co,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0024,Slack,Cinder Retail,CON-901,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-901."
+S-0025,Slack,Vantage Works,CON-179,Partner,"Thanks for asking. Gullwing Desk already runs its own MCP server, so we're working with their team to list it. Tracking in CON-179."
+F-0027,Form,Pinecrest Co,CON-167,Decline,Thanks for asking. We're not building Basalt Metrics right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-167 if this changes.
+S-0026,Slack,Meridian Group,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0028,Form,Upland Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0014,Direct ask,Northgate Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0015,Direct ask,Lattice Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0029,Form,Quarry Co,,Already live,Good news: Bluefin HR is already in the marketplace. You can enable it today from the connectors page.
+F-0030,Form,Quarry Retail,CON-176,Partner,"Thanks for asking. Fernhill Sync already runs its own MCP server, so we're working with their team to list it. Tracking in CON-176."
+F-0031,Form,Lumen Labs,CON-209,Partner,"Thanks for asking. Willow Logs already runs its own MCP server, so we're working with their team to list it. Tracking in CON-209."
+S-0027,Slack,Willow Group,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0032,Form,Alder Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0033,Form,Cinder Bank,CON-181,Build,Thanks for asking. Harbor Data is approved to build (priority: Medium). Tracking in CON-181; we'll update this thread when it ships.
+D-0016,Direct ask,Orchard Retail,CON-143,Decline,Thanks for asking. We're not building Upland Campaigns right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-143 if this changes.
+F-0034,Form,Cinder Partners,CON-189,Decline,Thanks for asking. We're not building Juniper Deploy right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-189 if this changes.
+S-0028,Slack,Pinecrest Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0035,Form,Vantage Co,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0036,Form,Meridian Co,CON-149,Build,Thanks for asking. Cinder Billing is approved to build (priority: High). Tracking in CON-149; we'll update this thread when it ships.
+D-0017,Direct ask,Heron Media,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0037,Form,Nimbus Group,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0029,Slack,Bluefin Systems,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0018,Direct ask,Tidewater Health,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0038,Form,Willow Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0019,Direct ask,Meridian Media,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+S-0030,Slack,Redwood Partners,,Already live,Good news: Zephyr Helpdesk is already in the marketplace. You can enable it today from the connectors page.
+S-0031,Slack,Kiln Co,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0039,Form,Kestrel Co,,Already live,Good news: Cobalt Warehouse is already in the marketplace. You can enable it today from the connectors page.
+F-0040,Form,Willow Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0041,Form,Basalt Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0020,Direct ask,Jetty Works,CON-204,Decline,Thanks for asking. We're not building Redwood Canvas right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-204 if this changes.
+D-0021,Direct ask,Ember Labs,,Already live,Good news: Pinecrest People is already in the marketplace. You can enable it today from the connectors page.
+F-0042,Form,Maple Retail,CON-173,Decline,Thanks for asking. We're not building Ember Payments right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-173 if this changes.
+F-0043,Form,Kiln Co,CON-132,Partner,"Thanks for asking. Northgate Billing already runs its own MCP server, so we're working with their team to list it. Tracking in CON-132."
+F-0044,Form,Harbor Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0022,Direct ask,Saltmarsh Retail,CON-902,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-902."
+F-0045,Form,Willow Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0032,Slack,Pinecrest Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0023,Direct ask,Kestrel Labs,CON-143,Decline,Thanks for asking. We're not building Upland Campaigns right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-143 if this changes.
+F-0046,Form,Alder Systems,CON-193,Partner,"Thanks for asking. Larkspur Payments already runs its own MCP server, so we're working with their team to list it. Tracking in CON-193."
+F-0047,Form,Cobalt Partners,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0024,Direct ask,Gullwing Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0025,Direct ask,Ironleaf Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0026,Direct ask,Foxglove Co,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0033,Slack,Redwood Health,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0048,Form,Heron Media,,Already live,Good news: Saltmarsh Desk is already in the marketplace. You can enable it today from the connectors page.
+F-0049,Form,Foxglove Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0050,Form,Maple Co,CON-122,Decline,Thanks for asking. We're not building Prism Data right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-122 if this changes.
+F-0051,Form,Heron Group,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0027,Direct ask,Saltmarsh Co,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0028,Direct ask,Ember Bank,CON-173,Decline,Thanks for asking. We're not building Ember Payments right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-173 if this changes.
+F-0052,Form,Foxglove Retail,,Already live,Good news: Elmstead Notes is already in the marketplace. You can enable it today from the connectors page.
+F-0053,Form,Granite Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0054,Form,Bluefin Group,,Already live,Good news: Foxglove Identity is already in the marketplace. You can enable it today from the connectors page.
+S-0034,Slack,Redwood Bank,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0035,Slack,Willow Partners,CON-201,Build,Thanks for asking. Orchard People is approved to build (priority: Medium). Tracking in CON-201; we'll update this thread when it ships.
+F-0055,Form,Prism Partners,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+D-0029,Direct ask,Tidewater Systems,,Already live,Good news: Granite Sync is already in the marketplace. You can enable it today from the connectors page.
+D-0030,Direct ask,Gullwing Group,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+S-0036,Slack,Oakum Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0037,Slack,Lattice Works,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0056,Form,Upland Partners,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0057,Form,Kestrel Retail,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+S-0038,Slack,Cinder Partners,,Already live,Good news: Gullwing Canvas is already in the marketplace. You can enable it today from the connectors page.
+S-0039,Slack,Lumen Bank,CON-184,Decline,Thanks for asking. We're not building Heron People right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-184 if this changes.
+F-0058,Form,Juniper Co,,Already live,Good news: Prism Analytics is already in the marketplace. You can enable it today from the connectors page.
+F-0059,Form,Cinder Co,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0040,Slack,Northgate Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0060,Form,Juniper Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0061,Form,Alder Co,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0062,Form,Quarry Systems,CON-183,Decline,Thanks for asking. We're not building Heron Pay right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-183 if this changes.
+S-0041,Slack,Tidewater Retail,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0063,Form,Acme Health,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0064,Form,Basalt Group,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+S-0042,Slack,Upland Bank,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0065,Form,Saltmarsh Retail,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0031,Direct ask,Granite Works,CON-170,Decline,Thanks for asking. We're not building Dovetail Campaigns right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-170 if this changes.
+F-0066,Form,Bluefin Systems,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0032,Direct ask,Bluefin Retail,CON-179,Partner,"Thanks for asking. Gullwing Desk already runs its own MCP server, so we're working with their team to list it. Tracking in CON-179."
+S-0043,Slack,Ember Media,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0044,Slack,Upland Health,CON-191,Decline,Thanks for asking. We're not building Kiln Helpdesk right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-191 if this changes.
+F-0067,Form,Cinder Media,,Already live,Good news: Oakum Warehouse is already in the marketplace. You can enable it today from the connectors page.
+F-0068,Form,Juniper Systems,,Already live,Good news: Foxglove Logs is already in the marketplace. You can enable it today from the connectors page.
+S-0045,Slack,Kestrel Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0033,Direct ask,Meridian Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0046,Slack,Nimbus Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0069,Form,Dovetail Labs,CON-169,Decline,Thanks for asking. We're not building Cinder Notes right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-169 if this changes.
+F-0070,Form,Vantage Co,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0071,Form,Tidewater Media,,Already live,Good news: Acme Wiki is already in the marketplace. You can enable it today from the connectors page.
+F-0072,Form,Kestrel Group,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0073,Form,Cinder Media,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0047,Slack,Saltmarsh Labs,CON-106,Build,Thanks for asking. Nimbus Analytics is approved to build (priority: High). Tracking in CON-106; we'll update this thread when it ships.
+D-0034,Direct ask,Ironleaf Systems,,Already live,Good news: Lumen Analytics is already in the marketplace. You can enable it today from the connectors page.
+S-0048,Slack,Driftwood Bank,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0074,Form,Willow Works,CON-199,Decline,Thanks for asking. We're not building Northgate Boards right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-199 if this changes.
+F-0075,Form,Indigo Media,CON-187,Decline,Thanks for asking. We're not building Jetty Helpdesk right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-187 if this changes.
+D-0035,Direct ask,Tidewater Bank,CON-903,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-903."
+F-0076,Form,Juniper Retail,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0049,Slack,Ember Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0077,Form,Elmstead Health,,Already live,Good news: Bluefin HR is already in the marketplace. You can enable it today from the connectors page.
+S-0050,Slack,Dovetail Health,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0078,Form,Heron Group,CON-163,Decline,Thanks for asking. We're not building Acme Billing right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-163 if this changes.
+F-0079,Form,Kestrel Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0080,Form,Indigo Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0051,Slack,Nimbus Systems,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0081,Form,Oakum Partners,CON-171,Partner,"Thanks for asking. Driftwood Wiki already runs its own MCP server, so we're working with their team to list it. Tracking in CON-171."
+D-0036,Direct ask,Fernhill Labs,CON-122,Decline,Thanks for asking. We're not building Prism Data right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-122 if this changes.
+F-0082,Form,Nimbus Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0052,Slack,Saltmarsh Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0083,Form,Northgate Co,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0084,Form,Meridian Media,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0085,Form,Fernhill Group,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0086,Form,Pinecrest Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0087,Form,Indigo Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0088,Form,Harbor Partners,CON-145,Decline,Thanks for asking. We're not building Tidewater Payroll right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-145 if this changes.
+F-0089,Form,Cobalt Bank,,Already live,Good news: Meridian Mail is already in the marketplace. You can enable it today from the connectors page.
+S-0053,Slack,Vantage Systems,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0054,Slack,Indigo Media,CON-200,Decline,Thanks for asking. We're not building Northgate Shield right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-200 if this changes.
+D-0037,Direct ask,Lumen Retail,CON-193,Partner,"Thanks for asking. Larkspur Payments already runs its own MCP server, so we're working with their team to list it. Tracking in CON-193."
+D-0038,Direct ask,Redwood Systems,CON-129,Build,Thanks for asking. Willow Insights is approved to build (priority: Medium). Tracking in CON-129; we'll update this thread when it ships.
+S-0055,Slack,Meridian Bank,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0090,Form,Ironleaf Health,CON-166,Decline,Thanks for asking. We're not building Alder Deploy right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-166 if this changes.
+S-0056,Slack,Lattice Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0091,Form,Ironleaf Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0092,Form,Saltmarsh Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0093,Form,Bluefin Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0039,Direct ask,Jetty Health,,Already live,Good news: Bluefin HR is already in the marketplace. You can enable it today from the connectors page.
+S-0057,Slack,Cobalt Systems,CON-143,Decline,Thanks for asking. We're not building Upland Campaigns right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-143 if this changes.
+S-0058,Slack,Heron Media,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0040,Direct ask,Granite Health,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0094,Form,Quarry Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0059,Slack,Fernhill Co,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0060,Slack,Meridian Systems,,Already live,Good news: Bluefin HR is already in the marketplace. You can enable it today from the connectors page.
+F-0095,Form,Granite Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0041,Direct ask,Bluefin Retail,CON-181,Build,Thanks for asking. Harbor Data is approved to build (priority: Medium). Tracking in CON-181; we'll update this thread when it ships.
+D-0042,Direct ask,Saltmarsh Retail,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0043,Direct ask,Foxglove Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0061,Slack,Vantage Systems,,Already live,Good news: Lumen Analytics is already in the marketplace. You can enable it today from the connectors page.
+F-0096,Form,Acme Retail,,Already live,Good news: Vantage Mail is already in the marketplace. You can enable it today from the connectors page.
+S-0062,Slack,Alder Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0063,Slack,Dovetail Media,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0097,Form,Harbor Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0064,Slack,Ironleaf Labs,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0098,Form,Bluefin Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0099,Form,Foxglove Labs,CON-182,Build,Thanks for asking. Harbor Vault is approved to build (priority: Medium). Tracking in CON-182; we'll update this thread when it ships.
+S-0065,Slack,Maple Co,CON-123,Partner,"Thanks for asking. Indigo Insights already runs its own MCP server, so we're working with their team to list it. Tracking in CON-123."
+F-0100,Form,Jetty Works,CON-168,Build,Thanks for asking. Brightpath Analytics is approved to build (priority: Urgent). Tracking in CON-168; we'll update this thread when it ships.
+F-0101,Form,Juniper Co,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+D-0044,Direct ask,Nimbus Retail,CON-192,Decline,Thanks for asking. We're not building Kiln Vault right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-192 if this changes.
+F-0102,Form,Pinecrest Bank,CON-119,Decline,Thanks for asking. We're not building Oakum Mail right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-119 if this changes.
+S-0066,Slack,Meridian Retail,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0103,Form,Pinecrest Co,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0104,Form,Redwood Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0067,Slack,Ironleaf Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0068,Slack,Foxglove Labs,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0069,Slack,Meridian Works,CON-904,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-904."
+F-0105,Form,Northgate Health,CON-119,Decline,Thanks for asking. We're not building Oakum Mail right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-119 if this changes.
+S-0070,Slack,Juniper Retail,CON-174,Decline,Thanks for asking. We're not building Ember Studio right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-174 if this changes.
+D-0045,Direct ask,Granite Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0071,Slack,Jetty Bank,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0106,Form,Alder Bank,CON-109,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-109."
+S-0072,Slack,Zephyr Group,CON-168,Build,Thanks for asking. Brightpath Analytics is approved to build (priority: Urgent). Tracking in CON-168; we'll update this thread when it ships.
+F-0107,Form,Willow Group,CON-905,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-905."
+D-0046,Direct ask,Kiln Group,,Already live,Good news: Elmstead Notes is already in the marketplace. You can enable it today from the connectors page.
+F-0108,Form,Orchard Health,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0073,Slack,Jetty Bank,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0074,Slack,Northgate Health,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0109,Form,Cinder Group,CON-195,Decline,Thanks for asking. We're not building Maple Metrics right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-195 if this changes.
+D-0047,Direct ask,Orchard Health,CON-204,Decline,Thanks for asking. We're not building Redwood Canvas right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-204 if this changes.
+S-0075,Slack,Saltmarsh Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0110,Form,Alder Retail,,Already live,Good news: Oakum Desk is already in the marketplace. You can enable it today from the connectors page.
+S-0076,Slack,Kestrel Media,CON-193,Partner,"Thanks for asking. Larkspur Payments already runs its own MCP server, so we're working with their team to list it. Tracking in CON-193."
+F-0111,Form,Acme Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0112,Form,Willow Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0113,Form,Nimbus Works,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0077,Slack,Lattice Bank,,Already live,Good news: Saltmarsh Data is already in the marketplace. You can enable it today from the connectors page.
+F-0114,Form,Ironleaf Partners,CON-115,Decline,Thanks for asking. We're not building Vantage Wiki right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-115 if this changes.
+S-0078,Slack,Ember Labs,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0115,Form,Tidewater Partners,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0079,Slack,Kiln Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0048,Direct ask,Ironleaf Works,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0080,Slack,Prism Partners,CON-194,Partner,"Thanks for asking. Lattice Analytics already runs its own MCP server, so we're working with their team to list it. Tracking in CON-194."
+D-0049,Direct ask,Gullwing Co,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+D-0050,Direct ask,Acme Co,,Already live,Good news: Quarry Boards is already in the marketplace. You can enable it today from the connectors page.
+F-0116,Form,Upland Retail,CON-168,Build,Thanks for asking. Brightpath Analytics is approved to build (priority: Urgent). Tracking in CON-168; we'll update this thread when it ships.
+S-0081,Slack,Saltmarsh Labs,CON-198,Decline,Thanks for asking. We're not building Nimbus People right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-198 if this changes.
+F-0117,Form,Jetty Labs,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+S-0082,Slack,Driftwood Systems,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0083,Slack,Redwood Co,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0118,Form,Cinder Group,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0084,Slack,Cinder Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0085,Slack,Northgate Systems,CON-164,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-164."
+F-0119,Form,Oakum Systems,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0086,Slack,Driftwood Group,CON-131,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-131."
+F-0120,Form,Bluefin Bank,,Already live,Good news: Driftwood Analytics is already in the marketplace. You can enable it today from the connectors page.
+D-0051,Direct ask,Redwood Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0087,Slack,Harbor Group,CON-182,Build,Thanks for asking. Harbor Vault is approved to build (priority: Medium). Tracking in CON-182; we'll update this thread when it ships.
+F-0121,Form,Dovetail Bank,,Already live,Good news: Elmstead Pay is already in the marketplace. You can enable it today from the connectors page.
+F-0122,Form,Dovetail Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0052,Direct ask,Vantage Labs,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0088,Slack,Fernhill Works,,Already live,Good news: Cinder Projects is already in the marketplace. You can enable it today from the connectors page.
+S-0089,Slack,Harbor Partners,CON-182,Build,Thanks for asking. Harbor Vault is approved to build (priority: Medium). Tracking in CON-182; we'll update this thread when it ships.
+F-0123,Form,Granite Works,CON-185,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-185."
+F-0124,Form,Kiln Bank,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0125,Form,Redwood Systems,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0090,Slack,Basalt Partners,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0091,Slack,Juniper Co,CON-171,Partner,"Thanks for asking. Driftwood Wiki already runs its own MCP server, so we're working with their team to list it. Tracking in CON-171."
+D-0053,Direct ask,Kiln Partners,CON-168,Build,Thanks for asking. Brightpath Analytics is approved to build (priority: Urgent). Tracking in CON-168; we'll update this thread when it ships.
+F-0126,Form,Redwood Systems,,Already live,Good news: Elmstead Notes is already in the marketplace. You can enable it today from the connectors page.
+D-0054,Direct ask,Prism Health,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0127,Form,Upland Co,CON-182,Build,Thanks for asking. Harbor Vault is approved to build (priority: Medium). Tracking in CON-182; we'll update this thread when it ships.
+D-0055,Direct ask,Kiln Labs,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0128,Form,Harbor Co,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0129,Form,Elmstead Labs,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0130,Form,Alder Systems,CON-197,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-197."
+F-0131,Form,Nimbus Health,,Already live,Good news: Acme Insights is already in the marketplace. You can enable it today from the connectors page.
+F-0132,Form,Bluefin Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0133,Form,Pinecrest Media,,Already live,Good news: Acme Wiki is already in the marketplace. You can enable it today from the connectors page.
+F-0134,Form,Elmstead Co,CON-906,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-906."
+F-0135,Form,Nimbus Group,,Already live,Good news: Pinecrest CI is already in the marketplace. You can enable it today from the connectors page.
+F-0136,Form,Juniper Retail,CON-210,Build,Thanks for asking. Zephyr Analytics is approved to build (priority: Medium). Tracking in CON-210; we'll update this thread when it ships.
+S-0092,Slack,Alder Labs,CON-183,Decline,Thanks for asking. We're not building Heron Pay right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-183 if this changes.
+F-0137,Form,Pinecrest Group,CON-207,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-207."
+F-0138,Form,Saltmarsh Co,CON-149,Build,Thanks for asking. Cinder Billing is approved to build (priority: High). Tracking in CON-149; we'll update this thread when it ships.
+F-0139,Form,Basalt Co,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0093,Slack,Zephyr Works,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0094,Slack,Nimbus Health,,Already live,Good news: Lumen Payments is already in the marketplace. You can enable it today from the connectors page.
+F-0140,Form,Basalt Partners,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0095,Slack,Quarry Works,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0096,Slack,Willow Partners,,Already live,Good news: Lumen Social is already in the marketplace. You can enable it today from the connectors page.
+S-0097,Slack,Juniper Partners,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+F-0141,Form,Oakum Works,CON-193,Partner,"Thanks for asking. Larkspur Payments already runs its own MCP server, so we're working with their team to list it. Tracking in CON-193."
+F-0142,Form,Quarry Co,CON-197,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-197."
+F-0143,Form,Oakum Health,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0098,Slack,Juniper Works,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0144,Form,Harbor Group,CON-187,Decline,Thanks for asking. We're not building Jetty Helpdesk right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-187 if this changes.
+F-0145,Form,Fernhill Labs,CON-172,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-172."
+F-0146,Form,Cinder Media,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0147,Form,Fernhill Labs,CON-171,Partner,"Thanks for asking. Driftwood Wiki already runs its own MCP server, so we're working with their team to list it. Tracking in CON-171."
+S-0099,Slack,Driftwood Retail,CON-168,Build,Thanks for asking. Brightpath Analytics is approved to build (priority: Urgent). Tracking in CON-168; we'll update this thread when it ships.
+D-0056,Direct ask,Alder Health,CON-171,Partner,"Thanks for asking. Driftwood Wiki already runs its own MCP server, so we're working with their team to list it. Tracking in CON-171."
+F-0148,Form,Alder Labs,CON-175,Decline,Thanks for asking. We're not building Fernhill Mail right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-175 if this changes.
+F-0149,Form,Cobalt Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+D-0057,Direct ask,Maple Co,CON-177,Decline,Thanks for asking. We're not building Granite Canvas right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-177 if this changes.
+S-0100,Slack,Jetty Health,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0150,Form,Maple Bank,CON-196,Build,Thanks for asking. Maple Social is approved to build (priority: High). Tracking in CON-196; we'll update this thread when it ships.
+F-0151,Form,Heron Co,CON-203,Decline,Thanks for asking. We're not building Pebblework Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-203 if this changes.
+F-0152,Form,Elmstead Partners,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0101,Slack,Prism Bank,CON-210,Build,Thanks for asking. Zephyr Analytics is approved to build (priority: Medium). Tracking in CON-210; we'll update this thread when it ships.
+F-0153,Form,Bluefin Media,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+F-0154,Form,Saltmarsh Media,,Already live,Good news: Bluefin HR is already in the marketplace. You can enable it today from the connectors page.
+F-0155,Form,Redwood Retail,CON-165,Build,Thanks for asking. Alder Billing is approved to build (priority: Urgent). Tracking in CON-165; we'll update this thread when it ships.
+S-0102,Slack,Bluefin Retail,CON-182,Build,Thanks for asking. Harbor Vault is approved to build (priority: Medium). Tracking in CON-182; we'll update this thread when it ships.
+S-0103,Slack,Nimbus Labs,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+S-0104,Slack,Elmstead Bank,,Already live,Good news: Cobalt CI is already in the marketplace. You can enable it today from the connectors page.
+F-0156,Form,Maple Labs,CON-168,Build,Thanks for asking. Brightpath Analytics is approved to build (priority: Urgent). Tracking in CON-168; we'll update this thread when it ships.
+S-0105,Slack,Foxglove Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0157,Form,Indigo Group,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0106,Slack,Upland Group,CON-142,Build,Thanks for asking. Tidewater People is approved to build (priority: Medium). Tracking in CON-142; we'll update this thread when it ships.
+D-0058,Direct ask,Ironleaf Media,,Already live,Good news: Acme Wiki is already in the marketplace. You can enable it today from the connectors page.
+S-0107,Slack,Granite Labs,,Already live,Good news: Pinecrest People is already in the marketplace. You can enable it today from the connectors page.
+F-0158,Form,Upland Health,,Already live,Good news: Gullwing Canvas is already in the marketplace. You can enable it today from the connectors page.
+D-0059,Direct ask,Kiln Partners,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0108,Slack,Ironleaf Retail,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+S-0109,Slack,Saltmarsh Works,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+F-0159,Form,Lumen Retail,CON-186,Decline,Thanks for asking. We're not building Jetty HR right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-186 if this changes.
+F-0160,Form,Meridian Partners,CON-200,Decline,Thanks for asking. We're not building Northgate Shield right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-200 if this changes.
+S-0110,Slack,Oakum Partners,,Already live,Good news: Lumen Analytics is already in the marketplace. You can enable it today from the connectors page.
+F-0161,Form,Indigo Co,CON-208,Partner,"Thanks for asking. Willow Deploy already runs its own MCP server, so we're working with their team to list it. Tracking in CON-208."
+S-0111,Slack,Harbor Labs,CON-907,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-907."
+F-0162,Form,Saltmarsh Bank,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.
+S-0112,Slack,Maple Bank,CON-190,Need info,"Thanks for asking. Before we can triage this, could you confirm whether the tool has a public API (research pending)? Tracking in CON-190."
+D-0060,Direct ask,Alder Group,CON-908,Need info,"Thanks for asking. Before we can triage this, could you tell us which tool you mean (name or website) and what you'd like to do with it? Tracking in CON-908."
+D-0061,Direct ask,Harbor Labs,,Already live,Good news: Acme Wiki is already in the marketplace. You can enable it today from the connectors page.
+S-0113,Slack,Foxglove Works,CON-188,Decline,Thanks for asking. We're not building Jetty Notes right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-188 if this changes.
+F-0163,Form,Gullwing Labs,,Already live,Good news: Elmstead Notes is already in the marketplace. You can enable it today from the connectors page.
+F-0164,Form,Orchard Health,CON-175,Decline,Thanks for asking. We're not building Fernhill Mail right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-175 if this changes.
+S-0114,Slack,Maple Partners,CON-205,Decline,Thanks for asking. We're not building Saltmarsh Docs right now: too few signals of adoption yet. We review declined tools every quarter and will reopen CON-205 if this changes.
+F-0165,Form,Orchard Media,CON-139,Build,Thanks for asking. Indigo Wiki is approved to build (priority: Medium). Tracking in CON-139; we'll update this thread when it ships.
+F-0166,Form,Ember Media,CON-206,Decline,Thanks for asking. We're not building Vantage Canvas right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-206 if this changes.
+F-0167,Form,Elmstead Partners,CON-161,Decline,Thanks for asking. We're not building Willow Vault right now: the tool has no public API to connect to. We review declined tools every quarter and will reopen CON-161 if this changes.

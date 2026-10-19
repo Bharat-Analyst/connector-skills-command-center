@@ -1,0 +1,9 @@
+{
+ "title": "Sketchwright",
+ "summary": "Turn a plain-English description into a clean, labeled technical illustration.",
+ "capabilities": "Draw diagrams, flowcharts and schematics as SVG|Label every component clearly|Lay out large diagrams automatically|Export as PNG or dark-mode SVG",
+ "permissions": "Write files to the outputs folder",
+ "required_connectors": "None",
+ "try_asking": "Draw a load balancer in front of three web servers|Turn these steps into a flowchart|Make a labeled cutaway of a centrifugal pump",
+ "author": "Ported from inkline/sketchwright by @inkline (MIT)"
+}
