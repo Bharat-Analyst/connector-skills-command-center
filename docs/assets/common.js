@@ -12,7 +12,7 @@ const PAGES = [
 
 const CC = {
   async load(name) {
-    const res = await fetch(`data/${name}.json?v=2026101601`);
+    const res = await fetch(`data/${name}.json?v=2026101902`);
     if (!res.ok) throw new Error(`Could not load data/${name}.json (${res.status})`);
     return res.json();
   },
