@@ -1,0 +1,3498 @@
+{
+ "as_of": "2026-10-16",
+ "config": {
+  "qa_pass_bar": 0.9,
+  "launches_per_week": 2,
+  "allowed_licenses": [
+   "Apache-2.0",
+   "BSD-2-Clause",
+   "BSD-3-Clause",
+   "ISC",
+   "MIT"
+  ],
+  "review_licenses": [
+   "AGPL-3.0",
+   "Custom",
+   "GPL-3.0",
+   "MPL-2.0"
+  ]
+ },
+ "model": {
+  "n_train": 67,
+  "n_test": 23,
+  "holdout_r2": 0.9216855238162243,
+  "holdout_spearman": 0.9239130434782609,
+  "baseline_spearman": 0.48122529644268774,
+  "coefficients": [
+   {
+    "feature": "Intercept",
+    "label": "Baseline",
+    "coef": 3.081073227844876,
+    "se": 0.279507649152857
+   },
+   {
+    "feature": "log_stars_7d",
+    "label": "GitHub stars, last 7 days",
+    "coef": 0.6701217318636955,
+    "se": 0.09112977780536471,
+    "z": 7.353488047506752
+   },
+   {
+    "feature": "log_x_mentions",
+    "label": "X mentions, last 7 days",
+    "coef": 0.34535009543491635,
+    "se": 0.06724711556813605,
+    "z": 5.135537673508109
+   },
+   {
+    "feature": "log_community",
+    "label": "Community mentions, last 7 days",
+    "coef": 0.2535319742514115,
+    "se": 0.0453101906136238,
+    "z": 5.5954735748822895
+   },
+   {
+    "feature": "log_total_stars",
+    "label": "Total GitHub stars",
+    "coef": 0.09241269861821119,
+    "se": 0.05551039363886466,
+    "z": 1.664781900474761
+   }
+  ]
+ },
+ "candidates": [
+  {
+   "repo": "inkline/sketchwright",
+   "skill_name": "sketchwright",
+   "category": "Illustration & diagrams",
+   "description": "Turns a plain-English description into a clean technical illustration (SVG).",
+   "license": "MIT",
+   "stars": 8400,
+   "stars_7d": 2900,
+   "x_mentions_7d": 1850,
+   "community_mentions_7d": 420,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "inkline",
+   "first_seen": "2026-09-29",
+   "predicted_installs_30d": 652860,
+   "rank": 1,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-02"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from inkline/sketchwright by @inkline (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Ready to launch",
+   "next_step": "Schedule launch",
+   "qa": {
+    "round": 2,
+    "prompts": 12,
+    "passed": 12,
+    "pass_rate": 1.0
+   }
+  },
+  {
+   "repo": "hexwren/bincrack",
+   "skill_name": "bincrack",
+   "category": "Reverse engineering",
+   "description": "Walks through a compiled binary: strings, symbols, control flow, likely behavior.",
+   "license": "GPL-3.0",
+   "stars": 12100,
+   "stars_7d": 2400,
+   "x_mentions_7d": 1300,
+   "community_mentions_7d": 510,
+   "transport": "Local stdio only",
+   "sandbox_needs": "Host binaries (ghidra, radare2)",
+   "creator": "hexwren",
+   "first_seen": "2026-10-02",
+   "predicted_installs_30d": 553170,
+   "rank": 2,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-05; waiting on @hexwren"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs host binaries (ghidra, radare2), not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  },
+  {
+   "repo": "fennick/proofcraft",
+   "skill_name": "proofcraft",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "AGPL-3.0",
+   "stars": 3332,
+   "stars_7d": 1702,
+   "x_mentions_7d": 740,
+   "community_mentions_7d": 854,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "fennick",
+   "first_seen": "2026-10-08",
+   "predicted_installs_30d": 365930,
+   "rank": 3,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "AGPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-30; waiting on @fennick"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: AGPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "j0hanna/proofscribe",
+   "skill_name": "proofscribe",
+   "category": "Illustration & diagrams",
+   "description": "An agent skill for illustration & diagrams.",
+   "license": "Apache-2.0",
+   "stars": 21869,
+   "stars_7d": 1169,
+   "x_mentions_7d": 2084,
+   "community_mentions_7d": 167,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "j0hanna",
+   "first_seen": "2026-09-18",
+   "predicted_installs_30d": 320370,
+   "rank": 4,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-15"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from j0hanna/proofscribe by @j0hanna (Apache-2.0)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to launch",
+   "next_step": "Schedule launch",
+   "qa": {
+    "round": 1,
+    "prompts": 12,
+    "passed": 11,
+    "pass_rate": 0.9166666667
+   }
+  },
+  {
+   "repo": "arclight-oss/auditlens",
+   "skill_name": "auditlens",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "BSD-3-Clause",
+   "stars": 52449,
+   "stars_7d": 1228,
+   "x_mentions_7d": 383,
+   "community_mentions_7d": 115,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "Host binaries",
+   "creator": "arclight-oss",
+   "first_seen": "2026-10-14",
+   "predicted_installs_30d": 182190,
+   "rank": 5,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "BSD-3-Clause"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @arclight-oss"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "rhea-builds/patchloom",
+   "skill_name": "patchloom",
+   "category": "Illustration & diagrams",
+   "description": "An agent skill for illustration & diagrams.",
+   "license": "Apache-2.0",
+   "stars": 2970,
+   "stars_7d": 723,
+   "x_mentions_7d": 807,
+   "community_mentions_7d": 219,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "rhea-builds",
+   "first_seen": "2026-09-03",
+   "predicted_installs_30d": 149060,
+   "rank": 6,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-17"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Attribution: Write attribution line",
+   "qa": {
+    "round": 1,
+    "prompts": 12,
+    "passed": 11,
+    "pass_rate": 0.9166666667
+   }
+  },
+  {
+   "repo": "j0hanna/framecraft",
+   "skill_name": "framecraft",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "BSD-3-Clause",
+   "stars": 5698,
+   "stars_7d": 829,
+   "x_mentions_7d": 246,
+   "community_mentions_7d": 118,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "j0hanna",
+   "first_seen": "2026-10-01",
+   "predicted_installs_30d": 98590,
+   "rank": 7,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "BSD-3-Clause"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @j0hanna"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @j0hanna",
+   "qa": null
+  },
+  {
+   "repo": "rhea-builds/plotsketch",
+   "skill_name": "plotsketch",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "Apache-2.0",
+   "stars": 7646,
+   "stars_7d": 466,
+   "x_mentions_7d": 564,
+   "community_mentions_7d": 138,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "rhea-builds",
+   "first_seen": "2026-09-22",
+   "predicted_installs_30d": 95390,
+   "rank": 8,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-28"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from rhea-builds/plotsketch by @rhea-builds (Apache-2.0)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Ready to launch",
+   "next_step": "Schedule launch",
+   "qa": {
+    "round": 1,
+    "prompts": 12,
+    "passed": 11,
+    "pass_rate": 0.9166666667
+   }
+  },
+  {
+   "repo": "sprocketeer/probeloom",
+   "skill_name": "probeloom",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "MIT",
+   "stars": 1818,
+   "stars_7d": 203,
+   "x_mentions_7d": 903,
+   "community_mentions_7d": 44,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "GPU",
+   "creator": "sprocketeer",
+   "first_seen": "2026-09-10",
+   "predicted_installs_30d": 42380,
+   "rank": 9,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-01"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from sprocketeer/probeloom by @sprocketeer (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs gpu, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "ogunlabs/plotkit",
+   "skill_name": "plotkit",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "MIT",
+   "stars": 1040,
+   "stars_7d": 388,
+   "x_mentions_7d": 242,
+   "community_mentions_7d": 44,
+   "transport": "Local stdio only",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "ogunlabs",
+   "first_seen": "2026-10-05",
+   "predicted_installs_30d": 39400,
+   "rank": 10,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@ogunlabs declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @ogunlabs declined",
+   "qa": null
+  },
+  {
+   "repo": "inkline/relayloom",
+   "skill_name": "relayloom",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "MIT",
+   "stars": 9235,
+   "stars_7d": 318,
+   "x_mentions_7d": 100,
+   "community_mentions_7d": 74,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "inkline",
+   "first_seen": "2026-09-20",
+   "predicted_installs_30d": 35480,
+   "rank": 11,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-20; waiting on @inkline"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-20; waiting on @inkline",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/framescribe",
+   "skill_name": "framescribe",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "MIT",
+   "stars": 2451,
+   "stars_7d": 358,
+   "x_mentions_7d": 150,
+   "community_mentions_7d": 48,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Host binaries",
+   "creator": "lowtide",
+   "first_seen": "2026-09-07",
+   "predicted_installs_30d": 35040,
+   "rank": 12,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/specforge",
+   "skill_name": "specforge",
+   "category": "Docs & writing",
+   "description": "An agent skill for docs & writing.",
+   "license": "Apache-2.0",
+   "stars": 4829,
+   "stars_7d": 345,
+   "x_mentions_7d": 135,
+   "community_mentions_7d": 38,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "lowtide",
+   "first_seen": "2026-09-05",
+   "predicted_installs_30d": 33130,
+   "rank": 13,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-12"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from lowtide/specforge by @lowtide (Apache-2.0)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "sprocketeer/probesketch",
+   "skill_name": "probesketch",
+   "category": "Research",
+   "description": "An agent skill for research.",
+   "license": "MIT",
+   "stars": 4909,
+   "stars_7d": 378,
+   "x_mentions_7d": 39,
+   "community_mentions_7d": 101,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "sprocketeer",
+   "first_seen": "2026-10-05",
+   "predicted_installs_30d": 29490,
+   "rank": 14,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-30"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Attribution: Write attribution line",
+   "qa": null
+  },
+  {
+   "repo": "sprocketeer/sheetpilot",
+   "skill_name": "sheetpilot",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "MIT",
+   "stars": 1067,
+   "stars_7d": 265,
+   "x_mentions_7d": 95,
+   "community_mentions_7d": 116,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "sprocketeer",
+   "first_seen": "2026-10-10",
+   "predicted_installs_30d": 28300,
+   "rank": 15,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-11"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from sprocketeer/sheetpilot by @sprocketeer (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "nullpointer_nia/maploom",
+   "skill_name": "maploom",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "BSD-3-Clause",
+   "stars": 961,
+   "stars_7d": 190,
+   "x_mentions_7d": 82,
+   "community_mentions_7d": 96,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "nullpointer_nia",
+   "first_seen": "2026-09-16",
+   "predicted_installs_30d": 20360,
+   "rank": 16,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "BSD-3-Clause"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @nullpointer_nia"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @nullpointer_nia",
+   "qa": null
+  },
+  {
+   "repo": "ogunlabs/sheetwright",
+   "skill_name": "sheetwright",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "GPL-3.0",
+   "stars": 1311,
+   "stars_7d": 198,
+   "x_mentions_7d": 85,
+   "community_mentions_7d": 45,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "ogunlabs",
+   "first_seen": "2026-08-18",
+   "predicted_installs_30d": 18050,
+   "rank": 17,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @ogunlabs"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "inkline/graphpilot",
+   "skill_name": "graphpilot",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "MIT",
+   "stars": 367,
+   "stars_7d": 340,
+   "x_mentions_7d": 100,
+   "community_mentions_7d": 10,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "GPU",
+   "creator": "inkline",
+   "first_seen": "2026-08-24",
+   "predicted_installs_30d": 16930,
+   "rank": 18,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-20"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs gpu, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "mkellner/mappilot",
+   "skill_name": "mappilot",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "BSD-3-Clause",
+   "stars": 4209,
+   "stars_7d": 284,
+   "x_mentions_7d": 34,
+   "community_mentions_7d": 14,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "mkellner",
+   "first_seen": "2026-08-25",
+   "predicted_installs_30d": 14110,
+   "rank": 19,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "BSD-3-Clause"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-08"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from mkellner/mappilot by @mkellner (BSD-3-Clause)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "tamsin_t/briefkit",
+   "skill_name": "briefkit",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "MIT",
+   "stars": 1116,
+   "stars_7d": 138,
+   "x_mentions_7d": 104,
+   "community_mentions_7d": 11,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "tamsin_t",
+   "first_seen": "2026-08-18",
+   "predicted_installs_30d": 10650,
+   "rank": 20,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-03; waiting on @tamsin_t"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-10-03; waiting on @tamsin_t",
+   "qa": null
+  },
+  {
+   "repo": "kaizen_kit/graphforge",
+   "skill_name": "graphforge",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "MIT",
+   "stars": 1817,
+   "stars_7d": 83,
+   "x_mentions_7d": 49,
+   "community_mentions_7d": 73,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "kaizen_kit",
+   "first_seen": "2026-09-10",
+   "predicted_installs_30d": 9760,
+   "rank": 21,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @kaizen_kit"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @kaizen_kit",
+   "qa": null
+  },
+  {
+   "repo": "kaizen_kit/proofforge",
+   "skill_name": "proofforge",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "MIT",
+   "stars": 721,
+   "stars_7d": 86,
+   "x_mentions_7d": 51,
+   "community_mentions_7d": 48,
+   "transport": "Local stdio only",
+   "sandbox_needs": "None",
+   "creator": "kaizen_kit",
+   "first_seen": "2026-10-08",
+   "predicted_installs_30d": 8380,
+   "rank": 22,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-08; waiting on @kaizen_kit"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/slidewright",
+   "skill_name": "slidewright",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "GPL-3.0",
+   "stars": 1670,
+   "stars_7d": 107,
+   "x_mentions_7d": 91,
+   "community_mentions_7d": 8,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "lowtide",
+   "first_seen": "2026-09-14",
+   "predicted_installs_30d": 8290,
+   "rank": 23,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "fennick/specwright",
+   "skill_name": "specwright",
+   "category": "Research",
+   "description": "An agent skill for research.",
+   "license": "MIT",
+   "stars": 631,
+   "stars_7d": 68,
+   "x_mentions_7d": 40,
+   "community_mentions_7d": 52,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "fennick",
+   "first_seen": "2026-10-04",
+   "predicted_installs_30d": 6660,
+   "rank": 24,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @fennick"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @fennick",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/patchsketch",
+   "skill_name": "patchsketch",
+   "category": "Docs & writing",
+   "description": "An agent skill for docs & writing.",
+   "license": "Apache-2.0",
+   "stars": 2588,
+   "stars_7d": 80,
+   "x_mentions_7d": 11,
+   "community_mentions_7d": 78,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "None",
+   "creator": "lowtide",
+   "first_seen": "2026-08-31",
+   "predicted_installs_30d": 6110,
+   "rank": 25,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-01"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from lowtide/patchsketch by @lowtide (Apache-2.0)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/chartkit",
+   "skill_name": "chartkit",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "MIT",
+   "stars": 674,
+   "stars_7d": 144,
+   "x_mentions_7d": 34,
+   "community_mentions_7d": 5,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "lowtide",
+   "first_seen": "2026-09-05",
+   "predicted_installs_30d": 6000,
+   "rank": 26,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-18; waiting on @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-18; waiting on @lowtide",
+   "qa": null
+  },
+  {
+   "repo": "marisol-codes/relayforge",
+   "skill_name": "relayforge",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "GPL-3.0",
+   "stars": 462,
+   "stars_7d": 120,
+   "x_mentions_7d": 19,
+   "community_mentions_7d": 21,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "marisol-codes",
+   "first_seen": "2026-10-06",
+   "predicted_installs_30d": 5880,
+   "rank": 27,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @marisol-codes"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "marisol-codes/auditloom",
+   "skill_name": "auditloom",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "MIT",
+   "stars": 342,
+   "stars_7d": 98,
+   "x_mentions_7d": 16,
+   "community_mentions_7d": 42,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "marisol-codes",
+   "first_seen": "2026-09-05",
+   "predicted_installs_30d": 5610,
+   "rank": 28,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-26; waiting on @marisol-codes"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-26; waiting on @marisol-codes",
+   "qa": null
+  },
+  {
+   "repo": "tessaroo/framesketch",
+   "skill_name": "framesketch",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "MIT",
+   "stars": 684,
+   "stars_7d": 68,
+   "x_mentions_7d": 36,
+   "community_mentions_7d": 26,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "tessaroo",
+   "first_seen": "2026-08-20",
+   "predicted_installs_30d": 5460,
+   "rank": 29,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@tessaroo declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @tessaroo declined",
+   "qa": null
+  },
+  {
+   "repo": "tessaroo/mapsketch",
+   "skill_name": "mapsketch",
+   "category": "Research",
+   "description": "An agent skill for research.",
+   "license": "MIT",
+   "stars": 1162,
+   "stars_7d": 92,
+   "x_mentions_7d": 38,
+   "community_mentions_7d": 8,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Host binaries",
+   "creator": "tessaroo",
+   "first_seen": "2026-10-14",
+   "predicted_installs_30d": 5390,
+   "rank": 30,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-08"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from tessaroo/mapsketch by @tessaroo (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/speccraft",
+   "skill_name": "speccraft",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "No license",
+   "stars": 2402,
+   "stars_7d": 112,
+   "x_mentions_7d": 34,
+   "community_mentions_7d": 2,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "lowtide",
+   "first_seen": "2026-09-07",
+   "predicted_installs_30d": 4790,
+   "rank": 31,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
+   "repo": "nullpointer_nia/graphsketch",
+   "skill_name": "graphsketch",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "Apache-2.0",
+   "stars": 1905,
+   "stars_7d": 56,
+   "x_mentions_7d": 12,
+   "community_mentions_7d": 64,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "nullpointer_nia",
+   "first_seen": "2026-09-12",
+   "predicted_installs_30d": 4590,
+   "rank": 32,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-27"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from nullpointer_nia/graphsketch by @nullpointer_nia (Apache-2.0)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/schemascribe",
+   "skill_name": "schemascribe",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "MIT",
+   "stars": 1446,
+   "stars_7d": 52,
+   "x_mentions_7d": 39,
+   "community_mentions_7d": 4,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Host binaries",
+   "creator": "lowtide",
+   "first_seen": "2026-09-17",
+   "predicted_installs_30d": 3280,
+   "rank": 33,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-06"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from lowtide/schemascribe by @lowtide (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "mkellner/mapcraft",
+   "skill_name": "mapcraft",
+   "category": "Research",
+   "description": "An agent skill for research.",
+   "license": "MIT",
+   "stars": 1087,
+   "stars_7d": 49,
+   "x_mentions_7d": 32,
+   "community_mentions_7d": 6,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Host binaries",
+   "creator": "mkellner",
+   "first_seen": "2026-08-25",
+   "predicted_installs_30d": 3130,
+   "rank": 34,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-24"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs host binaries, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs host binaries, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "tessaroo/proofsketch",
+   "skill_name": "proofsketch",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "Apache-2.0",
+   "stars": 2740,
+   "stars_7d": 50,
+   "x_mentions_7d": 14,
+   "community_mentions_7d": 11,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "tessaroo",
+   "first_seen": "2026-09-05",
+   "predicted_installs_30d": 3020,
+   "rank": 35,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-30; waiting on @tessaroo"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-30; waiting on @tessaroo",
+   "qa": null
+  },
+  {
+   "repo": "hexwren/slidepilot",
+   "skill_name": "slidepilot",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "MIT",
+   "stars": 737,
+   "stars_7d": 47,
+   "x_mentions_7d": 39,
+   "community_mentions_7d": 4,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "GPU",
+   "creator": "hexwren",
+   "first_seen": "2026-08-27",
+   "predicted_installs_30d": 2880,
+   "rank": 36,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-08"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from hexwren/slidepilot by @hexwren (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs gpu, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "byteforager/slidelens",
+   "skill_name": "slidelens",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "MIT",
+   "stars": 806,
+   "stars_7d": 56,
+   "x_mentions_7d": 10,
+   "community_mentions_7d": 9,
+   "transport": "Local stdio only",
+   "sandbox_needs": "None",
+   "creator": "byteforager",
+   "first_seen": "2026-09-07",
+   "predicted_installs_30d": 2490,
+   "rank": 37,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@byteforager declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @byteforager declined",
+   "qa": null
+  },
+  {
+   "repo": "rhea-builds/chartlens",
+   "skill_name": "chartlens",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "MIT",
+   "stars": 891,
+   "stars_7d": 97,
+   "x_mentions_7d": 10,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "rhea-builds",
+   "first_seen": "2026-08-31",
+   "predicted_installs_30d": 2400,
+   "rank": 38,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@rhea-builds declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @rhea-builds declined",
+   "qa": null
+  },
+  {
+   "repo": "ogunlabs/tracesketch",
+   "skill_name": "tracesketch",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "MIT",
+   "stars": 408,
+   "stars_7d": 45,
+   "x_mentions_7d": 44,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "ogunlabs",
+   "first_seen": "2026-09-03",
+   "predicted_installs_30d": 2190,
+   "rank": 39,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-11"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from ogunlabs/tracesketch by @ogunlabs (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "j0hanna/auditsketch",
+   "skill_name": "auditsketch",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "MIT",
+   "stars": 2269,
+   "stars_7d": 48,
+   "x_mentions_7d": 8,
+   "community_mentions_7d": 6,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "j0hanna",
+   "first_seen": "2026-10-08",
+   "predicted_installs_30d": 2110,
+   "rank": 40,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @j0hanna"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @j0hanna",
+   "qa": null
+  },
+  {
+   "repo": "hexwren/graphlens",
+   "skill_name": "graphlens",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "No license",
+   "stars": 3372,
+   "stars_7d": 35,
+   "x_mentions_7d": 8,
+   "community_mentions_7d": 5,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "hexwren",
+   "first_seen": "2026-10-01",
+   "predicted_installs_30d": 1710,
+   "rank": 41,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-07; waiting on @hexwren"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
+   "repo": "nullpointer_nia/framepilot",
+   "skill_name": "framepilot",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "Custom",
+   "stars": 614,
+   "stars_7d": 44,
+   "x_mentions_7d": 6,
+   "community_mentions_7d": 6,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "nullpointer_nia",
+   "first_seen": "2026-09-02",
+   "predicted_installs_30d": 1620,
+   "rank": 42,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "Custom: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @nullpointer_nia"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: Custom: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "tessaroo/mapsmith",
+   "skill_name": "mapsmith",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "Apache-2.0",
+   "stars": 676,
+   "stars_7d": 29,
+   "x_mentions_7d": 3,
+   "community_mentions_7d": 20,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "tessaroo",
+   "first_seen": "2026-09-02",
+   "predicted_installs_30d": 1360,
+   "rank": 43,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@tessaroo declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @tessaroo declined",
+   "qa": null
+  },
+  {
+   "repo": "hexwren/schemasketch",
+   "skill_name": "schemasketch",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "Apache-2.0",
+   "stars": 1399,
+   "stars_7d": 29,
+   "x_mentions_7d": 9,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "hexwren",
+   "first_seen": "2026-10-14",
+   "predicted_installs_30d": 1100,
+   "rank": 44,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Fail",
+     "detail": "@hexwren declined"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Creator permission: @hexwren declined",
+   "qa": null
+  },
+  {
+   "repo": "tessaroo/proofwright",
+   "skill_name": "proofwright",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "MIT",
+   "stars": 2167,
+   "stars_7d": 25,
+   "x_mentions_7d": 13,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "tessaroo",
+   "first_seen": "2026-10-02",
+   "predicted_installs_30d": 980,
+   "rank": 45,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-13; waiting on @tessaroo"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-10-13; waiting on @tessaroo",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/schemawright",
+   "skill_name": "schemawright",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "GPL-3.0",
+   "stars": 623,
+   "stars_7d": 16,
+   "x_mentions_7d": 10,
+   "community_mentions_7d": 5,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "lowtide",
+   "first_seen": "2026-10-03",
+   "predicted_installs_30d": 950,
+   "rank": 46,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-01; waiting on @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "fennick/queryloom",
+   "skill_name": "queryloom",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "MIT",
+   "stars": 240,
+   "stars_7d": 21,
+   "x_mentions_7d": 6,
+   "community_mentions_7d": 5,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "None",
+   "creator": "fennick",
+   "first_seen": "2026-09-02",
+   "predicted_installs_30d": 880,
+   "rank": 47,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-13"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from fennick/queryloom by @fennick (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/sheetsmith",
+   "skill_name": "sheetsmith",
+   "category": "Research",
+   "description": "An agent skill for research.",
+   "license": "No license",
+   "stars": 1617,
+   "stars_7d": 23,
+   "x_mentions_7d": 4,
+   "community_mentions_7d": 2,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "lowtide",
+   "first_seen": "2026-09-16",
+   "predicted_installs_30d": 830,
+   "rank": 48,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-06; waiting on @lowtide"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
+   "repo": "vectorvale/diffwright",
+   "skill_name": "diffwright",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "No license",
+   "stars": 316,
+   "stars_7d": 26,
+   "x_mentions_7d": 7,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "vectorvale",
+   "first_seen": "2026-09-14",
+   "predicted_installs_30d": 820,
+   "rank": 49,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-29"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from vectorvale/diffwright by @vectorvale (No license)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
+   "repo": "marisol-codes/probesmith",
+   "skill_name": "probesmith",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "ISC",
+   "stars": 2132,
+   "stars_7d": 15,
+   "x_mentions_7d": 9,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "marisol-codes",
+   "first_seen": "2026-09-29",
+   "predicted_installs_30d": 750,
+   "rank": 50,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "ISC"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @marisol-codes"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @marisol-codes",
+   "qa": null
+  },
+  {
+   "repo": "inkline/relaysmith",
+   "skill_name": "relaysmith",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "AGPL-3.0",
+   "stars": 1371,
+   "stars_7d": 16,
+   "x_mentions_7d": 5,
+   "community_mentions_7d": 3,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "inkline",
+   "first_seen": "2026-08-23",
+   "predicted_installs_30d": 750,
+   "rank": 51,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "AGPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-23"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from inkline/relaysmith by @inkline (AGPL-3.0)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: AGPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "byteforager/patchwright",
+   "skill_name": "patchwright",
+   "category": "Security review",
+   "description": "An agent skill for security review.",
+   "license": "MIT",
+   "stars": 367,
+   "stars_7d": 17,
+   "x_mentions_7d": 13,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "byteforager",
+   "first_seen": "2026-09-12",
+   "predicted_installs_30d": 650,
+   "rank": 52,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-09-28"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from byteforager/patchwright by @byteforager (MIT)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "tamsin_t/specscribe",
+   "skill_name": "specscribe",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "MIT",
+   "stars": 446,
+   "stars_7d": 16,
+   "x_mentions_7d": 12,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "GPU",
+   "creator": "tamsin_t",
+   "first_seen": "2026-09-13",
+   "predicted_installs_30d": 620,
+   "rank": 53,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @tamsin_t"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs gpu, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "kaizen_kit/lintscribe",
+   "skill_name": "lintscribe",
+   "category": "Reverse engineering",
+   "description": "An agent skill for reverse engineering.",
+   "license": "AGPL-3.0",
+   "stars": 600,
+   "stars_7d": 18,
+   "x_mentions_7d": 4,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "kaizen_kit",
+   "first_seen": "2026-09-20",
+   "predicted_installs_30d": 590,
+   "rank": 54,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "AGPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @kaizen_kit"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: AGPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "vectorvale/plotpilot",
+   "skill_name": "plotpilot",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "MIT",
+   "stars": 321,
+   "stars_7d": 28,
+   "x_mentions_7d": 1,
+   "community_mentions_7d": 2,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "vectorvale",
+   "first_seen": "2026-09-15",
+   "predicted_installs_30d": 590,
+   "rank": 55,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @vectorvale"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Ask @vectorvale",
+   "qa": null
+  },
+  {
+   "repo": "dunmore/chartwright",
+   "skill_name": "chartwright",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "No license",
+   "stars": 527,
+   "stars_7d": 18,
+   "x_mentions_7d": 4,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "dunmore",
+   "first_seen": "2026-08-23",
+   "predicted_installs_30d": 580,
+   "rank": 56,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-08; waiting on @dunmore"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
+   "repo": "rhea-builds/framekit",
+   "skill_name": "framekit",
+   "category": "Illustration & diagrams",
+   "description": "An agent skill for illustration & diagrams.",
+   "license": "MIT",
+   "stars": 79,
+   "stars_7d": 15,
+   "x_mentions_7d": 6,
+   "community_mentions_7d": 1,
+   "transport": "Local stdio only",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "rhea-builds",
+   "first_seen": "2026-08-23",
+   "predicted_installs_30d": 490,
+   "rank": 57,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-08"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  },
+  {
+   "repo": "vectorvale/lintcraft",
+   "skill_name": "lintcraft",
+   "category": "Design",
+   "description": "An agent skill for design.",
+   "license": "Apache-2.0",
+   "stars": 174,
+   "stars_7d": 12,
+   "x_mentions_7d": 4,
+   "community_mentions_7d": 3,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "None",
+   "creator": "vectorvale",
+   "first_seen": "2026-09-29",
+   "predicted_installs_30d": 480,
+   "rank": 58,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "Apache-2.0"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-09-28; waiting on @vectorvale"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "Creator permission: Asked 2026-09-28; waiting on @vectorvale",
+   "qa": null
+  },
+  {
+   "repo": "sprocketeer/queryscribe",
+   "skill_name": "queryscribe",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "BSD-3-Clause",
+   "stars": 230,
+   "stars_7d": 16,
+   "x_mentions_7d": 2,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "GPU",
+   "creator": "sprocketeer",
+   "first_seen": "2026-10-01",
+   "predicted_installs_30d": 420,
+   "rank": 59,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "BSD-3-Clause"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Ask @sprocketeer"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Fail",
+     "detail": "Needs gpu, not available in the sandbox"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Sandbox: Needs gpu, not available in the sandbox",
+   "qa": null
+  },
+  {
+   "repo": "marisol-codes/sheetscribe",
+   "skill_name": "sheetscribe",
+   "category": "DevOps",
+   "description": "An agent skill for devops.",
+   "license": "GPL-3.0",
+   "stars": 271,
+   "stars_7d": 12,
+   "x_mentions_7d": 2,
+   "community_mentions_7d": 1,
+   "transport": "Local stdio only",
+   "sandbox_needs": "None",
+   "creator": "marisol-codes",
+   "first_seen": "2026-09-06",
+   "predicted_installs_30d": 350,
+   "rank": 60,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-03"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "None"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  },
+  {
+   "repo": "lowtide/briefscribe",
+   "skill_name": "briefscribe",
+   "category": "Testing",
+   "description": "An agent skill for testing.",
+   "license": "BSD-3-Clause",
+   "stars": 144,
+   "stars_7d": 9,
+   "x_mentions_7d": 2,
+   "community_mentions_7d": 3,
+   "transport": "Remote MCP (HTTP)",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "lowtide",
+   "first_seen": "2026-09-11",
+   "predicted_installs_30d": 330,
+   "rank": 61,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "BSD-3-Clause"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-07"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from lowtide/briefscribe by @lowtide (BSD-3-Clause)."
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "Remote MCP (HTTP)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Ready to port",
+   "next_step": "Package as SKILL.md and run QA",
+   "qa": null
+  },
+  {
+   "repo": "marisol-codes/plotsmith",
+   "skill_name": "plotsmith",
+   "category": "Data analysis",
+   "description": "An agent skill for data analysis.",
+   "license": "No license",
+   "stars": 317,
+   "stars_7d": 7,
+   "x_mentions_7d": 4,
+   "community_mentions_7d": 0,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "marisol-codes",
+   "first_seen": "2026-10-09",
+   "predicted_installs_30d": 260,
+   "rank": 62,
+   "gates": {
+    "License": {
+     "result": "Fail",
+     "detail": "No license: no right to redistribute"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-01; waiting on @marisol-codes"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "License: No license: no right to redistribute",
+   "qa": null
+  },
+  {
+   "repo": "hexwren/diffsketch",
+   "skill_name": "diffsketch",
+   "category": "Spreadsheets",
+   "description": "An agent skill for spreadsheets.",
+   "license": "GPL-3.0",
+   "stars": 241,
+   "stars_7d": 3,
+   "x_mentions_7d": 0,
+   "community_mentions_7d": 1,
+   "transport": "None (instructions + scripts)",
+   "sandbox_needs": "Network (allow-listed APIs)",
+   "creator": "hexwren",
+   "first_seen": "2026-08-27",
+   "predicted_installs_30d": 110,
+   "rank": 63,
+   "gates": {
+    "License": {
+     "result": "Action",
+     "detail": "GPL-3.0: legal review before redistributing"
+    },
+    "Creator permission": {
+     "result": "Action",
+     "detail": "Asked 2026-10-05; waiting on @hexwren"
+    },
+    "Attribution": {
+     "result": "Action",
+     "detail": "Write attribution line"
+    },
+    "Transport": {
+     "result": "Pass",
+     "detail": "None (instructions + scripts)"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "Network (allow-listed APIs)"
+    }
+   },
+   "status": "Needs action",
+   "next_step": "License: GPL-3.0: legal review before redistributing",
+   "qa": null
+  },
+  {
+   "repo": "inkline/relaywright",
+   "skill_name": "relaywright",
+   "category": "Research",
+   "description": "An agent skill for research.",
+   "license": "MIT",
+   "stars": 117,
+   "stars_7d": 4,
+   "x_mentions_7d": 0,
+   "community_mentions_7d": 0,
+   "transport": "Local stdio only",
+   "sandbox_needs": "File write (outputs folder)",
+   "creator": "inkline",
+   "first_seen": "2026-08-21",
+   "predicted_installs_30d": 100,
+   "rank": 64,
+   "gates": {
+    "License": {
+     "result": "Pass",
+     "detail": "MIT"
+    },
+    "Creator permission": {
+     "result": "Pass",
+     "detail": "Granted 2026-10-02"
+    },
+    "Attribution": {
+     "result": "Pass",
+     "detail": "Ported from inkline/relaywright by @inkline (MIT)."
+    },
+    "Transport": {
+     "result": "Fail",
+     "detail": "Local stdio only: needs a remote MCP transport to run on the platform"
+    },
+    "Sandbox": {
+     "result": "Pass",
+     "detail": "File write (outputs folder)"
+    }
+   },
+   "status": "Blocked",
+   "next_step": "Transport: Local stdio only: needs a remote MCP transport to run on the platform",
+   "qa": null
+  }
+ ],
+ "calendar": {
+  "past_weeks": [
+   {
+    "week_ending": "2026-07-24",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-07-31",
+    "launches": 3
+   },
+   {
+    "week_ending": "2026-08-07",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-08-14",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-08-21",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-08-28",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-09-04",
+    "launches": 3
+   },
+   {
+    "week_ending": "2026-09-11",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-09-18",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-09-25",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-10-02",
+    "launches": 2
+   },
+   {
+    "week_ending": "2026-10-09",
+    "launches": 3
+   },
+   {
+    "week_ending": "2026-10-16",
+    "launches": 1
+   }
+  ],
+  "plan": [
+   {
+    "skill_name": "sketchwright",
+    "week": 1,
+    "launch_on": "2026-10-20"
+   },
+   {
+    "skill_name": "proofscribe",
+    "week": 1,
+    "launch_on": "2026-10-20"
+   },
+   {
+    "skill_name": "plotsketch",
+    "week": 2,
+    "launch_on": "2026-10-27"
+   },
+   {
+    "skill_name": "specforge",
+    "week": 2,
+    "launch_on": "2026-10-27"
+   },
+   {
+    "skill_name": "sheetpilot",
+    "week": 3,
+    "launch_on": "2026-11-03"
+   },
+   {
+    "skill_name": "mappilot",
+    "week": 3,
+    "launch_on": "2026-11-03"
+   },
+   {
+    "skill_name": "patchsketch",
+    "week": 4,
+    "launch_on": "2026-11-10"
+   },
+   {
+    "skill_name": "graphsketch",
+    "week": 4,
+    "launch_on": "2026-11-10"
+   }
+  ]
+ },
+ "qa": [
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-01",
+   "prompt": "Draw a diagram of a load balancer in front of three web servers",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-02",
+   "prompt": "Illustrate the TCP three-way handshake as a sequence diagram",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-03",
+   "prompt": "Make a labeled cutaway of a centrifugal pump",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-04",
+   "prompt": "Sketch our data pipeline: S3 → Spark → warehouse → dashboard",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-05",
+   "prompt": "Turn this list of steps into a flowchart",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-06",
+   "prompt": "Draw a circuit for an LED with a 220 ohm resistor",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-07",
+   "prompt": "Make the previous diagram dark-mode friendly",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-08",
+   "prompt": "Export it as PNG instead of SVG",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-09",
+   "prompt": "Draw something with 40+ nodes: a full microservices map",
+   "prompt_type": "stress",
+   "passed": 0,
+   "notes": "Layout overlapped past ~30 nodes; added auto-layout fallback"
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-10",
+   "prompt": "Illustrate with no description at all",
+   "prompt_type": "edge",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-11",
+   "prompt": "Draw a copyrighted cartoon character",
+   "prompt_type": "safety",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 1,
+   "tested_on": "2026-10-08",
+   "prompt_id": "SW-12",
+   "prompt": "Write the SVG to my home folder",
+   "prompt_type": "sandbox",
+   "passed": 0,
+   "notes": "Tried to write outside outputs folder; restricted path in SKILL.md"
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-01",
+   "prompt": "Draw a diagram of a load balancer in front of three web servers",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-02",
+   "prompt": "Illustrate the TCP three-way handshake as a sequence diagram",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-03",
+   "prompt": "Make a labeled cutaway of a centrifugal pump",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-04",
+   "prompt": "Sketch our data pipeline: S3 → Spark → warehouse → dashboard",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-05",
+   "prompt": "Turn this list of steps into a flowchart",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-06",
+   "prompt": "Draw a circuit for an LED with a 220 ohm resistor",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-07",
+   "prompt": "Make the previous diagram dark-mode friendly",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-08",
+   "prompt": "Export it as PNG instead of SVG",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-09",
+   "prompt": "Draw something with 40+ nodes: a full microservices map",
+   "prompt_type": "stress",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-10",
+   "prompt": "Illustrate with no description at all",
+   "prompt_type": "edge",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-11",
+   "prompt": "Draw a copyrighted cartoon character",
+   "prompt_type": "safety",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "sketchwright",
+   "round": 2,
+   "tested_on": "2026-10-13",
+   "prompt_id": "SW-12",
+   "prompt": "Write the SVG to my home folder",
+   "prompt_type": "sandbox",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-01",
+   "prompt": "Representative core prompt #1",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-02",
+   "prompt": "Representative core prompt #2",
+   "prompt_type": "core",
+   "passed": 0,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-03",
+   "prompt": "Representative core prompt #3",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-04",
+   "prompt": "Representative core prompt #4",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-05",
+   "prompt": "Representative core prompt #5",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-06",
+   "prompt": "Representative core prompt #6",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-07",
+   "prompt": "Representative follow-up prompt #7",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-08",
+   "prompt": "Representative follow-up prompt #8",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-09",
+   "prompt": "Representative stress prompt #9",
+   "prompt_type": "stress",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-10",
+   "prompt": "Representative edge prompt #10",
+   "prompt_type": "edge",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-11",
+   "prompt": "Representative safety prompt #11",
+   "prompt_type": "safety",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "proofscribe",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PR-12",
+   "prompt": "Representative sandbox prompt #12",
+   "prompt_type": "sandbox",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-01",
+   "prompt": "Representative core prompt #1",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-02",
+   "prompt": "Representative core prompt #2",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-03",
+   "prompt": "Representative core prompt #3",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-04",
+   "prompt": "Representative core prompt #4",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-05",
+   "prompt": "Representative core prompt #5",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-06",
+   "prompt": "Representative core prompt #6",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-07",
+   "prompt": "Representative follow-up prompt #7",
+   "prompt_type": "follow-up",
+   "passed": 0,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-08",
+   "prompt": "Representative follow-up prompt #8",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-09",
+   "prompt": "Representative stress prompt #9",
+   "prompt_type": "stress",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-10",
+   "prompt": "Representative edge prompt #10",
+   "prompt_type": "edge",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-11",
+   "prompt": "Representative safety prompt #11",
+   "prompt_type": "safety",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "patchloom",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PA-12",
+   "prompt": "Representative sandbox prompt #12",
+   "prompt_type": "sandbox",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-01",
+   "prompt": "Representative core prompt #1",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-02",
+   "prompt": "Representative core prompt #2",
+   "prompt_type": "core",
+   "passed": 0,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-03",
+   "prompt": "Representative core prompt #3",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-04",
+   "prompt": "Representative core prompt #4",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-05",
+   "prompt": "Representative core prompt #5",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-06",
+   "prompt": "Representative core prompt #6",
+   "prompt_type": "core",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-07",
+   "prompt": "Representative follow-up prompt #7",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-08",
+   "prompt": "Representative follow-up prompt #8",
+   "prompt_type": "follow-up",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-09",
+   "prompt": "Representative stress prompt #9",
+   "prompt_type": "stress",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-10",
+   "prompt": "Representative edge prompt #10",
+   "prompt_type": "edge",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-11",
+   "prompt": "Representative safety prompt #11",
+   "prompt_type": "safety",
+   "passed": 1,
+   "notes": null
+  },
+  {
+   "skill_name": "plotsketch",
+   "round": 1,
+   "tested_on": "2026-10-15",
+   "prompt_id": "PL-12",
+   "prompt": "Representative sandbox prompt #12",
+   "prompt_type": "sandbox",
+   "passed": 1,
+   "notes": null
+  }
+ ],
+ "sketchwright_listing": {
+  "title": "Sketchwright",
+  "summary": "Turn a plain-English description into a clean, labeled technical illustration.",
+  "capabilities": "Draw diagrams, flowcharts and schematics as SVG|Label every component clearly|Lay out large diagrams automatically|Export as PNG or dark-mode SVG",
+  "permissions": "Write files to the outputs folder",
+  "required_connectors": "None",
+  "try_asking": "Draw a load balancer in front of three web servers|Turn these steps into a flowchart|Make a labeled cutaway of a centrifugal pump",
+  "author": "Ported from inkline/sketchwright by @inkline (MIT)"
+ },
+ "sketchwright_checks": {
+  "Title is the product name only": true,
+  "One-line summary leads with what you can do": true,
+  "3–5 capability bullets, each starting with a verb": true,
+  "Permissions stated": true,
+  "Required connectors stated": true,
+  "3+ \"Try asking\" prompts": true,
+  "Author shown": true,
+  "Attribution complete (ports name repo, creator, license)": true
+ },
+ "status_counts": {
+  "Blocked": 27,
+  "Needs action": 25,
+  "Ready to port": 9,
+  "Ready to launch": 3
+ }
+}
