@@ -13,7 +13,7 @@ Personal project. All company names, people, repos and handles are fictional. Al
 | # | Responsibility | Module / output |
 |---|----------------|-----------------|
 | 1a | Weekly triage | Intake queue from forms, request channel, direct asks; dedupe against live catalog + backlog |
-| 1b | Research & scoring | Fitted adoption model → standard rubric points → Urgent / High / Medium / Low |
+| 1b | Research & scoring | Weighted average of five bucketed signals → Urgent / High / Medium / Low, backtested on past launches |
 | 1c | Backlog management | Every request has owner, decision (build / partner / decline / need info), reply; Linear import CSV |
 | 1d | Escalations & reporting | Product Lead escalations, engineering build briefs, weekly status summary |
 | 2a | Trend spotting | Ranked skill candidates from GitHub + X + community signals (fitted install model) |
@@ -26,20 +26,20 @@ Personal project. All company names, people, repos and handles are fictional. Al
 
 ## The story
 Three featured items flow through every page:
-- **Brightpath Analytics** connector request: asked 6 times through 3 channels → merged → scored Urgent → Build → engineering brief → launched with a clean listing.
+- **Brightpath Analytics** connector request: asked 6 times through 3 channels → merged → scored 77 (Urgent) → Build → engineering brief → launched with a clean listing.
 - **sketchwright** (technical illustration skill on GitHub): trending → passes every compliance gate → ported to SKILL.md → QA'd → launched.
 - **Two listing rewrites** of high-traffic entries that fail the template.
 Plus one featured request per decision: Larkspur Payments (Partner), Pebblework Notes (Decline), an unnamed "HR tool" ask (Need info).
 
 ## Technical constraints (do not deviate without asking)
-- **Python 3.11**, **pandas**, **numpy**. Models are fitted with numpy (logistic regression via IRLS, OLS), no extra dependencies.
+- **Python 3.11**, **pandas**, **numpy**. No extra dependencies (the skills installs model is OLS in numpy).
 - **No database.** CSV files in folders that mirror warehouse layers:
   - `data/raw/`: source extracts (form submissions, Slack request channel, direct asks, Linear issues,
     live catalog, company signals, skill candidates, past launches, listings + traffic)
   - `data/processed/`: cleaned, deduped, scored tables
   - `data/output/`: files we'd push to tools (Linear import CSV, build briefs, weekly status, SKILL.md ports)
 - **Fixed random seed = 42** everywhere. Snapshot date 2026-10-16 (a Friday, the weekly triage day).
-- **Scoring must be fitted to outcomes, not hand-picked weights**, and shown with holdout validation.
+- **Connector priority score is a simple weighted average** (owner decision 2026-10-19, for simplicity), backtested on past launches. Weights and buckets live in the config block.
 - **Front end:** static site in `/docs` (plain HTML/CSS/JS + Plotly.js from a pinned CDN version, no build tools)
   reading precomputed JSON in `docs/data/`. Hosted on GitHub Pages from `/docs` on `main`.
 - No real company logos or trademarks. Open standards (MCP, SKILL.md, Linear as a tool name) are fine.

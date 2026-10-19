@@ -3,8 +3,8 @@
 ## Headlines
 - **43 new asks** this week (26 tools); all triaged today.
 - **Backlog:** 62 of 62 historical issues scored and given a decision.
-- **Decisions (all open tools):** 24 build, 19 partner, 56 decline, 11 need info.
-- **Escalated to Product Lead:** 22 (see escalations.md).
+- **Decisions (all open tools):** 27 build, 19 partner, 53 decline, 11 need info.
+- **Escalated to Product Lead:** 25 (see escalations.md).
 - **Skills:** 64 candidates ranked; 3 ready to launch; next launches: sketchwright, proofscribe.
 - **Listings:** 141 audited; 7 meet the template; 2 of 20 top-priority rewritten.
 
@@ -23,9 +23,9 @@
 ## Top of the build queue
 | Issue | Tool | Tier | Score | Owner |
 |---|---|---|---|---|
-| CON-168 | Brightpath Analytics | Urgent | 93 | Integrations Eng – Pod A |
-| CON-165 | Alder Billing | Urgent | 84 | Integrations Eng – Pod B |
-| CON-149 | Cinder Billing | High | 69 | Integrations Eng – Pod A |
-| CON-106 | Nimbus Analytics | High | 65 | Integrations Eng – Pod B |
-| CON-153 | Basalt Canvas | High | 63 | Integrations Eng – Pod A |
-| CON-127 | Foxglove HR | High | 63 | Integrations Eng – Pod B |
+| CON-168 | Brightpath Analytics | Urgent | 77 | Integrations Eng – Pod A |
+| CON-149 | Cinder Billing | High | 59 | Integrations Eng – Pod B |
+| CON-165 | Alder Billing | High | 58 | Integrations Eng – Pod A |
+| CON-116 | Ember Helpdesk | High | 55 | Integrations Eng – Pod B |
+| CON-106 | Nimbus Analytics | High | 55 | Integrations Eng – Pod A |
+| CON-152 | Acme Payroll | High | 52 | Integrations Eng – Pod B |

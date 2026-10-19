@@ -1,11 +1,11 @@
 # Build brief: Alder Billing connector (CON-165)
 
-**Priority:** Urgent (score 84/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 1
+**Priority:** High (score 58/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 1
 
 ## Why build it
 - 21 customers asking (6 Enterprise); 21 new asks via Direct ask, Form, Slack.
 - Blocked deals: $0.
-- Model: 84% chance of 50+ weekly active orgs by day 90. Top reasons: Customers asking, Company size.
+- Priority score 58/100. Top reasons: Customers asking, Company size.
 
 ## What customers want to do
 - look up failed payments

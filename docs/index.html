@@ -42,7 +42,7 @@
       <thead><tr><th>Responsibility</th><th>What we built</th><th>Page</th></tr></thead>
       <tbody>
         <tr><td>Weekly triage</td><td>One queue from form, request channel and direct asks; spellings matched; repeats merged; deduped against the live catalog and Linear</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
-        <tr><td>Research &amp; scoring</td><td>Adoption model fitted on past launches (size, growth, traction, customers asking, Enterprise share) → Urgent / High / Medium / Low rubric</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
+        <tr><td>Research &amp; scoring</td><td>Weighted average of customers asking, online traction, Enterprise share, company size and growth → Urgent / High / Medium / Low rubric</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
         <tr><td>Backlog management</td><td>Every ask has an owner, a decision (build / partner / decline / need info) and a reply; Linear import CSV</td><td><a href="intake.html">Intake &amp; triage</a></td></tr>
         <tr><td>Escalations &amp; reporting</td><td>Product Lead escalations, engineering build briefs, weekly written status</td><td><a href="intake.html">Intake</a> · <a href="status.html">Weekly status</a></td></tr>
         <tr><td>Trend spotting</td><td>Candidates from GitHub, X and communities, ranked by an installs model that weights momentum</td><td><a href="skills.html">Skill ports</a></td></tr>
@@ -61,6 +61,7 @@
     CC.init("index.html");
     const [I, S, C, T] = await Promise.all(["intake", "skills", "catalog", "status"].map(CC.load));
     const c = I.counts;
+    const W = Object.fromEntries(I.score.weights.map((w) => [w.feature, w.weight]));
     const bp = I.tools.find((t) => t.tool === "Brightpath Analytics");
     const lp = I.tools.find((t) => t.tool === "Larkspur Payments");
     const pb = I.tools.find((t) => t.tool === "Pebblework Notes");
@@ -90,7 +91,7 @@
         featured: `“${bpAsks.slice(0, 4).map((r) => r.tool_text.length > 40 ? r.tool_text.slice(0, 40) + "…" : r.tool_text).join("”, “")}” → one issue, ${bp.issue_id}.`,
         jd: ["Deduplicate requests against the live catalog and active backlog issues"] },
       { name: "Score", type: "decision", page: "intake.html",
-        what: `A logistic regression fitted on past launches predicts each tool's chance of reaching 50+ weekly active orgs by day 90, from company size, growth, online traction, customers asking and Enterprise share. Holdout AUC ${I.model.holdout_auc.toFixed(2)} vs ${I.model.baseline_auc.toFixed(2)} for “most asks wins”. The score sets the tier.`,
+        what: `Each tool gets a 0–100 priority score: a weighted average of customers asking (${CC.pct(W.customers)}), online traction (${CC.pct(W.traction)}), Enterprise share (${CC.pct(W.enterprise)}), company size (${CC.pct(W.size)}) and growth (${CC.pct(W.growth)}). Checked on ${I.score.n} past launches, it picks the connectors that got used better than “most asks wins” (AUC ${I.score.auc.toFixed(2)} vs ${I.score.baseline_auc.toFixed(2)}). The score sets the tier.`,
         featured: `Brightpath Analytics scores ${bp.priority_score}/100 (top reasons: ${bp.top_reasons.join(", ").toLowerCase()}) → ${bp.tier}.`,
         jd: ["company size, growth trajectory, online traction, customer context, and API/MCP availability", "Urgent / High / Medium / Low using a standard rubric"] },
       { name: "Decide and reply", type: "decision", page: "intake.html",

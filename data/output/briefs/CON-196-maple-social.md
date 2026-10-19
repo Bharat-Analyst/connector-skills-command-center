@@ -1,11 +1,11 @@
 # Build brief: Maple Social connector (CON-196)
 
-**Priority:** High (score 56/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 4
+**Priority:** High (score 52/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 3
 
 ## Why build it
 - 1 customers asking (1 Enterprise); 1 new asks via Form.
 - Blocked deals: $0.
-- Model: 56% chance of 50+ weekly active orgs by day 90. Top reasons: Share of asks from Enterprise customers, Online traction (mentions, 90 days).
+- Priority score 52/100. Top reasons: Share of asks from Enterprise customers, Online traction (mentions, 90 days).
 
 ## What customers want to do
 - draft campaign emails

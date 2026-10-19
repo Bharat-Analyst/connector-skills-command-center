@@ -15,7 +15,7 @@ Outputs (data/raw/):
     live_catalog.csv          connectors already in the marketplace
     companies.csv             research signals per tool: size, growth, traction, API / MCP
     past_connector_launches.csv  connectors we launched before, with request-time signals
-                              and whether they reached adoption (training data for the model)
+                              and whether they reached adoption (used to backtest the priority score)
     skill_candidates.csv      open-source agent skills spotted on GitHub, X and communities
     past_skill_ports.csv      skills we ported before, with signals at port time and installs
     skill_outreach.csv        creator permission requests and attribution text
@@ -81,7 +81,7 @@ USE_CASES = {
     "Security": ["review access requests", "summarize alerts", "look up user permissions"],
 }
 
-# The model's "truth" for connector adoption (the pipeline never sees these; it re-fits them).
+# Hidden "truth" for connector adoption: the pipeline never sees these; its backtest checks the score against the outcomes.
 # Bigger, faster-growing, more-talked-about tools that many orgs (and enterprises) ask for
 # are the ones that reach 50+ weekly active orgs within 90 days of launch.
 TRUE_ADOPTION = {"intercept": -0.35, "log_employees": 0.55, "growth": 1.6,

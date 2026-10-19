@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intake &amp; Triage</title>
-  <meta name="description" content="Weekly connector triage: dedupe, fitted priority score, build / partner / decline / need info, owners, replies and Linear.">
+  <meta name="description" content="Weekly connector triage: dedupe, weighted priority score, build / partner / decline / need info, owners, replies and Linear.">
   <link rel="stylesheet" href="assets/style.css?v=2026101601">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
 </head>
@@ -44,19 +44,18 @@
     <div class="table-wrap" id="tools"></div>
     <p class="howto"><strong>How to read this:</strong> click a row to see why it scored that way, the decision, the reply sent and the Linear issue. "Historical backlog" rows are old Linear issues that had no priority or owner until this sweep.</p>
 
-    <h2>How the priority score is fitted</h2>
+    <h2>How the priority score works</h2>
     <div class="grid grid-2">
       <div class="card">
-        <h3>What predicts adoption</h3>
-        <p class="small muted" id="model-lede"></p>
-        <div class="table-wrap" id="coefs"></div>
-        <p class="howto"><strong>How to read this:</strong> logistic regression on past connector launches. Label: 50+ weekly active orgs 90 days after launch. A coefficient is the change in log-odds per unit of the signal; z above 2 means the effect is clearly not noise.</p>
+        <h3>Five signals, one weighted average</h3>
+        <div class="table-wrap" id="weights"></div>
+        <p class="howto"><strong>How to read this:</strong> each signal is turned into 0–100 points using the buckets shown, then multiplied by its weight. The five results add up to the priority score (0–100).</p>
       </div>
       <div class="card">
-        <h3>Does it work on launches it never saw?</h3>
+        <h3>Does it pick the connectors that got used?</h3>
         <div class="grid grid-2" id="model-kpis" style="margin-bottom:8px"></div>
-        <div id="calib" class="chart" style="height:250px" role="img" aria-label="Calibration chart: predicted versus actual adoption rate in five bands of held-out launches."></div>
-        <p class="howto"><strong>How to read this:</strong> held-out launches split into five bands by predicted chance. Dots near the diagonal mean a score of 70 really does adopt about 70% of the time.</p>
+        <div id="calib" class="chart" style="height:250px" role="img" aria-label="Bar chart: share of past launches that reached adoption, by the tier today's score would have given them."></div>
+        <p class="howto"><strong>How to read this:</strong> we scored <span id="bt-n"></span> past launches with today's weights. Each bar is the share that reached 50+ weekly active orgs by day 90. If the weights are sensible, higher tiers adopt more often.</p>
       </div>
     </div>
     <div class="card" style="margin-top:12px">
@@ -102,8 +101,8 @@
     // ---- selected tool ----
     const bySlug = Object.fromEntries(tools.map((t) => [t.slug, t]));
     let current = bySlug[CC.param("tool")] || bySlug["brightpath-analytics"];
-    const labels = { log_employees: "Company size", headcount_growth: "Growth", log_mentions: "Online traction",
-      log_requesting_orgs: "Customers asking", enterprise_share: "Enterprise share" };
+    const labels = { customers: "Customers asking", traction: "Online traction", enterprise: "Enterprise share",
+      size: "Company size", growth: "Growth" };
 
     function renderSelected() {
       const t = current;
@@ -123,8 +122,8 @@
         </dl>
         <div class="grid grid-2" style="margin-top:12px">
           <div>
-            <div id="contrib" style="height:210px" role="img" aria-label="Bar chart of how each signal moved this tool's score versus an average past launch."></div>
-            <p class="howto"><strong>How to read this:</strong> how each signal pushes this tool's odds up (right) or down (left) versus an average past launch.</p>
+            <div id="contrib" style="height:210px" role="img" aria-label="Bar chart of the points each signal adds to this tool's priority score."></div>
+            <p class="howto"><strong>How to read this:</strong> points each signal adds (its 0–100 points × its weight). The bars add up to the score of ${t.priority_score}.</p>
           </div>
           <div>
             <p class="small" style="margin:0"><strong>Decision:</strong> ${CC.esc(t.decision)}: ${CC.esc(t.decision_reason)}.${t.escalation ? ` <strong>Escalated:</strong> ${CC.esc(t.escalation)}.` : ""}${t.build_week ? ` Build week ${t.build_week}.` : ""}</p>
@@ -135,12 +134,12 @@
           </div>
         </div>`;
       const keys = Object.keys(labels);
-      const vals = keys.map((k) => t[`pts_${k}`]);
+      const W = Object.fromEntries(D.score.weights.map((w) => [w.feature, w.weight]));
       CC.plot("contrib", [{
-        type: "bar", orientation: "h", y: keys.map((k) => labels[k]), x: vals,
-        marker: { color: vals.map((v) => (v >= 0 ? CC.css("--accent") : CC.css("--out"))) },
-        hovertemplate: "%{y}: %{x:+.2f} log-odds<extra></extra>",
-      }], { margin: { l: 120, r: 12, t: 4, b: 28 }, xaxis: { zeroline: true, zerolinecolor: CC.css("--axis"), gridcolor: CC.css("--grid") } });
+        type: "bar", orientation: "h", y: keys.map((k) => labels[k]), x: keys.map((k) => t[`pts_${k}`]),
+        customdata: keys.map((k) => [t[`sig_${k}`], CC.pct(W[k])]), marker: { color: CC.css("--accent") },
+        hovertemplate: "%{y}: %{customdata[0]} points × %{customdata[1]} = %{x:.1f}<extra></extra>",
+      }], { margin: { l: 120, r: 12, t: 4, b: 28 }, yaxis: { autorange: "reversed" }, xaxis: { range: [0, 30], gridcolor: CC.css("--grid") } });
     }
 
     // ---- ranked table ----
@@ -169,26 +168,29 @@
     }
     Object.values(f).forEach((el) => el.addEventListener("input", renderTable));
 
-    // ---- model ----
-    const M = D.model;
-    document.getElementById("model-lede").textContent =
-      `Fitted on ${M.n_train + M.n_test} past launches (${CC.pct(M.base_rate)} reached adoption).`;
-    CC.table(document.getElementById("coefs"), M.coefficients.filter((r) => r.feature !== "Intercept"), [
-      { label: "Signal", key: "label" },
-      { label: "Coefficient", num: true, render: (r) => r.coef.toFixed(2) },
-      { label: "Std. error", num: true, render: (r) => r.se.toFixed(2) },
-      { label: "z", num: true, render: (r) => r.z.toFixed(1) },
+    // ---- score ----
+    const SC = D.score, B = SC.buckets;
+    const fmtB = (bs, f) => bs.map(([m, p]) => `${f(m)}+ → ${p}`).join(" · ");
+    const bucketText = {
+      customers: fmtB(B.customers, (m) => m) + " orgs",
+      traction: fmtB(B.traction, (m) => CC.num(m)) + " mentions",
+      enterprise: "share × 100 (e.g. 5 of 6 Enterprise → 83)",
+      size: fmtB(B.size, (m) => CC.num(m)) + " employees",
+      growth: fmtB(B.growth, (m) => CC.pct(m)) + "; shrinking → 0",
+    };
+    CC.table(document.getElementById("weights"), SC.weights, [
+      { label: "Signal", render: (w) => `<strong>${CC.esc(w.label)}</strong>` },
+      { label: "Weight", num: true, render: (w) => CC.pct(w.weight) },
+      { label: "Points (0–100)", render: (w) => `<span class="small">${CC.esc(bucketText[w.feature])}</span>` },
     ]);
+    document.getElementById("bt-n").textContent = SC.n;
     document.getElementById("model-kpis").innerHTML =
-      CC.kpi("Holdout AUC: model", M.holdout_auc.toFixed(2), `${M.n_test} launches it never saw`) +
-      CC.kpi("Holdout AUC: “most asks wins”", M.baseline_auc.toFixed(2), "ranking by request count alone");
-    const cal = M.calibration;
-    CC.plot("calib", [
-      { type: "scatter", mode: "lines", x: [0, 1], y: [0, 1], line: { color: CC.css("--axis"), dash: "dot" }, hoverinfo: "skip", showlegend: false },
-      { type: "scatter", mode: "markers+lines", x: cal.map((b) => b.predicted), y: cal.map((b) => b.actual),
-        marker: { size: cal.map((b) => 6 + b.n / 3), color: CC.css("--accent") }, line: { color: CC.css("--accent") }, showlegend: false,
-        hovertemplate: "Predicted %{x:.0%}<br>Actual %{y:.0%}<extra></extra>" },
-    ], { margin: { l: 48, r: 12, t: 4, b: 40 }, xaxis: { title: "Predicted", tickformat: ".0%", range: [0, 1] }, yaxis: { title: "Actual", tickformat: ".0%", range: [0, 1] } });
+      CC.kpi("Backtest AUC: weighted score", SC.auc.toFixed(2), `${SC.n} past launches`) +
+      CC.kpi("Backtest AUC: “most asks wins”", SC.baseline_auc.toFixed(2), "ranking by request count alone");
+    CC.plot("calib", [{ type: "bar", x: SC.by_tier.map((b) => b.tier), y: SC.by_tier.map((b) => b.adoption_rate),
+      text: SC.by_tier.map((b) => `${CC.pct(b.adoption_rate)} of ${b.n}`), textposition: "outside", cliponaxis: false,
+      marker: { color: CC.css("--accent") }, hovertemplate: "%{x}: %{text}<extra></extra>" }],
+      { margin: { l: 48, r: 12, t: 16, b: 40 }, yaxis: { title: "Reached adoption", tickformat: ".0%", range: [0, 1] } });
     const C = D.config;
     document.getElementById("rubric").innerHTML = `
       <div class="table-wrap"><table><thead><tr><th>Tier</th><th>Rule</th><th>What happens</th></tr></thead><tbody>

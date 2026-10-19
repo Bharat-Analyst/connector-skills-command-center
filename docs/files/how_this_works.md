@@ -9,9 +9,9 @@ Oct 16, 2026 · @Bharat
 
 The command center turns three streams of work into one weekly cycle: connector requests, trending open-source agent skills, and marketplace listings.
 
-Every Friday, each new ask is matched to a tool, deduped, scored by a model fitted on past launches, and given an owner, a decision (build, partner, decline or need info) and a reply. Skills spotted on GitHub, X and builder communities are ranked by predicted installs, checked against five compliance gates, packaged as SKILL.md, tested and launched on a steady cadence. Every listing is checked against one template. A written status goes out at the end of the week.
+Every Friday, each new ask is matched to a tool, deduped, scored with a simple weighted average, and given an owner, a decision (build, partner, decline or need info) and a reply. Skills spotted on GitHub, X and builder communities are ranked by predicted installs, checked against five compliance gates, packaged as SKILL.md, tested and launched on a steady cadence. Every listing is checked against one template. A written status goes out at the end of the week.
 
-Three featured items show the whole path. **Brightpath Analytics** was asked for 6 times through 3 channels; it scores 93/100, is Urgent, and goes to engineering with a build brief. **sketchwright**, a technical illustration skill, passes every gate, goes from 10/12 to 12/12 in QA, and launches crediting its creator. **Granite Docs** and **Chartcraft**, two high-traffic listings, go from 1/8 and 2/8 checks to 8/8.
+Three featured items show the whole path. **Brightpath Analytics** was asked for 6 times through 3 channels; it scores 77/100, is Urgent, and goes to engineering with a build brief. **sketchwright**, a technical illustration skill, passes every gate, goes from 10/12 to 12/12 in QA, and launches crediting its creator. **Granite Docs** and **Chartcraft**, two high-traffic listings, go from 1/8 and 2/8 checks to 8/8.
 
 ## The problem
 
@@ -31,7 +31,7 @@ Demand for connectors and skills is growing faster than ad-hoc triage can keep u
 
 1. **Collect.** Forms, the request channel, direct asks, the Linear backlog, and skill candidates from GitHub, X and communities.
 2. **Match and dedupe.** One tool per issue, whatever the spelling; already-live tools get a link.
-3. **Score.** A fitted model gives each tool its chance of adoption; the rubric turns that into a tier. *Decision: how much does this matter?*
+3. **Score.** A weighted average of five signals gives each tool a 0–100 score; the rubric turns that into a tier. *Decision: how much does this matter?*
 4. **Decide and reply.** Build, partner, decline or need info, with an owner, a Linear status and a reply. *Decision: what do we do?*
 5. **Escalate and brief.** Hard calls and partnerships go to the Product Lead; approved builds get a brief.
 6. **Spot and qualify skills.** Rank by predicted installs; check five gates. *Decision: which skills do we port?*
@@ -63,44 +63,53 @@ Each ask's text is reduced to letters and digits ("Bright Path" → "brightpath"
 
 ## Score
 
-### The model
+### The weighted average
 
-We don't hand-pick weights. A logistic regression is fitted on 260 connectors we launched before, using the signals we had when they were requested.
+Each tool gets a priority score from 0 to 100. Each of five signals is turned into 0–100 points with simple buckets, multiplied by its weight, and the five results are added up.
 
-- **Label:** 50+ weekly active orgs 90 days after launch (47% of past launches).
-- **Signals:** company size (log employees), headcount growth over 12 months, online traction (log mentions in 90 days), customers asking (log), and the share of asks from Enterprise customers.
-- **Fit:** iteratively reweighted least squares in numpy, the same method statsmodels uses. `validate.py` refits it with plain gradient descent and checks every score matches within 1 point.
+| Signal | Weight | Points (0–100) | Why it matters |
+|---|---|---|---|
+| Customers asking | 30% | 20+ orgs → 100 · 10+ → 85 · 5+ → 70 · 3+ → 50 · 2 → 30 · 1 → 15 | Real customers asking is the strongest sign a connector will be used |
+| Online traction (mentions, 90 days) | 25% | 10,000+ → 100 · 3,000+ → 80 · 1,000+ → 60 · 300+ → 40 · 50+ → 20 | Tools people talk about pull in users beyond the ones who asked |
+| Share of asks from Enterprise customers | 20% | share × 100 | Bigger accounts, and revenue tied to the connector |
+| Company size (employees) | 15% | 5,000+ → 100 · 1,000+ → 80 · 250+ → 60 · 50+ → 40 · 10+ → 20 | More users who could turn the connector on |
+| Growth (headcount, 12 months) | 10% | 40%+ → 100 · 25%+ → 80 · 10%+ → 60 · 0%+ → 30 · shrinking → 0 | Fast-growing tools gain users after launch |
 
-| Signal | Coefficient | Std. error |
-|---|---|---|
-| Company size (log10 employees) | 0.52 | 0.22 |
-| Growth (headcount, 12 months) | 1.10 | 0.84 |
-| Online traction (log10 mentions) | 0.93 | 0.21 |
-| Customers asking (log) | 0.90 | 0.25 |
-| Enterprise share | 1.00 | 0.73 |
+**Worked example: Brightpath Analytics**
 
-Growth and Enterprise share have large standard errors: the direction is right but the size is uncertain with 260 launches. Refitting each quarter narrows this.
+| Signal | Value | Points | × Weight | = |
+|---|---|---|---|---|
+| Customers asking | 6 orgs | 70 | 30% | 21.0 |
+| Online traction | 6,400 mentions | 80 | 25% | 20.0 |
+| Enterprise share | 5 of 6 | 83 | 20% | 16.6 |
+| Company size | 920 employees | 60 | 15% | 9.0 |
+| Growth | +48% | 100 | 10% | 10.0 |
+| **Priority score** | | | | **77** |
 
-### Validation
+Pebblework Notes (12 employees, 40 mentions, 1 Free-plan customer) scores 10.
 
-A quarter of past launches (68) were held out and never used in fitting.
+The two signals that add the most points are shown as each tool's top reasons. `validate.py` recomputes every score from the raw signals with separate code.
 
-- **Holdout AUC 0.78.** A random adopted connector outscores a random non-adopted one 78% of the time.
-- **Baseline AUC 0.72** for "most asks wins", ranking by request count alone. The model adds size, traction and customer mix on top.
-- **Calibration:** in five bands of held-out launches, predicted and actual adoption rates track each other (chart on the Intake page).
+### Does it pick the right connectors?
+
+The weights are a judgment call, so we check them against history. We scored 260 connectors we launched before with today's weights and asked whether each reached 50+ weekly active orgs 90 days after launch.
+
+- **AUC 0.74.** A random adopted connector outscores a random non-adopted one 74% of the time.
+- **Baseline AUC 0.62** for "most asks wins", ranking by request count alone.
+- **By tier:** 19% of past launches that would have been Low reached adoption, 46% of Medium, 74% of High and 80% of Urgent.
+
+If a quarterly check shows a tier no longer separates winners from the rest, we adjust the weights.
 
 ### The rubric
 
-The score is the predicted chance of adoption, 0–100.
-
 | Tier | Rule |
 |---|---|
-| Urgent | 75+, or 55+ with a blocked deal of $100K+ |
-| High | 55–74 |
-| Medium | 35–54 |
+| Urgent | 65+, or 50+ with a blocked deal of $100K+ |
+| High | 50–64 |
+| Medium | 35–49 |
 | Low | Below 35 |
 
-The blocked-deal rule is the one judgment call on top of the model: revenue already waiting on a connector makes a strong request time-sensitive. This week: 6 Urgent, 17 High, 36 Medium, 51 Low.
+The blocked-deal rule is the one judgment call on top of the score: revenue already waiting on a connector makes a strong request time-sensitive. This week: 3 Urgent, 13 High, 51 Medium, 43 Low.
 
 ## Decide and reply
 
@@ -123,13 +132,13 @@ Every ask gets a reply on the channel it came from, naming the decision and the 
 
 ## Escalate and brief
 
-**To the Product Lead (22 this week):**
+**To the Product Lead (25 this week):**
 
 - Partnerships: the vendor runs its own MCP server and demand is Medium or higher.
 - Hard calls: strong demand (High or Urgent) but no public API, where we could ask the vendor to ship an API or MCP server.
-- Hard calls: a blocked deal of $250K+ on a tool the model rates Medium or Low.
+- Hard calls: a blocked deal of $250K+ on a tool the score rates Medium or Low.
 
-**To engineering (12 briefs):** demand (customers, Enterprise share, channels, blocked deals), why the model rates it, what customers want to do, API and auth, acceptance criteria, and a draft listing that already passes the template.
+**To engineering (7 briefs):** demand (customers, Enterprise share, channels, blocked deals), why it scores the way it does, what customers want to do, API and auth, acceptance criteria, and a draft listing that already passes the template.
 
 ## Spot and qualify skills
 
@@ -190,13 +199,13 @@ The 5-day target holds because triage runs every Friday: an ask that arrives on 
 
 ## What this data can and can't show
 
-All data is synthetic, generated with a fixed seed. The generator plants real relationships (bigger, faster-growing, more-discussed tools adopt more often; skill momentum drives installs), and the models recover them from the data alone. That shows the method works end to end. It does not prove these coefficients hold for a real marketplace. With real data, the same code would be fitted on real launch outcomes, and we would expect weaker fits than the 0.93 here.
+All data is synthetic, generated with a fixed seed. The generator plants real relationships (bigger, faster-growing, more-discussed tools adopt more often; skill momentum drives installs). The backtest and the skills model find them, which shows the method works end to end. It does not prove these weights hold for a real marketplace. With real data, the same backtest would run on real launch outcomes, and we would expect weaker results than the 0.93 here.
 
 ## Decision log
 
 | Decision | Why |
 |---|---|
-| Fit the priority score instead of hand-picking weights | A score that decides what engineering builds should be learned from what was used, and tested on launches it never saw |
+| Simple weighted average for the priority score | Anyone can check it by hand and see why a tool ranks where it does; a backtest on past launches keeps the weights honest |
 | Label = 50+ weekly active orgs at day 90 | Adoption, not launch, is the outcome that matters; 90 days lets slow-moving Enterprise orgs show up |
 | Blocked deal can lift High to Urgent | Revenue already waiting is time-sensitive in a way the adoption model can't see |
 | Vendor-run MCP → Partner | The vendor maintains it; building our own would duplicate their work |

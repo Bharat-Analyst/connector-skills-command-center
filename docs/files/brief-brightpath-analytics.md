@@ -1,11 +1,11 @@
 # Build brief: Brightpath Analytics connector (CON-168)
 
-**Priority:** Urgent (score 93/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 1
+**Priority:** Urgent (score 77/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 1
 
 ## Why build it
 - 6 customers asking (5 Enterprise); 6 new asks via Direct ask, Form, Slack.
 - Blocked deals: $180,000.
-- Model: 93% chance of 50+ weekly active orgs by day 90. Top reasons: Online traction (mentions, 90 days), Customers asking.
+- Priority score 77/100. Top reasons: Customers asking, Online traction (mentions, 90 days).
 
 ## What customers want to do
 - pull weekly KPIs into a report

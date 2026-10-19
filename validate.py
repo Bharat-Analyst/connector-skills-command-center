@@ -6,7 +6,7 @@ Checks:
     1. Every raw ask is accounted for exactly once (no ask lost in matching or dedupe).
     2. Every ask has an owner, a decision and a reply; every tool has one Linear issue.
     3. Triage SLA: business days recomputed from dates, all within the target.
-    4. The adoption model refits to the same scores (plain gradient descent, not IRLS).
+    4. Every priority score recomputes from the raw signals, and its breakdown adds up.
     5. Tiers and decisions follow the published rubric exactly.
     6. Every launch-scheduled skill has permission, attribution, passing gates and a QA log at the bar.
     7. Listing audit: rewritten listings pass every check; counts on the site match the CSVs.
@@ -69,21 +69,20 @@ def main():
     check((req.business_days_to_triage <= P.SLA_BUSINESS_DAYS).all(), "SLA breached")
     n += 3
 
-    # 4. Refit the adoption model with gradient descent; scores must match within 1 point
-    L = raw["past_connector_launches"]
-    X = P.model_features(L, "employees", "headcount_growth_12m", "mentions_90d", "requesting_orgs", "enterprise_share").values
-    y = (L.weekly_active_orgs_day90 >= P.ADOPTION_THRESHOLD).astype(float).values
-    mu, sd = X.mean(0), X.std(0)
-    Z = np.column_stack([np.ones(len(X)), (X - mu) / sd])
-    w = np.zeros(Z.shape[1])
-    for _ in range(20000):
-        p = 1 / (1 + np.exp(-Z @ w))
-        w -= 0.5 * (Z.T @ (p - y) / len(y))
-    Xt = P.model_features(tools, "employees", "headcount_growth_12m", "mentions_90d", "requesting_orgs", "enterprise_share").values
-    gd = 100 / (1 + np.exp(-(np.column_stack([np.ones(len(Xt)), (Xt - mu) / sd]) @ w)))
-    gap = np.abs(gd - tools.priority_score).max()
-    check(gap <= 1.0, f"model refit differs by {gap:.2f} pts")
-    n += 1
+    # 4. Recompute the weighted score from the raw signals with a separate bucket lookup
+    def pts(v, buckets):
+        return next((p for m, p in buckets if v >= m), 0)
+    W = P.WEIGHTS
+    for _, r in tools.iterrows():
+        s = (W["customers"] * pts(r.requesting_orgs, P.CUSTOMERS_BUCKETS)
+             + W["traction"] * pts(r.mentions_90d, P.TRACTION_BUCKETS)
+             + W["enterprise"] * round(100 * r.enterprise_share)
+             + W["size"] * pts(r.employees, P.SIZE_BUCKETS)
+             + W["growth"] * pts(r.headcount_growth_12m, P.GROWTH_BUCKETS))
+        check(abs(s - r.priority_score) <= 0.5, f"score for {r.tool}: {s:.1f} vs {r.priority_score}")
+        parts = sum(r[f"pts_{f}"] for f in P.FEATURES)
+        check(abs(parts - r.priority_score) <= 0.6, f"score breakdown for {r.tool} doesn't add up")
+    n += 2
 
     # 5. Rubric and decisions
     for _, r in tools.iterrows():

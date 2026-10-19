@@ -1,11 +1,11 @@
 # Build brief: Nimbus Analytics connector (CON-106)
 
-**Priority:** High (score 65/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 2
+**Priority:** High (score 55/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 2
 
 ## Why build it
 - 5 customers asking (1 Enterprise); 1 new asks via Slack.
 - Blocked deals: $0.
-- Model: 65% chance of 50+ weekly active orgs by day 90. Top reasons: Customers asking, Online traction (mentions, 90 days).
+- Priority score 55/100. Top reasons: Customers asking, Online traction (mentions, 90 days).
 
 ## What customers want to do
 - (no use cases given; confirm with requesters)

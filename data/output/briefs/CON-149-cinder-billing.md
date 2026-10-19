@@ -1,11 +1,11 @@
 # Build brief: Cinder Billing connector (CON-149)
 
-**Priority:** High (score 69/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 1
+**Priority:** High (score 59/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 1
 
 ## Why build it
 - 4 customers asking (3 Enterprise); 2 new asks via Form.
 - Blocked deals: $0.
-- Model: 69% chance of 50+ weekly active orgs by day 90. Top reasons: Share of asks from Enterprise customers, Online traction (mentions, 90 days).
+- Priority score 59/100. Top reasons: Customers asking, Online traction (mentions, 90 days).
 
 ## What customers want to do
 - look up failed payments

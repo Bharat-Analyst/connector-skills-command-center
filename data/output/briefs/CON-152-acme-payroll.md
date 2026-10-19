@@ -1,11 +1,11 @@
 # Build brief: Acme Payroll connector (CON-152)
 
-**Priority:** High (score 58/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 3
+**Priority:** High (score 52/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 2
 
 ## Why build it
 - 5 customers asking (1 Enterprise); 0 new asks via nan.
 - Blocked deals: $0.
-- Model: 58% chance of 50+ weekly active orgs by day 90. Top reasons: Online traction (mentions, 90 days), Customers asking.
+- Priority score 52/100. Top reasons: Customers asking, Online traction (mentions, 90 days).
 
 ## What customers want to do
 - (no use cases given; confirm with requesters)

@@ -1,11 +1,11 @@
 # Build brief: Ember Helpdesk connector (CON-116)
 
-**Priority:** High (score 56/100) · **Owner:** Integrations Eng – Pod A · **Target start:** build week 3
+**Priority:** High (score 55/100) · **Owner:** Integrations Eng – Pod B · **Target start:** build week 2
 
 ## Why build it
 - 2 customers asking (2 Enterprise); 0 new asks via nan.
 - Blocked deals: $0.
-- Model: 56% chance of 50+ weekly active orgs by day 90. Top reasons: Share of asks from Enterprise customers, Growth (headcount, 12 months).
+- Priority score 55/100. Top reasons: Share of asks from Enterprise customers, Online traction (mentions, 90 days).
 
 ## What customers want to do
 - (no use cases given; confirm with requesters)

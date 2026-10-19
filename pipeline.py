@@ -6,8 +6,8 @@ Steps (mirrors "How this works"):
     1. Collect            read forms, Slack, direct asks, Linear, catalog, research signals
     2. Match and dedupe   find the tool each ask is about; merge repeats; check the live
                           catalog and the Linear backlog
-    3. Score              fit an adoption model on past launches; score every open tool;
-                          turn scores into Urgent / High / Medium / Low
+    3. Score              weighted average of five bucketed signals, backtested on past
+                          launches; turn scores into Urgent / High / Medium / Low
     4. Decide             build / partner / decline / need info, with an owner and a reply;
                           escalations; engineering briefs; Linear import
     5. Spot skills        fit an installs model on past ports; rank open-source candidates
@@ -36,15 +36,32 @@ SEED = 42
 TRIAGE_WEEKDAY = 4                         # Friday. A weekly pass means no ask waits more than 5 business days.
 SLA_BUSINESS_DAYS = 5                      # the 90-day target: every new ask triaged within 5 business days
 
-# Connector adoption model: label = 50+ weekly active orgs 90 days after launch.
-ADOPTION_THRESHOLD = 50
-HOLDOUT_SHARE = 0.25                       # share of past launches kept aside to test the model
-RIDGE = 1e-3                               # tiny penalty so the fit is stable; doesn't change the story
+# Connector priority score: a simple weighted average. Each signal is bucketed to 0–100,
+# then weighted. Buckets are (minimum, points), checked top-down; below the last minimum = 0.
+SIZE_BUCKETS = [(5000, 100), (1000, 80), (250, 60), (50, 40), (10, 20)]                 # employees
+GROWTH_BUCKETS = [(0.40, 100), (0.25, 80), (0.10, 60), (0.0, 30)]                         # headcount, 12 months; shrinking = 0
+TRACTION_BUCKETS = [(10000, 100), (3000, 80), (1000, 60), (300, 40), (50, 20)]          # mentions, 90 days
+CUSTOMERS_BUCKETS = [(20, 100), (10, 85), (5, 70), (3, 50), (2, 30), (1, 15)]           # distinct orgs asking
+WEIGHTS = {
+    # Real customers asking is the strongest sign a connector will be used.
+    "customers": 0.30,
+    # Tools people talk about online pull in users beyond the ones who asked.
+    "traction": 0.25,
+    # Enterprise asks mean bigger accounts and revenue tied to the connector.
+    "enterprise": 0.20,
+    # Bigger companies have more users who could turn the connector on.
+    "size": 0.15,
+    # Fast-growing tools gain users after launch.
+    "growth": 0.10,
+}
+assert abs(sum(WEIGHTS.values()) - 1) < 1e-9
 
-# Priority rubric: the fitted score (0–100 = chance of adoption) sets the tier.
-# A blocked customer deal can lift a strong request to Urgent: revenue is waiting on it.
-TIER_URGENT = 75
-TIER_HIGH = 55
+# Backtest: does the score rank past launches well? Adopted = 50+ weekly active orgs at day 90.
+ADOPTION_THRESHOLD = 50
+
+# Priority rubric. A blocked customer deal can lift a strong request to Urgent: revenue is waiting on it.
+TIER_URGENT = 65
+TIER_HIGH = 50
 TIER_MEDIUM = 35
 URGENT_BLOCKED_ARR = 100_000               # with a score of TIER_HIGH+, a deal this size makes it Urgent
 ESCALATE_BLOCKED_ARR = 250_000             # a deal this size on a Medium/Low request is a hard call for the Product Lead
@@ -55,6 +72,7 @@ OWNER_PRODUCT_LEAD = "Product Lead"
 ENG_PODS = ["Integrations Eng – Pod A", "Integrations Eng – Pod B"]
 
 # Skills
+HOLDOUT_SHARE = 0.25                       # share of past ports kept aside to test the installs model
 ALLOWED_LICENSES = {"MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC"}
 REVIEW_LICENSES = {"GPL-3.0", "AGPL-3.0", "MPL-2.0", "Custom"}   # copyleft or custom: legal review first
 OK_TRANSPORTS = {"None (instructions + scripts)", "Remote MCP (HTTP)"}
@@ -175,44 +193,36 @@ def match_and_dedupe(req, raw):
 
 
 # =============================================================================
-# 3. Score: fit the adoption model, apply it, map to the rubric
+# 3. Score: weighted average of bucketed signals, backtested on past launches
 # =============================================================================
-FEATURES = ["log_employees", "headcount_growth", "log_mentions", "log_requesting_orgs", "enterprise_share"]
+FEATURES = ["customers", "traction", "enterprise", "size", "growth"]
 FEATURE_LABELS = {
-    "log_employees": "Company size", "headcount_growth": "Growth (headcount, 12 months)",
-    "log_mentions": "Online traction (mentions, 90 days)", "log_requesting_orgs": "Customers asking",
-    "enterprise_share": "Share of asks from Enterprise customers",
+    "customers": "Customers asking", "traction": "Online traction (mentions, 90 days)",
+    "enterprise": "Share of asks from Enterprise customers", "size": "Company size",
+    "growth": "Growth (headcount, 12 months)",
 }
 
 
-def model_features(df, employees, growth, mentions, orgs, ent_share):
+def bucket(value, buckets):
+    for minimum, points in buckets:
+        if value >= minimum:
+            return points
+    return 0
+
+
+def signal_points(df, employees, growth, mentions, orgs, ent_share):
+    """Each signal on a 0–100 scale."""
     return pd.DataFrame({
-        "log_employees": np.log10(df[employees].clip(lower=1)),
-        "headcount_growth": df[growth],
-        "log_mentions": np.log10(df[mentions].clip(lower=1)),
-        "log_requesting_orgs": np.log1p(df[orgs]),
-        "enterprise_share": df[ent_share],
-    })
+        "customers": df[orgs].apply(bucket, buckets=CUSTOMERS_BUCKETS),
+        "traction": df[mentions].apply(bucket, buckets=TRACTION_BUCKETS),
+        "enterprise": (100 * df[ent_share]).round(),
+        "size": df[employees].apply(bucket, buckets=SIZE_BUCKETS),
+        "growth": df[growth].apply(bucket, buckets=GROWTH_BUCKETS),
+    }, index=df.index)
 
 
-def fit_logistic(X, y):
-    """Logistic regression by iteratively reweighted least squares (what statsmodels does)."""
-    Xd = np.column_stack([np.ones(len(X)), X])
-    beta = np.zeros(Xd.shape[1])
-    for _ in range(50):
-        p = 1 / (1 + np.exp(-Xd @ beta))
-        W = p * (1 - p)
-        H = Xd.T @ (Xd * W[:, None]) + RIDGE * np.eye(len(beta))
-        step = np.linalg.solve(H, Xd.T @ (y - p) - RIDGE * beta)
-        beta += step
-        if np.abs(step).max() < 1e-9:
-            break
-    se = np.sqrt(np.diag(np.linalg.inv(H)))
-    return beta, se
-
-
-def predict_logistic(beta, X):
-    return 1 / (1 + np.exp(-(beta[0] + np.asarray(X) @ beta[1:])))
+def weighted_score(points):
+    return sum(points[f] * WEIGHTS[f] for f in FEATURES)
 
 
 def auc(y, s):
@@ -223,31 +233,25 @@ def auc(y, s):
     return float((ranks[y == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0))
 
 
-def fit_adoption_model(launches):
-    X = model_features(launches, "employees", "headcount_growth_12m", "mentions_90d",
-                       "requesting_orgs", "enterprise_share")
+def backtest_score(launches):
+    """Score past launches with today's weights and check the score ranks real adoption."""
+    pts = signal_points(launches, "employees", "headcount_growth_12m", "mentions_90d",
+                        "requesting_orgs", "enterprise_share")
+    score = weighted_score(pts)
     y = (launches.weekly_active_orgs_day90 >= ADOPTION_THRESHOLD).astype(int).values
-    rng = np.random.default_rng(SEED)
-    test = rng.random(len(X)) < HOLDOUT_SHARE
-
-    beta_tr, _ = fit_logistic(X[~test].values, y[~test])
-    p_test = predict_logistic(beta_tr, X[test].values)
-    # Baseline: "loudest wins" — rank by how many customers asked, the way intake is often run.
-    baseline_auc = auc(y[test], X[test].log_requesting_orgs.values)
-    cal = pd.DataFrame({"p": p_test, "y": y[test]})
-    cal["band"] = pd.qcut(cal.p, 5, labels=False, duplicates="drop")
-    calibration = cal.groupby("band").agg(predicted=("p", "mean"), actual=("y", "mean"), n=("y", "size")).reset_index()
-
-    beta, se = fit_logistic(X.values, y)           # final model uses every past launch
-    coefs = [{"feature": "Intercept", "label": "Baseline", "coef": beta[0], "se": se[0]}] + [
-        {"feature": f, "label": FEATURE_LABELS[f], "coef": b, "se": s, "z": b / s}
-        for f, b, s in zip(FEATURES, beta[1:], se[1:])]
+    bands = pd.cut(score, [0, TIER_MEDIUM, TIER_HIGH, TIER_URGENT, 101], right=False,
+                   labels=["Low", "Medium", "High", "Urgent"])
+    by_band = pd.DataFrame({"tier": bands, "y": y}).groupby("tier", observed=False) \
+        .agg(adoption_rate=("y", "mean"), n=("y", "size")).reset_index()
     return {
-        "beta": beta, "means": X.mean().to_dict(), "coefficients": coefs,
-        "n_train": int((~test).sum()), "n_test": int(test.sum()), "base_rate": float(y.mean()),
-        "holdout_auc": auc(y[test], p_test), "baseline_auc": baseline_auc,
-        "holdout_brier": float(np.mean((p_test - y[test]) ** 2)),
-        "calibration": records(calibration.round(3)),
+        "n": len(y), "base_rate": float(y.mean()),
+        "auc": auc(y, score.values),
+        # Baseline: "loudest wins" — rank by how many customers asked, the way intake is often run.
+        "baseline_auc": auc(y, launches.requesting_orgs.values),
+        "by_tier": records(by_band.round(3)),
+        "weights": [{"feature": f, "label": FEATURE_LABELS[f], "weight": WEIGHTS[f]} for f in FEATURES],
+        "buckets": {"size": SIZE_BUCKETS, "growth": GROWTH_BUCKETS, "traction": TRACTION_BUCKETS,
+                    "customers": CUSTOMERS_BUCKETS},
     }
 
 
@@ -286,17 +290,17 @@ def build_tool_table(req, backlog, raw):
     return t.reset_index()
 
 
-def score_tools(t, model):
-    X = model_features(t, "employees", "headcount_growth_12m", "mentions_90d", "requesting_orgs", "enterprise_share")
-    beta = model["beta"]
-    t["priority_score"] = np.round(100 * predict_logistic(beta, X.values)).astype(int)
-    # Top reasons: features pushing this tool's odds up most versus an average past launch.
-    contrib = (X - pd.Series(model["means"])) * beta[1:]
-    t["top_reasons"] = [
-        [FEATURE_LABELS[f] for f in row.sort_values(ascending=False).index if row[f] > 0.15][:2]
-        for _, row in contrib.iterrows()]
+def score_tools(t):
+    pts = signal_points(t, "employees", "headcount_growth_12m", "mentions_90d", "requesting_orgs", "enterprise_share")
+    t["priority_score"] = weighted_score(pts).round().astype(int)
+    # Each signal's share of the score (points × weight); they add up to the score.
+    contrib = pd.DataFrame({f: pts[f] * WEIGHTS[f] for f in FEATURES})
+    # Top reasons: the two signals adding the most points.
+    t["top_reasons"] = [[FEATURE_LABELS[f] for f in row.sort_values(ascending=False).index if row[f] > 0][:2]
+                        for _, row in contrib.iterrows()]
     for f in FEATURES:
-        t[f"pts_{f}"] = contrib[f].round(2).values
+        t[f"sig_{f}"] = pts[f].values
+        t[f"pts_{f}"] = contrib[f].round(1).values
 
     def tier(r):
         if r.priority_score >= TIER_URGENT or (r.priority_score >= TIER_HIGH and r.blocked_deal_arr >= URGENT_BLOCKED_ARR):
@@ -335,7 +339,7 @@ def decide(t):
             return "Decline", "the tool has no public API to connect to", OWNER_PM
         if r.tier == "Low":
             return "Decline", "too few signals of adoption yet", OWNER_PM
-        return "Build", "public API and strong adoption signals", None
+        return "Build", "public API and a strong priority score", None
     out = t.apply(lambda r: pd.Series(one(r), index=["decision", "decision_reason", "owner"]), axis=1)
     t = pd.concat([t, out], axis=1)
 
@@ -691,7 +695,7 @@ def write_brief(r):
 ## Why build it
 - {r.requesting_orgs} customers asking ({r.enterprise_orgs} Enterprise); {r.asks} new asks via {r.channels}.
 - Blocked deals: ${r.blocked_deal_arr:,.0f}.
-- Model: {r.priority_score}% chance of 50+ weekly active orgs by day 90. Top reasons: {reasons}.
+- Priority score {r.priority_score}/100. Top reasons: {reasons}.
 
 ## What customers want to do
 {chr(10).join(f"- {u}" for u in r.use_cases) or "- (no use cases given; confirm with requesters)"}
@@ -809,9 +813,9 @@ def main():
     req = triage_dates(req)
 
     # 3. Score
-    model = fit_adoption_model(raw["past_connector_launches"])
+    model = backtest_score(raw["past_connector_launches"])
     t = build_tool_table(req, backlog, raw)
-    t = score_tools(t, model)
+    t = score_tools(t)
 
     # 4. Decide
     t = decide(t)
@@ -882,7 +886,7 @@ def write_site(req, t, model, briefs, esc, linear, cands, smodel, cal, listings,
                  "enterprise_share", "blocked_deal_arr", "channels", "api_type", "auth", "employees",
                  "headcount_growth_12m", "mentions_90d", "priority_score", "tier", "top_reasons", "decision",
                  "decision_reason", "owner", "linear_status", "escalation", "brief", "build_week", "use_cases",
-                 "old_priority", "old_assignee", "domain"] + [f"pts_{f}" for f in FEATURES]
+                 "old_priority", "old_assignee", "domain"] + [f"pts_{f}" for f in FEATURES] + [f"sig_{f}" for f in FEATURES]
     tv = t[tool_cols].copy()
     tv["slug"] = tv.tool.map(slug)
     req_v = req.assign(received_at=req.received_at.dt.strftime("%Y-%m-%d %H:%M"),
@@ -900,7 +904,7 @@ def write_site(req, t, model, briefs, esc, linear, cands, smodel, cal, listings,
                    "by_channel": req.channel.value_counts().to_dict(),
                    "by_match": req.match_status.value_counts().to_dict(),
                    "decisions": t.decision.value_counts().to_dict(), "tiers": t.tier.value_counts().to_dict()},
-        "model": {k: v for k, v in model.items() if k not in ("beta", "means")},
+        "score": model,
         "tools": records(tv.sort_values("priority_score", ascending=False)),
         "requests": records(req_v.drop(columns=["linear_issue", "decision_reason"])),
         "weekly": records(weekly),
@@ -961,8 +965,8 @@ def print_summary(req, t, model, smodel, cands, listings, metrics, n_checks):
     print(f"Asks: {len(req)} raw → {req.tool.nunique()} tools "
           f"({req.is_duplicate.sum()} duplicates, {(req.match_status == 'Already live').sum()} already live, "
           f"{(req.match_status == 'Tool not named').sum()} unnamed)")
-    print(f"Adoption model: holdout AUC {model['holdout_auc']:.2f} vs 'most asks' {model['baseline_auc']:.2f}; "
-          f"Brier {model['holdout_brier']:.3f}")
+    print(f"Weighted score backtest: AUC {model['auc']:.2f} vs 'most asks' {model['baseline_auc']:.2f} "
+          f"on {model['n']} past launches")
     print("Tiers:", t.tier.value_counts().to_dict(), "| Decisions:", t.decision.value_counts().to_dict())
     print(f"Installs model: holdout R² {smodel['holdout_r2']:.2f}, Spearman {smodel['holdout_spearman']:.2f} "
           f"vs total stars {smodel['baseline_spearman']:.2f}")
