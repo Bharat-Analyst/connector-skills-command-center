@@ -57,3 +57,12 @@ Plus one featured request per decision: Larkspur Payments (Partner), Pebblework 
 ## Wording rules
 - Plain on-screen labels. Collaborative phrasing ("we could"). Never "I'd".
 - Built-with-AI credit stays at the top of every page.
+
+## Current files
+- `generate_data.py` → `data/raw/*.csv` (13 files, seed 42, featured items planted).
+- `pipeline.py` → processed tables, tool outputs (Linear CSV, briefs, SKILL.md package, escalations, weekly status),
+  `docs/data/{intake,skills,catalog,status}.json` and `docs/files/` (copies the site links to). Ends by running `validate.py`.
+- `content/how_this_works.md` — the written method; rendered by `docs/how-this-works.html`. Keep numbers in sync with the pipeline.
+- Pages: index (weekly cycle), intake, skills, catalog (listings), status, how-this-works. Shared JS: `docs/assets/common.js`.
+- Cross-page state is URL-only: `?tool=<slug>`, `?skill=<name>`, `?step=<1-8>`.
+- Preview: `python3 -m http.server 8000 -d docs`.
