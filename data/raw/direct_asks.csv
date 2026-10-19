@@ -1,0 +1,62 @@
+ask_id,asked_at,from_role,requester_org,plan,tool_mentioned,notes,blocked_deal_arr
+D-0001,2026-08-24 11:18,AE,Driftwood Systems,Team,jettynotes.com,Customer wants to keep docs in sync.,0
+D-0002,2026-08-24 13:37,Partner manager,Driftwood Media,Enterprise,Jetty Notes,Customer wants to keep docs in sync.,50000
+D-0003,2026-08-25 10:44,CSM,Acme Media,Free,ElmsteadNotes,Customer wants to search team docs.,0
+D-0004,2026-08-25 17:57,AE,Upland Retail,Enterprise,jetty notes,Customer wants to keep docs in sync.,400000
+D-0005,2026-08-26 15:26,AE,Cinder Bank,Team,emberprojects.com,Customer wants to summarize sprint status.,0
+D-0006,2026-08-27 09:11,CSM,Driftwood Group,Team,jettynotes.com,Customer wants to search team docs.,0
+D-0007,2026-08-27 11:04,Partner manager,Harbor Systems,Free,willow vault,Customer wants to look up user permissions.,0
+D-0008,2026-08-28 12:26,AE,Cinder Health,Team,pinecrestpeople.com,Customer wants to look up PTO balances.,0
+D-0009,2026-08-31 14:19,Partner manager,Basalt Retail,Team,jetty notes,Customer wants to search team docs.,0
+D-0010,2026-09-01 08:02,Partner manager,Dovetail Health,Team,gullwing payroll,Customer wants to answer policy questions.,0
+D-0011,2026-09-01 08:57,CSM,Indigo Health,Enterprise,Jetty Notes,Customer wants to keep docs in sync.,120000
+D-0012,2026-09-01 11:18,Partner manager,Foxglove Retail,Team,Pinecrest CI,Customer wants to open incidents from alerts.,0
+D-0013,2026-09-01 16:29,AE,Jetty Group,Free,willowvault.com,Customer wants to summarize alerts.,0
+D-0014,2026-09-02 16:05,Partner manager,Northgate Retail,Enterprise,Jetty Notes,Customer wants to turn notes into a spec.,0
+D-0015,2026-09-02 16:19,AE,Lattice Works,Free,jetty notes,Customer wants to keep docs in sync.,0
+D-0016,2026-09-03 18:32,CSM,Orchard Retail,Free,upland campaigns,Customer wants to schedule posts.,0
+D-0017,2026-09-04 13:03,Partner manager,Heron Media,Team,Willow Vault,Customer wants to summarize alerts.,0
+D-0018,2026-09-04 16:51,Partner manager,Tidewater Health,Free,Willow Deploy,Customer wants to open incidents from alerts.,0
+D-0019,2026-09-07 10:22,CSM,Meridian Media,Team,tidewater people,Customer wants to draft onboarding plans.,0
+D-0020,2026-09-07 16:10,CSM,Jetty Works,Free,RedwoodCanvas,Customer wants to describe a design file.,0
+D-0021,2026-09-07 16:32,AE,Ember Labs,Team,Pinecrest People,Customer wants to draft onboarding plans.,0
+D-0022,2026-09-07 18:11,CSM,Saltmarsh Retail,Team,the tool our finance team uses,Customer wants to report campaign results.,0
+D-0023,2026-09-08 10:09,CSM,Kestrel Labs,Team,uplandcampaigns.com,Customer wants to schedule posts.,0
+D-0024,2026-09-08 14:12,CSM,Gullwing Health,Free,jetty notes,Customer wants to search team docs.,0
+D-0025,2026-09-08 18:32,Partner manager,Ironleaf Bank,Team,WillowVault,Customer wants to review access requests.,0
+D-0026,2026-09-09 08:11,CSM,Foxglove Co,Team,Willow Deploy,Customer wants to read deploy logs.,0
+D-0027,2026-09-09 15:30,AE,Saltmarsh Co,Team,willowvault.com,Customer wants to summarize alerts.,0
+D-0028,2026-09-09 15:53,CSM,Ember Bank,Team,ember payments,Customer wants to look up failed payments.,0
+D-0029,2026-09-10 13:29,AE,Tidewater Systems,Enterprise,granitesync.com,Customer wants to check a pipeline run.,50000
+D-0030,2026-09-10 14:33,Partner manager,Gullwing Group,Free,TidewaterPeople,Customer wants to draft onboarding plans.,0
+D-0031,2026-09-14 11:47,Partner manager,Granite Works,Team,dovetailcampaigns.com,Customer wants to report campaign results.,0
+D-0032,2026-09-14 17:07,CSM,Bluefin Retail,Team,gullwingdesk.com,Customer wants to summarize open tickets.,0
+D-0033,2026-09-15 14:26,AE,Meridian Works,Enterprise,AlderBilling,Customer wants to reconcile payouts.,0
+D-0034,2026-09-16 10:01,Partner manager,Ironleaf Systems,Free,lumenanalytics.com,Customer wants to pull weekly KPIs into a report.,0
+D-0035,2026-09-16 15:04,CSM,Tidewater Bank,Team,whatever CRM the customer has,Customer wants to review a mockup.,0
+D-0036,2026-09-18 09:55,Partner manager,Fernhill Labs,Team,PrismData,Customer wants to describe a schema.,0
+D-0037,2026-09-22 11:00,Partner manager,Lumen Retail,Enterprise,Larkspur,Customer wants to summarize churned subscriptions.,0
+D-0038,2026-09-22 13:30,CSM,Redwood Systems,Team,willowinsights.com,Customer wants to pull weekly KPIs into a report.,0
+D-0039,2026-09-23 18:05,CSM,Jetty Health,Team,bluefinhr.com,Customer wants to answer policy questions.,0
+D-0040,2026-09-24 08:24,AE,Granite Health,Enterprise,willowvault.com,Customer wants to review access requests.,0
+D-0041,2026-09-24 12:08,CSM,Bluefin Retail,Free,HarborData,Customer wants to query tables in plain English.,0
+D-0042,2026-09-24 14:12,AE,Saltmarsh Retail,Team,WillowVault,Customer wants to look up user permissions.,0
+D-0043,2026-09-24 15:23,CSM,Foxglove Retail,Free,jetty notes,Customer wants to turn notes into a spec.,0
+D-0044,2026-09-28 16:16,CSM,Nimbus Retail,Team,Kiln Vault,Customer wants to look up user permissions.,0
+D-0045,2026-09-29 18:16,CSM,Granite Group,Team,Jetty Notes,Customer wants to turn notes into a spec.,0
+D-0046,2026-09-30 13:50,CSM,Kiln Group,Free,Elmstead Notes,Customer wants to turn notes into a spec.,0
+D-0047,2026-09-30 18:47,AE,Orchard Health,Team,redwoodcanvas.com,Customer wants to describe a design file.,0
+D-0048,2026-10-02 16:34,AE,Ironleaf Works,Free,WillowDeploy,Customer wants to read deploy logs.,0
+D-0049,2026-10-02 17:28,AE,Gullwing Co,Team,pinecrestci.com,Customer wants to open incidents from alerts.,0
+D-0050,2026-10-05 09:35,AE,Acme Co,Enterprise,quarryboards.com,Customer wants to create tasks from meeting notes.,400000
+D-0051,2026-10-06 11:43,Partner manager,Redwood Partners,Enterprise,JettyNotes,Customer wants to keep docs in sync.,0
+D-0052,2026-10-06 13:01,CSM,Vantage Labs,Team,WillowVault,Customer wants to look up user permissions.,0
+D-0053,2026-10-07 10:00,Partner manager,Kiln Partners,Enterprise,Brightpath Analytics,Customer wants to explain a metric drop.,180000
+D-0054,2026-10-07 10:33,AE,Prism Health,Enterprise,willowdeploy.com,Customer wants to open incidents from alerts.,120000
+D-0055,2026-10-07 12:35,Partner manager,Kiln Labs,Team,jetty notes,Customer wants to keep docs in sync.,0
+D-0056,2026-10-12 12:09,CSM,Alder Health,Enterprise,driftwoodwiki.com,Customer wants to turn notes into a spec.,0
+D-0057,2026-10-12 18:05,CSM,Maple Co,Free,GraniteCanvas,Customer wants to export assets.,0
+D-0058,2026-10-14 14:08,AE,Ironleaf Media,Team,AcmeWiki,Customer wants to turn notes into a spec.,0
+D-0059,2026-10-14 16:59,AE,Kiln Partners,Free,jetty notes,Customer wants to turn notes into a spec.,0
+D-0060,2026-10-16 10:26,AE,Alder Group,Free,that new AI notes app,Customer wants to ask questions about dashboards.,0
+D-0061,2026-10-16 10:34,Partner manager,Harbor Labs,Team,acmewiki.com,Customer wants to search team docs.,0

@@ -1,0 +1,65 @@
+repo,skill_name,category,description,license,stars,stars_7d,x_mentions_7d,community_mentions_7d,transport,sandbox_needs,creator,first_seen
+inkline/sketchwright,sketchwright,Illustration & diagrams,Turns a plain-English description into a clean technical illustration (SVG).,MIT,8400,2900,1850,420,None (instructions + scripts),File write (outputs folder),inkline,2026-09-29
+hexwren/bincrack,bincrack,Reverse engineering,"Walks through a compiled binary: strings, symbols, control flow, likely behavior.",GPL-3.0,12100,2400,1300,510,Local stdio only,"Host binaries (ghidra, radare2)",hexwren,2026-10-02
+kaizen_kit/lintscribe,lintscribe,Reverse engineering,An agent skill for reverse engineering.,AGPL-3.0,600,18,4,1,None (instructions + scripts),File write (outputs folder),kaizen_kit,2026-09-20
+marisol-codes/relayforge,relayforge,Spreadsheets,An agent skill for spreadsheets.,GPL-3.0,462,120,19,21,Remote MCP (HTTP),Network (allow-listed APIs),marisol-codes,2026-10-06
+kaizen_kit/graphforge,graphforge,Data analysis,An agent skill for data analysis.,MIT,1817,83,49,73,None (instructions + scripts),None,kaizen_kit,2026-09-10
+nullpointer_nia/graphsketch,graphsketch,DevOps,An agent skill for devops.,Apache-2.0,1905,56,12,64,None (instructions + scripts),None,nullpointer_nia,2026-09-12
+sprocketeer/probesketch,probesketch,Research,An agent skill for research.,MIT,4909,378,39,101,None (instructions + scripts),None,sprocketeer,2026-10-05
+inkline/relayloom,relayloom,Testing,An agent skill for testing.,MIT,9235,318,100,74,None (instructions + scripts),None,inkline,2026-09-20
+tessaroo/mapsketch,mapsketch,Research,An agent skill for research.,MIT,1162,92,38,8,None (instructions + scripts),Host binaries,tessaroo,2026-10-14
+lowtide/sheetsmith,sheetsmith,Research,An agent skill for research.,No license,1617,23,4,2,None (instructions + scripts),Network (allow-listed APIs),lowtide,2026-09-16
+nullpointer_nia/framepilot,framepilot,Testing,An agent skill for testing.,Custom,614,44,6,6,None (instructions + scripts),File write (outputs folder),nullpointer_nia,2026-09-02
+rhea-builds/patchloom,patchloom,Illustration & diagrams,An agent skill for illustration & diagrams.,Apache-2.0,2970,723,807,219,Remote MCP (HTTP),File write (outputs folder),rhea-builds,2026-09-03
+j0hanna/proofscribe,proofscribe,Illustration & diagrams,An agent skill for illustration & diagrams.,Apache-2.0,21869,1169,2084,167,None (instructions + scripts),None,j0hanna,2026-09-18
+marisol-codes/plotsmith,plotsmith,Data analysis,An agent skill for data analysis.,No license,317,7,4,0,None (instructions + scripts),Network (allow-listed APIs),marisol-codes,2026-10-09
+kaizen_kit/proofforge,proofforge,Design,An agent skill for design.,MIT,721,86,51,48,Local stdio only,None,kaizen_kit,2026-10-08
+vectorvale/diffwright,diffwright,Design,An agent skill for design.,No license,316,26,7,1,None (instructions + scripts),File write (outputs folder),vectorvale,2026-09-14
+lowtide/specforge,specforge,Docs & writing,An agent skill for docs & writing.,Apache-2.0,4829,345,135,38,None (instructions + scripts),File write (outputs folder),lowtide,2026-09-05
+j0hanna/auditsketch,auditsketch,Security review,An agent skill for security review.,MIT,2269,48,8,6,None (instructions + scripts),None,j0hanna,2026-10-08
+byteforager/slidelens,slidelens,Security review,An agent skill for security review.,MIT,806,56,10,9,Local stdio only,None,byteforager,2026-09-07
+hexwren/schemasketch,schemasketch,Security review,An agent skill for security review.,Apache-2.0,1399,29,9,1,None (instructions + scripts),Network (allow-listed APIs),hexwren,2026-10-14
+tamsin_t/briefkit,briefkit,Data analysis,An agent skill for data analysis.,MIT,1116,138,104,11,None (instructions + scripts),File write (outputs folder),tamsin_t,2026-08-18
+inkline/graphpilot,graphpilot,Spreadsheets,An agent skill for spreadsheets.,MIT,367,340,100,10,Remote MCP (HTTP),GPU,inkline,2026-08-24
+byteforager/patchwright,patchwright,Security review,An agent skill for security review.,MIT,367,17,13,0,None (instructions + scripts),File write (outputs folder),byteforager,2026-09-12
+fennick/queryloom,queryloom,Spreadsheets,An agent skill for spreadsheets.,MIT,240,21,6,5,Remote MCP (HTTP),None,fennick,2026-09-02
+hexwren/slidepilot,slidepilot,DevOps,An agent skill for devops.,MIT,737,47,39,4,Remote MCP (HTTP),GPU,hexwren,2026-08-27
+rhea-builds/framekit,framekit,Illustration & diagrams,An agent skill for illustration & diagrams.,MIT,79,15,6,1,Local stdio only,File write (outputs folder),rhea-builds,2026-08-23
+nullpointer_nia/maploom,maploom,Reverse engineering,An agent skill for reverse engineering.,BSD-3-Clause,961,190,82,96,None (instructions + scripts),Network (allow-listed APIs),nullpointer_nia,2026-09-16
+tessaroo/proofsketch,proofsketch,Data analysis,An agent skill for data analysis.,Apache-2.0,2740,50,14,11,Remote MCP (HTTP),Network (allow-listed APIs),tessaroo,2026-09-05
+lowtide/slidewright,slidewright,Spreadsheets,An agent skill for spreadsheets.,GPL-3.0,1670,107,91,8,None (instructions + scripts),File write (outputs folder),lowtide,2026-09-14
+ogunlabs/sheetwright,sheetwright,Design,An agent skill for design.,GPL-3.0,1311,198,85,45,None (instructions + scripts),None,ogunlabs,2026-08-18
+vectorvale/plotpilot,plotpilot,Data analysis,An agent skill for data analysis.,MIT,321,28,1,2,Remote MCP (HTTP),File write (outputs folder),vectorvale,2026-09-15
+tessaroo/framesketch,framesketch,Design,An agent skill for design.,MIT,684,68,36,26,None (instructions + scripts),File write (outputs folder),tessaroo,2026-08-20
+hexwren/diffsketch,diffsketch,Spreadsheets,An agent skill for spreadsheets.,GPL-3.0,241,3,0,1,None (instructions + scripts),Network (allow-listed APIs),hexwren,2026-08-27
+hexwren/graphlens,graphlens,Testing,An agent skill for testing.,No license,3372,35,8,5,None (instructions + scripts),None,hexwren,2026-10-01
+tamsin_t/specscribe,specscribe,Reverse engineering,An agent skill for reverse engineering.,MIT,446,16,12,0,None (instructions + scripts),GPU,tamsin_t,2026-09-13
+rhea-builds/chartlens,chartlens,DevOps,An agent skill for devops.,MIT,891,97,10,1,None (instructions + scripts),None,rhea-builds,2026-08-31
+fennick/specwright,specwright,Research,An agent skill for research.,MIT,631,68,40,52,None (instructions + scripts),File write (outputs folder),fennick,2026-10-04
+sprocketeer/probeloom,probeloom,Reverse engineering,An agent skill for reverse engineering.,MIT,1818,203,903,44,None (instructions + scripts),GPU,sprocketeer,2026-09-10
+tessaroo/mapsmith,mapsmith,Spreadsheets,An agent skill for spreadsheets.,Apache-2.0,676,29,3,20,None (instructions + scripts),File write (outputs folder),tessaroo,2026-09-02
+lowtide/framescribe,framescribe,Design,An agent skill for design.,MIT,2451,358,150,48,None (instructions + scripts),Host binaries,lowtide,2026-09-07
+dunmore/chartwright,chartwright,Spreadsheets,An agent skill for spreadsheets.,No license,527,18,4,1,None (instructions + scripts),None,dunmore,2026-08-23
+marisol-codes/probesmith,probesmith,Security review,An agent skill for security review.,ISC,2132,15,9,1,None (instructions + scripts),Network (allow-listed APIs),marisol-codes,2026-09-29
+sprocketeer/sheetpilot,sheetpilot,DevOps,An agent skill for devops.,MIT,1067,265,95,116,None (instructions + scripts),None,sprocketeer,2026-10-10
+lowtide/patchsketch,patchsketch,Docs & writing,An agent skill for docs & writing.,Apache-2.0,2588,80,11,78,Remote MCP (HTTP),None,lowtide,2026-08-31
+sprocketeer/queryscribe,queryscribe,Spreadsheets,An agent skill for spreadsheets.,BSD-3-Clause,230,16,2,1,None (instructions + scripts),GPU,sprocketeer,2026-10-01
+mkellner/mapcraft,mapcraft,Research,An agent skill for research.,MIT,1087,49,32,6,None (instructions + scripts),Host binaries,mkellner,2026-08-25
+lowtide/chartkit,chartkit,Testing,An agent skill for testing.,MIT,674,144,34,5,None (instructions + scripts),Network (allow-listed APIs),lowtide,2026-09-05
+j0hanna/framecraft,framecraft,Design,An agent skill for design.,BSD-3-Clause,5698,829,246,118,Remote MCP (HTTP),File write (outputs folder),j0hanna,2026-10-01
+lowtide/briefscribe,briefscribe,Testing,An agent skill for testing.,BSD-3-Clause,144,9,2,3,Remote MCP (HTTP),File write (outputs folder),lowtide,2026-09-11
+ogunlabs/plotkit,plotkit,Reverse engineering,An agent skill for reverse engineering.,MIT,1040,388,242,44,Local stdio only,File write (outputs folder),ogunlabs,2026-10-05
+ogunlabs/tracesketch,tracesketch,Data analysis,An agent skill for data analysis.,MIT,408,45,44,1,None (instructions + scripts),None,ogunlabs,2026-09-03
+vectorvale/lintcraft,lintcraft,Design,An agent skill for design.,Apache-2.0,174,12,4,3,None (instructions + scripts),None,vectorvale,2026-09-29
+lowtide/schemascribe,schemascribe,Spreadsheets,An agent skill for spreadsheets.,MIT,1446,52,39,4,None (instructions + scripts),Host binaries,lowtide,2026-09-17
+fennick/proofcraft,proofcraft,DevOps,An agent skill for devops.,AGPL-3.0,3332,1702,740,854,None (instructions + scripts),Network (allow-listed APIs),fennick,2026-10-08
+arclight-oss/auditlens,auditlens,Design,An agent skill for design.,BSD-3-Clause,52449,1228,383,115,Remote MCP (HTTP),Host binaries,arclight-oss,2026-10-14
+inkline/relaywright,relaywright,Research,An agent skill for research.,MIT,117,4,0,0,Local stdio only,File write (outputs folder),inkline,2026-08-21
+lowtide/schemawright,schemawright,Data analysis,An agent skill for data analysis.,GPL-3.0,623,16,10,5,None (instructions + scripts),None,lowtide,2026-10-03
+lowtide/speccraft,speccraft,Reverse engineering,An agent skill for reverse engineering.,No license,2402,112,34,2,None (instructions + scripts),Network (allow-listed APIs),lowtide,2026-09-07
+marisol-codes/sheetscribe,sheetscribe,DevOps,An agent skill for devops.,GPL-3.0,271,12,2,1,Local stdio only,None,marisol-codes,2026-09-06
+mkellner/mappilot,mappilot,Reverse engineering,An agent skill for reverse engineering.,BSD-3-Clause,4209,284,34,14,None (instructions + scripts),File write (outputs folder),mkellner,2026-08-25
+rhea-builds/plotsketch,plotsketch,Testing,An agent skill for testing.,Apache-2.0,7646,466,564,138,Remote MCP (HTTP),Network (allow-listed APIs),rhea-builds,2026-09-22
+marisol-codes/auditloom,auditloom,Testing,An agent skill for testing.,MIT,342,98,16,42,None (instructions + scripts),None,marisol-codes,2026-09-05
+tessaroo/proofwright,proofwright,Data analysis,An agent skill for data analysis.,MIT,2167,25,13,0,None (instructions + scripts),Network (allow-listed APIs),tessaroo,2026-10-02
+inkline/relaysmith,relaysmith,Testing,An agent skill for testing.,AGPL-3.0,1371,16,5,3,None (instructions + scripts),File write (outputs folder),inkline,2026-08-23

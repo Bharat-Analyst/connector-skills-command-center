@@ -1,0 +1,65 @@
+repo,creator,requested_on,status,responded_on,attribution_text
+inkline/sketchwright,inkline,2026-10-01,Granted,2026-10-02,Ported from inkline/sketchwright by @inkline (MIT).
+hexwren/bincrack,hexwren,2026-10-05,Pending,,
+kaizen_kit/lintscribe,kaizen_kit,,Not requested,,
+marisol-codes/relayforge,marisol-codes,,Not requested,,
+kaizen_kit/graphforge,kaizen_kit,,Not requested,,
+nullpointer_nia/graphsketch,nullpointer_nia,2026-09-25,Granted,2026-09-27,Ported from nullpointer_nia/graphsketch by @nullpointer_nia (Apache-2.0).
+sprocketeer/probesketch,sprocketeer,2026-09-28,Granted,2026-09-30,
+inkline/relayloom,inkline,2026-09-20,Pending,,
+tessaroo/mapsketch,tessaroo,2026-10-06,Granted,2026-10-08,Ported from tessaroo/mapsketch by @tessaroo (MIT).
+lowtide/sheetsmith,lowtide,2026-10-06,Pending,,
+nullpointer_nia/framepilot,nullpointer_nia,,Not requested,,
+rhea-builds/patchloom,rhea-builds,2026-10-14,Granted,2026-10-17,
+j0hanna/proofscribe,j0hanna,2026-10-10,Granted,2026-10-15,Ported from j0hanna/proofscribe by @j0hanna (Apache-2.0).
+marisol-codes/plotsmith,marisol-codes,2026-10-01,Pending,,
+kaizen_kit/proofforge,kaizen_kit,2026-10-08,Pending,,
+vectorvale/diffwright,vectorvale,2026-09-24,Granted,2026-09-29,Ported from vectorvale/diffwright by @vectorvale (No license).
+lowtide/specforge,lowtide,2026-10-11,Granted,2026-10-12,Ported from lowtide/specforge by @lowtide (Apache-2.0).
+j0hanna/auditsketch,j0hanna,,Not requested,,
+byteforager/slidelens,byteforager,2026-09-18,Declined,2026-09-22,
+hexwren/schemasketch,hexwren,2026-10-07,Declined,2026-10-10,
+tamsin_t/briefkit,tamsin_t,2026-10-03,Pending,,
+inkline/graphpilot,inkline,2026-09-19,Granted,2026-09-20,
+byteforager/patchwright,byteforager,2026-09-24,Granted,2026-09-28,Ported from byteforager/patchwright by @byteforager (MIT).
+fennick/queryloom,fennick,2026-10-08,Granted,2026-10-13,Ported from fennick/queryloom by @fennick (MIT).
+hexwren/slidepilot,hexwren,2026-10-07,Granted,2026-10-08,Ported from hexwren/slidepilot by @hexwren (MIT).
+rhea-builds/framekit,rhea-builds,2026-10-06,Granted,2026-10-08,
+nullpointer_nia/maploom,nullpointer_nia,,Not requested,,
+tessaroo/proofsketch,tessaroo,2026-09-30,Pending,,
+lowtide/slidewright,lowtide,,Not requested,,
+ogunlabs/sheetwright,ogunlabs,,Not requested,,
+vectorvale/plotpilot,vectorvale,,Not requested,,
+tessaroo/framesketch,tessaroo,2026-09-26,Declined,2026-09-28,
+hexwren/diffsketch,hexwren,2026-10-05,Pending,,
+hexwren/graphlens,hexwren,2026-10-07,Pending,,
+tamsin_t/specscribe,tamsin_t,,Not requested,,
+rhea-builds/chartlens,rhea-builds,2026-10-08,Declined,2026-10-12,
+fennick/specwright,fennick,,Not requested,,
+sprocketeer/probeloom,sprocketeer,2026-09-26,Granted,2026-10-01,Ported from sprocketeer/probeloom by @sprocketeer (MIT).
+tessaroo/mapsmith,tessaroo,2026-09-19,Declined,2026-09-24,
+lowtide/framescribe,lowtide,,Not requested,,
+dunmore/chartwright,dunmore,2026-10-08,Pending,,
+marisol-codes/probesmith,marisol-codes,,Not requested,,
+sprocketeer/sheetpilot,sprocketeer,2026-10-08,Granted,2026-10-11,Ported from sprocketeer/sheetpilot by @sprocketeer (MIT).
+lowtide/patchsketch,lowtide,2026-09-26,Granted,2026-10-01,Ported from lowtide/patchsketch by @lowtide (Apache-2.0).
+sprocketeer/queryscribe,sprocketeer,,Not requested,,
+mkellner/mapcraft,mkellner,2026-09-22,Granted,2026-09-24,
+lowtide/chartkit,lowtide,2026-09-18,Pending,,
+j0hanna/framecraft,j0hanna,,Not requested,,
+lowtide/briefscribe,lowtide,2026-10-02,Granted,2026-10-07,Ported from lowtide/briefscribe by @lowtide (BSD-3-Clause).
+ogunlabs/plotkit,ogunlabs,2026-10-14,Declined,2026-10-18,
+ogunlabs/tracesketch,ogunlabs,2026-10-07,Granted,2026-10-11,Ported from ogunlabs/tracesketch by @ogunlabs (MIT).
+vectorvale/lintcraft,vectorvale,2026-09-28,Pending,,
+lowtide/schemascribe,lowtide,2026-10-04,Granted,2026-10-06,Ported from lowtide/schemascribe by @lowtide (MIT).
+fennick/proofcraft,fennick,2026-09-30,Pending,,
+arclight-oss/auditlens,arclight-oss,,Not requested,,
+inkline/relaywright,inkline,2026-10-01,Granted,2026-10-02,Ported from inkline/relaywright by @inkline (MIT).
+lowtide/schemawright,lowtide,2026-10-01,Pending,,
+lowtide/speccraft,lowtide,,Not requested,,
+marisol-codes/sheetscribe,marisol-codes,2026-09-30,Granted,2026-10-03,
+mkellner/mappilot,mkellner,2026-10-05,Granted,2026-10-08,Ported from mkellner/mappilot by @mkellner (BSD-3-Clause).
+rhea-builds/plotsketch,rhea-builds,2026-09-23,Granted,2026-09-28,Ported from rhea-builds/plotsketch by @rhea-builds (Apache-2.0).
+marisol-codes/auditloom,marisol-codes,2026-09-26,Pending,,
+tessaroo/proofwright,tessaroo,2026-10-13,Pending,,
+inkline/relaysmith,inkline,2026-09-20,Granted,2026-09-23,Ported from inkline/relaysmith by @inkline (AGPL-3.0).

@@ -1,0 +1,115 @@
+message_id,posted_at,channel,posted_by,requester_org,plan,message,blocked_deal_arr
+S-0001,2026-08-24 10:45,#connector-requests,AE,Kestrel Works,Team,customer on Team asking for Jetty Notes — they want to search team docs,0
+S-0002,2026-08-24 18:06,#connector-requests,CSM,Lumen Systems,Free,"+1 for quarryboards.com, Lumen Systems asked again (Free plan)",0
+S-0003,2026-08-25 08:05,#connector-requests,SE,Tidewater Works,Enterprise,"+1 for jettynotes.com, Tidewater Works asked again (Enterprise plan)",0
+S-0004,2026-08-25 11:10,#connector-requests,Support,Elmstead Labs,Free,customer on Free asking for embersales.com — they want to pull deal notes before calls,0
+S-0005,2026-08-25 12:20,#connector-requests,Support,Gullwing Systems,Team,any chance we get a maplemetrics.com connector? customer wants to ask questions about dashboards,0
+S-0006,2026-08-25 13:46,#connector-requests,CSM,Kestrel Labs,Enterprise,customer on Enterprise asking for jetty notes — they want to search team docs,0
+S-0007,2026-08-25 13:48,#connector-requests,SE,Zephyr Co,Enterprise,"+1 for alderbilling.com, Zephyr Co asked again (Enterprise plan)",0
+S-0008,2026-08-25 17:53,#connector-requests,CSM,Harbor Media,Enterprise,"+1 for vantagewiki.com, Harbor Media asked again (Enterprise plan)",0
+S-0009,2026-08-25 18:42,#connector-requests,CSM,Elmstead Health,Team,customer on Team asking for Willow Vault — they want to review access requests,0
+S-0010,2026-08-26 11:14,#connector-requests,Support,Nimbus Systems,Free,"+1 for jetty notes, Nimbus Systems asked again (Free plan)",0
+S-0011,2026-08-26 14:03,#connector-requests,AE,Indigo Health,Team,customer on Team asking for WillowDeploy — they want to read deploy logs,0
+S-0012,2026-08-26 14:56,#connector-requests,Support,Prism Systems,Team,any chance we get a Driftwood Wiki connector? customer wants to keep docs in sync,0
+S-0013,2026-08-26 17:45,#connector-requests,CSM,Heron Labs,Free,"+1 for jetty notes, Heron Labs asked again (Free plan)",0
+S-0014,2026-08-26 18:14,#connector-requests,CSM,Indigo Media,Free,customer on Free asking for granite vault — they want to review access requests,0
+S-0015,2026-08-27 11:50,#connector-requests,Support,Pinecrest Works,Team,customer on Team asking for Willow Vault — they want to review access requests,0
+S-0016,2026-08-27 14:49,#connector-requests,AE,Driftwood Co,Team,"+1 for HarborData, Driftwood Co asked again (Team plan)",0
+S-0017,2026-08-28 09:11,#connector-requests,SE,Foxglove Group,Enterprise,customer on Enterprise asking for TidewaterPeople — they want to draft onboarding plans,0
+S-0018,2026-08-28 12:33,#connector-requests,SE,Lattice Co,Team,"+1 for saltmarsh data, Lattice Co asked again (Team plan)",0
+S-0019,2026-08-31 10:29,#connector-requests,Support,Juniper Media,Free,any chance we get a jettynotes.com connector? customer wants to keep docs in sync,0
+S-0020,2026-08-31 11:24,#connector-requests,CSM,Tidewater Systems,Enterprise,"+1 for willowvault.com, Tidewater Systems asked again (Enterprise plan)",0
+S-0021,2026-09-01 10:06,#connector-requests,AE,Zephyr Co,Enterprise,any chance we get a Jetty Notes connector? customer wants to turn notes into a spec,0
+S-0022,2026-09-01 17:20,#connector-requests,CSM,Lattice Retail,Team,any chance we get a PrismData connector? customer wants to describe a schema,0
+S-0023,2026-09-01 18:09,#connector-requests,Support,Dovetail Labs,Team,any chance we get a Elmstead Notes connector? customer wants to search team docs,0
+S-0024,2026-09-02 08:18,#connector-requests,SE,Cinder Retail,Free,customer asking for a connector to the tool our finance team uses,0
+S-0025,2026-09-02 08:28,#connector-requests,CSM,Vantage Works,Enterprise,any chance we get a GullwingDesk connector? customer wants to find recurring issues,0
+S-0026,2026-09-02 13:27,#connector-requests,CSM,Meridian Group,Team,any chance we get a alderbilling.com connector? customer wants to look up failed payments,0
+S-0027,2026-09-03 11:02,#connector-requests,AE,Willow Group,Enterprise,customer on Enterprise asking for pinecrestci.com — they want to open incidents from alerts,0
+S-0028,2026-09-04 08:16,#connector-requests,Support,Pinecrest Partners,Team,"+1 for jetty notes, Pinecrest Partners asked again (Team plan)",0
+S-0029,2026-09-04 15:19,#connector-requests,AE,Bluefin Systems,Team,"+1 for willow deploy, Bluefin Systems asked again (Team plan)",0
+S-0030,2026-09-07 10:34,#connector-requests,AE,Redwood Partners,Team,customer on Team asking for zephyr helpdesk — they want to find recurring issues,0
+S-0031,2026-09-07 11:33,#connector-requests,Support,Kiln Co,Free,"+1 for willow vault, Kiln Co asked again (Free plan)",0
+S-0032,2026-09-08 09:52,#connector-requests,AE,Pinecrest Partners,Enterprise,customer on Enterprise asking for jettynotes.com — they want to keep docs in sync,0
+S-0033,2026-09-09 08:45,#connector-requests,Support,Redwood Health,Team,customer on Team asking for alderbilling.com — they want to summarize churned subscriptions,0
+S-0034,2026-09-10 09:21,#connector-requests,Support,Redwood Bank,Team,"+1 for alderbilling.com, Redwood Bank asked again (Team plan)",0
+S-0035,2026-09-10 11:48,#connector-requests,AE,Willow Partners,Enterprise,customer on Enterprise asking for orchardpeople.com — they want to look up PTO balances,0
+S-0036,2026-09-10 14:43,#connector-requests,CSM,Oakum Co,Team,customer on Team asking for jettynotes.com — they want to search team docs,0
+S-0037,2026-09-10 15:51,#connector-requests,SE,Lattice Works,Free,customer on Free asking for WillowVault — they want to look up user permissions,0
+S-0038,2026-09-10 17:43,#connector-requests,AE,Cinder Partners,Free,customer on Free asking for gullwingcanvas.com — they want to describe a design file,0
+S-0039,2026-09-10 18:47,#connector-requests,AE,Lumen Bank,Enterprise,any chance we get a Heron People connector? customer wants to answer policy questions,0
+S-0040,2026-09-11 11:03,#connector-requests,AE,Northgate Co,Free,customer on Free asking for jetty notes — they want to keep docs in sync,0
+S-0041,2026-09-11 18:24,#connector-requests,AE,Tidewater Retail,Team,customer on Team asking for pinecrestci.com — they want to explain a failed build,0
+S-0042,2026-09-14 09:15,#connector-requests,AE,Upland Bank,Free,any chance we get a willowdeploy.com connector? customer wants to explain a failed build,0
+S-0043,2026-09-15 08:28,#connector-requests,SE,Ember Media,Team,customer on Team asking for WillowVault — they want to summarize alerts,0
+S-0044,2026-09-15 09:44,#connector-requests,SE,Upland Health,Free,customer on Free asking for kilnhelpdesk.com — they want to draft replies to tickets,0
+S-0045,2026-09-15 13:45,#connector-requests,CSM,Kestrel Health,Free,"+1 for jetty notes, Kestrel Health asked again (Free plan)",0
+S-0046,2026-09-15 15:26,#connector-requests,CSM,Nimbus Systems,Free,any chance we get a jetty notes connector? customer wants to turn notes into a spec,0
+S-0047,2026-09-16 09:50,#connector-requests,Support,Saltmarsh Labs,Team,customer on Team asking for Nimbus Analytics — they want to ask questions about dashboards,0
+S-0048,2026-09-16 11:38,#connector-requests,SE,Driftwood Bank,Enterprise,"+1 for Alder Billing, Driftwood Bank asked again (Enterprise plan)",0
+S-0049,2026-09-16 16:12,#connector-requests,SE,Ember Works,Team,any chance we get a jettynotes.com connector? customer wants to search team docs,0
+S-0050,2026-09-16 17:43,#connector-requests,AE,Dovetail Health,Enterprise,customer on Enterprise asking for willowdeploy.com — they want to read deploy logs,0
+S-0051,2026-09-17 18:47,#connector-requests,SE,Nimbus Systems,Team,customer on Team asking for Willow Deploy — they want to read deploy logs,0
+S-0052,2026-09-18 17:53,#connector-requests,AE,Saltmarsh Health,Team,"+1 for jetty notes, Saltmarsh Health asked again (Team plan)",0
+S-0053,2026-09-22 08:20,#connector-requests,AE,Vantage Systems,Team,customer on Team asking for willowdeploy.com — they want to read deploy logs,0
+S-0054,2026-09-22 08:32,#connector-requests,CSM,Indigo Media,Free,"+1 for NorthgateShield, Indigo Media asked again (Free plan)",0
+S-0055,2026-09-22 14:05,#connector-requests,Support,Meridian Bank,Free,"+1 for PinecrestCI, Meridian Bank asked again (Free plan)",0
+S-0056,2026-09-22 15:57,#connector-requests,SE,Lattice Group,Free,customer on Free asking for jetty notes — they want to search team docs,0
+S-0057,2026-09-23 18:54,#connector-requests,SE,Cobalt Systems,Team,any chance we get a UplandCampaigns connector? customer wants to report campaign results,0
+S-0058,2026-09-24 08:06,#connector-requests,CSM,Heron Media,Team,customer on Team asking for willowvault.com — they want to review access requests,0
+S-0059,2026-09-24 09:18,#connector-requests,AE,Fernhill Co,Team,"+1 for Willow Vault, Fernhill Co asked again (Team plan)",0
+S-0060,2026-09-24 09:21,#connector-requests,Support,Meridian Systems,Free,any chance we get a Bluefin HR connector? customer wants to draft onboarding plans,0
+S-0061,2026-09-25 11:22,#connector-requests,CSM,Vantage Systems,Free,any chance we get a LumenAnalytics connector? customer wants to pull weekly KPIs into a report,0
+S-0062,2026-09-25 15:58,#connector-requests,SE,Alder Health,Team,customer on Team asking for jettynotes.com — they want to keep docs in sync,0
+S-0063,2026-09-25 16:24,#connector-requests,CSM,Dovetail Media,Team,"+1 for JettyNotes, Dovetail Media asked again (Team plan)",0
+S-0064,2026-09-25 18:15,#connector-requests,Support,Ironleaf Labs,Enterprise,"+1 for willowdeploy.com, Ironleaf Labs asked again (Enterprise plan)",0
+S-0065,2026-09-28 09:57,#connector-requests,SE,Maple Co,Team,customer on Team asking for indigoinsights.com — they want to explain a metric drop,0
+S-0066,2026-09-29 10:04,#connector-requests,SE,Meridian Retail,Free,any chance we get a willow vault connector? customer wants to look up user permissions,0
+S-0067,2026-09-29 13:58,#connector-requests,CSM,Ironleaf Systems,Free,any chance we get a Jetty Notes connector? customer wants to turn notes into a spec,0
+S-0068,2026-09-29 15:13,#connector-requests,SE,Foxglove Labs,Enterprise,any chance we get a WillowVault connector? customer wants to review access requests,0
+S-0069,2026-09-29 16:46,#connector-requests,SE,Meridian Works,Enterprise,customer asking for a connector to that new AI notes app,0
+S-0070,2026-09-29 17:57,#connector-requests,Support,Juniper Retail,Team,customer on Team asking for EmberStudio — they want to review a mockup,0
+S-0071,2026-09-30 09:48,#connector-requests,Support,Jetty Bank,Team,any chance we get a jettynotes.com connector? customer wants to search team docs,0
+S-0072,2026-09-30 10:00,#connector-requests,AE,Zephyr Group,Enterprise,any chance we get a BrightPath connector? 2 enterprise customers want to explain a metric drop,0
+S-0073,2026-09-30 15:49,#connector-requests,AE,Jetty Bank,Team,customer on Team asking for alderbilling.com — they want to look up failed payments,0
+S-0074,2026-09-30 16:01,#connector-requests,SE,Northgate Health,Team,customer on Team asking for alderbilling.com — they want to reconcile payouts,0
+S-0075,2026-10-01 09:47,#connector-requests,AE,Saltmarsh Systems,Team,"+1 for jetty notes, Saltmarsh Systems asked again (Team plan)",0
+S-0076,2026-10-01 11:00,#connector-requests,CSM,Kestrel Media,Team,any chance we get a larkspurpay.com connector? customer wants to reconcile payouts,0
+S-0077,2026-10-01 17:11,#connector-requests,Support,Lattice Bank,Enterprise,customer on Enterprise asking for saltmarshdata.com — they want to check a pipeline run,0
+S-0078,2026-10-01 18:33,#connector-requests,AE,Ember Labs,Enterprise,customer on Enterprise asking for Jetty Notes — they want to keep docs in sync,0
+S-0079,2026-10-02 12:46,#connector-requests,Support,Kiln Partners,Free,"+1 for JettyNotes, Kiln Partners asked again (Free plan)",0
+S-0080,2026-10-02 16:48,#connector-requests,CSM,Prism Partners,Enterprise,"+1 for Lattice Analytics, Prism Partners asked again (Enterprise plan)",0
+S-0081,2026-10-05 11:03,#connector-requests,AE,Saltmarsh Labs,Team,any chance we get a Nimbus People connector? customer wants to draft onboarding plans,0
+S-0082,2026-10-05 13:34,#connector-requests,Support,Driftwood Systems,Team,customer on Team asking for willow deploy — they want to explain a failed build,0
+S-0083,2026-10-05 14:14,#connector-requests,Support,Redwood Co,Free,"+1 for JettyNotes, Redwood Co asked again (Free plan)",0
+S-0084,2026-10-05 17:52,#connector-requests,CSM,Cinder Retail,Team,"+1 for JettyNotes, Cinder Retail asked again (Team plan)",0
+S-0085,2026-10-05 17:57,#connector-requests,SE,Northgate Systems,Free,"+1 for acmedocs.com, Northgate Systems asked again (Free plan)",0
+S-0086,2026-10-06 08:06,#connector-requests,CSM,Driftwood Group,Team,any chance we get a EmberTasks connector? customer wants to create tasks from meeting notes,0
+S-0087,2026-10-06 11:54,#connector-requests,Support,Harbor Group,Team,customer on Team asking for harborvault.com — they want to review access requests,0
+S-0088,2026-10-06 13:18,#connector-requests,CSM,Fernhill Works,Enterprise,customer on Enterprise asking for Cinder Projects — they want to create tasks from meeting notes,0
+S-0089,2026-10-06 13:32,#connector-requests,CSM,Harbor Partners,Team,any chance we get a Harbor Vault connector? customer wants to summarize alerts,0
+S-0090,2026-10-07 09:06,#connector-requests,CSM,Basalt Partners,Team,any chance we get a Willow Vault connector? customer wants to look up user permissions,0
+S-0091,2026-10-07 09:22,#connector-requests,AE,Juniper Co,Team,"+1 for driftwood wiki, Juniper Co asked again (Team plan)",0
+S-0092,2026-10-08 11:32,#connector-requests,CSM,Alder Labs,Free,any chance we get a heronpay.com connector? customer wants to reconcile payouts,0
+S-0093,2026-10-08 13:54,#connector-requests,SE,Zephyr Works,Team,any chance we get a willow vault connector? customer wants to review access requests,0
+S-0094,2026-10-08 14:58,#connector-requests,AE,Nimbus Health,Team,any chance we get a Lumen Payments connector? customer wants to look up failed payments,0
+S-0095,2026-10-09 09:07,#connector-requests,SE,Quarry Works,Team,customer on Team asking for willow vault — they want to look up user permissions,0
+S-0096,2026-10-09 09:08,#connector-requests,CSM,Willow Partners,Team,customer on Team asking for LumenSocial — they want to draft campaign emails,0
+S-0097,2026-10-09 10:36,#connector-requests,AE,Juniper Partners,Free,any chance we get a Alder Billing connector? customer wants to look up failed payments,0
+S-0098,2026-10-09 13:27,#connector-requests,AE,Juniper Works,Team,any chance we get a willowdeploy.com connector? customer wants to read deploy logs,0
+S-0099,2026-10-12 10:00,#connector-requests,Support,Driftwood Retail,Enterprise,"+1 for Bright Path, Meridian Bank asked again (Enterprise plan)",0
+S-0100,2026-10-12 18:06,#connector-requests,AE,Jetty Health,Enterprise,customer on Enterprise asking for Jetty Notes — they want to search team docs,0
+S-0101,2026-10-13 12:23,#connector-requests,SE,Prism Bank,Enterprise,"+1 for Zephyr Analytics, Prism Bank asked again (Enterprise plan)",0
+S-0102,2026-10-13 15:42,#connector-requests,AE,Bluefin Retail,Team,"+1 for harborvault.com, Bluefin Retail asked again (Team plan)",0
+S-0103,2026-10-14 08:48,#connector-requests,CSM,Nimbus Labs,Team,customer on Team asking for TidewaterPeople — they want to look up PTO balances,0
+S-0104,2026-10-14 09:01,#connector-requests,AE,Elmstead Bank,Team,any chance we get a cobaltci.com connector? customer wants to explain a failed build,0
+S-0105,2026-10-14 10:05,#connector-requests,CSM,Foxglove Works,Team,any chance we get a jettynotes.com connector? customer wants to turn notes into a spec,0
+S-0106,2026-10-14 12:39,#connector-requests,SE,Upland Group,Team,any chance we get a tidewater people connector? customer wants to look up PTO balances,0
+S-0107,2026-10-14 14:47,#connector-requests,Support,Granite Labs,Enterprise,"+1 for pinecrestpeople.com, Granite Labs asked again (Enterprise plan)",0
+S-0108,2026-10-15 10:11,#connector-requests,SE,Ironleaf Retail,Team,"+1 for jettynotes.com, Ironleaf Retail asked again (Team plan)",0
+S-0109,2026-10-15 10:36,#connector-requests,Support,Saltmarsh Works,Free,any chance we get a Willow Deploy connector? customer wants to read deploy logs,0
+S-0110,2026-10-15 14:37,#connector-requests,CSM,Oakum Partners,Team,"+1 for lumenanalytics.com, Oakum Partners asked again (Team plan)",0
+S-0111,2026-10-15 15:10,#connector-requests,AE,Harbor Labs,Enterprise,can we get a connector for the HR tool we use? customer keeps asking,0
+S-0112,2026-10-15 18:06,#connector-requests,AE,Maple Bank,Team,customer on Team asking for junipermail.com — they want to report campaign results,0
+S-0113,2026-10-16 10:47,#connector-requests,Support,Foxglove Works,Free,any chance we get a jettynotes.com connector? customer wants to keep docs in sync,0
+S-0114,2026-10-16 12:14,#connector-requests,CSM,Maple Partners,Free,any chance we get a Saltmarsh Docs connector? customer wants to turn notes into a spec,0

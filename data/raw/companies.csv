@@ -1,0 +1,241 @@
+company_id,company_name,domain,category,employees,headcount_growth_12m,mentions_90d,api_type,auth,aliases
+CO-0001,Brightpath Analytics,brightpath.io,Analytics,920,0.48,6400,Public API,OAuth 2.0,Brightpath|BrightPath|brightpath.io|Bright Path
+CO-0002,Larkspur Payments,larkspurpay.com,Payments,4100,0.22,9800,Official MCP (remote),OAuth 2.0,Larkspur|LarkspurPay|larkspurpay.com
+CO-0003,Pebblework Notes,pebblework.app,Docs & notes,12,0.05,40,No public API,,Pebblework|pebblework.app
+CO-0004,Granite Docs,granitedocs.com,Docs & notes,2600,0.18,7200,Public API,OAuth 2.0,GraniteDocs|granitedocs.com
+CO-0005,Gullwing Metrics,gullwingmetrics.com,Analytics,424,0.3,23,Public API,OAuth 2.0,GullwingMetrics|gullwingmetrics.com
+CO-0006,Foxglove Identity,foxgloveidentity.com,Security,95,-0.01,636,Public API,OAuth 2.0,FoxgloveIdentity|foxgloveidentity.com
+CO-0007,Northgate Billing,northgatebilling.com,Payments,719,0.22,110,Official MCP (remote),OAuth 2.0,NorthgateBilling|northgatebilling.com
+CO-0008,Lattice Design,latticedesign.com,Design,507,0.11,127,Public API,API key,LatticeDesign|latticedesign.com
+CO-0009,Oakum CRM,oakumcrm.com,CRM,81,0.08,389,No public API,,OakumCRM|oakumcrm.com
+CO-0010,Bluefin Notes,bluefinnotes.com,Docs & notes,271,0.5,155,Public API,OAuth 2.0,BluefinNotes|bluefinnotes.com
+CO-0011,Meridian People,meridianpeople.com,HR,351,0.12,94,No public API,,MeridianPeople|meridianpeople.com
+CO-0012,Nimbus Payments,nimbuspayments.com,Payments,369,0.23,119,Unknown,,NimbusPayments|nimbuspayments.com
+CO-0013,Redwood Wiki,redwoodwiki.com,Docs & notes,174,0.29,315,No public API,,RedwoodWiki|redwoodwiki.com
+CO-0014,Jetty HR,jettyhr.com,HR,163,0.25,34,No public API,,JettyHR|jettyhr.com
+CO-0015,Lumen Social,lumensocial.com,Marketing,76,0.09,1339,Public API,OAuth 2.0,LumenSocial|lumensocial.com
+CO-0016,Cinder Notes,cindernotes.com,Docs & notes,14,0.08,155,Public API,OAuth 2.0,CinderNotes|cindernotes.com
+CO-0017,Driftwood Canvas,driftwoodcanvas.com,Design,450,0.06,912,Official MCP (remote),OAuth 2.0,DriftwoodCanvas|driftwoodcanvas.com
+CO-0018,Quarry Payroll,quarrypayroll.com,HR,30,-0.02,290,No public API,,QuarryPayroll|quarrypayroll.com
+CO-0019,Lumen Vault,lumenvault.com,Security,81,0.17,439,Official MCP (remote),OAuth 2.0,LumenVault|lumenvault.com
+CO-0020,Quarry Boards,quarryboards.com,Project management,58,0.08,37,Public API,OAuth 2.0,QuarryBoards|quarryboards.com
+CO-0021,Saltmarsh Desk,saltmarshdesk.com,Support,151,0.22,407,Public API,OAuth 2.0,SaltmarshDesk|saltmarshdesk.com
+CO-0022,Granite Notes,granitenotes.com,Docs & notes,82,-0.15,29,Official MCP (remote),API key,GraniteNotes|granitenotes.com
+CO-0023,Ember Tasks,embertasks.com,Project management,259,-0.01,159,Unknown,,EmberTasks|embertasks.com
+CO-0024,Oakum Mail,oakummail.com,Marketing,416,-0.02,224,No public API,,OakumMail|oakummail.com
+CO-0025,Driftwood CRM,driftwoodcrm.com,CRM,481,-0.15,535,No public API,,DriftwoodCRM|driftwoodcrm.com
+CO-0026,Zephyr Campaigns,zephyrcampaigns.com,Marketing,19,0.15,68,Public API,API key,ZephyrCampaigns|zephyrcampaigns.com
+CO-0027,Maple Notes,maplenotes.com,Docs & notes,1397,-0.03,501,Public API,API key,MapleNotes|maplenotes.com
+CO-0028,Bluefin Mail,bluefinmail.com,Marketing,477,0.2,2034,Public API,OAuth 2.0,BluefinMail|bluefinmail.com
+CO-0029,Heron Deploy,herondeploy.com,Developer tools,40,-0.09,373,Unknown,,HeronDeploy|herondeploy.com
+CO-0030,Lumen Design,lumendesign.com,Design,18,0.19,397,Public API,OAuth 2.0,LumenDesign|lumendesign.com
+CO-0031,Tidewater Payroll,tidewaterpayroll.com,HR,265,-0.03,16,Public API,API key,TidewaterPayroll|tidewaterpayroll.com
+CO-0032,Oakum HR,oakumhr.com,HR,82,0.12,781,No public API,,OakumHR|oakumhr.com
+CO-0033,Acme Wiki,acmewiki.com,Docs & notes,118,-0.14,113,Public API,OAuth 2.0,AcmeWiki|acmewiki.com
+CO-0034,Lumen Analytics,lumenanalytics.com,Analytics,1763,0.16,1510,Official MCP (remote),API key,LumenAnalytics|lumenanalytics.com
+CO-0035,Prism Data,prismdata.com,Data,38,0.5,55,Public API,OAuth 2.0,PrismData|prismdata.com
+CO-0036,Indigo Wiki,indigowiki.com,Docs & notes,546,0.21,256,Public API,API key,IndigoWiki|indigowiki.com
+CO-0037,Prism Payroll,prismpayroll.com,HR,277,-0.07,50,Public API,OAuth 2.0,PrismPayroll|prismpayroll.com
+CO-0038,Lattice Analytics,latticeanalytics.com,Analytics,185,0.12,347,Official MCP (local only),OAuth 2.0,LatticeAnalytics|latticeanalytics.com
+CO-0039,Acme Payroll,acmepayroll.com,HR,83,0.21,1444,Public API,OAuth 2.0,AcmePayroll|acmepayroll.com
+CO-0040,Kestrel Projects,kestrelprojects.com,Project management,21,0.42,1307,No public API,,KestrelProjects|kestrelprojects.com
+CO-0041,Granite Sync,granitesync.com,Data,1148,-0.05,118,Public API,API key,GraniteSync|granitesync.com
+CO-0042,Maple Social,maplesocial.com,Marketing,147,0.2,1410,Public API,OAuth 2.0,MapleSocial|maplesocial.com
+CO-0043,Fernhill HR,fernhillhr.com,HR,8,0.13,36,Official MCP (remote),API key,FernhillHR|fernhillhr.com
+CO-0044,Quarry Design,quarrydesign.com,Design,92,-0.09,209,Public API,API key,QuarryDesign|quarrydesign.com
+CO-0045,Ember Notes,embernotes.com,Docs & notes,75,0.08,704,No public API,,EmberNotes|embernotes.com
+CO-0046,Cinder Design,cinderdesign.com,Design,119,0.02,160,Unknown,,CinderDesign|cinderdesign.com
+CO-0047,Willow Deploy,willowdeploy.com,Developer tools,32,0.16,207,Official MCP (remote),OAuth 2.0,WillowDeploy|willowdeploy.com
+CO-0048,Granite Vault,granitevault.com,Security,44,-0.11,77,Official MCP (local only),API key,GraniteVault|granitevault.com
+CO-0049,Acme Warehouse,acmewarehouse.com,Data,53,0.03,10,Public API,OAuth 2.0,AcmeWarehouse|acmewarehouse.com
+CO-0050,Gullwing Canvas,gullwingcanvas.com,Design,70,0.33,166,Public API,OAuth 2.0,GullwingCanvas|gullwingcanvas.com
+CO-0051,Kiln Shield,kilnshield.com,Security,2924,-0.08,114,Public API,API key,KilnShield|kilnshield.com
+CO-0052,Cobalt Warehouse,cobaltwarehouse.com,Data,239,0.43,70,Official MCP (remote),API key,CobaltWarehouse|cobaltwarehouse.com
+CO-0053,Meridian Insights,meridianinsights.com,Analytics,272,0.12,44,Public API,OAuth 2.0,MeridianInsights|meridianinsights.com
+CO-0054,Acme Studio,acmestudio.com,Design,205,0.05,453,Public API,OAuth 2.0,AcmeStudio|acmestudio.com
+CO-0055,Indigo Helpdesk,indigohelpdesk.com,Support,242,0.14,100,Unknown,,IndigoHelpdesk|indigohelpdesk.com
+CO-0056,Vantage Design,vantagedesign.com,Design,129,0.41,361,Public API,OAuth 2.0,VantageDesign|vantagedesign.com
+CO-0057,Bluefin HR,bluefinhr.com,HR,213,-0.05,1167,Public API,OAuth 2.0,BluefinHR|bluefinhr.com
+CO-0058,Quarry Sales,quarrysales.com,CRM,12,0.22,28,No public API,,QuarrySales|quarrysales.com
+CO-0059,Maple Sync,maplesync.com,Data,214,0.09,217,Official MCP (remote),API key,MapleSync|maplesync.com
+CO-0060,Vantage Mail,vantagemail.com,Marketing,1164,-0.3,278,Public API,API key,VantageMail|vantagemail.com
+CO-0061,Juniper Deploy,juniperdeploy.com,Developer tools,88,0.2,1879,Public API,OAuth 2.0,JuniperDeploy|juniperdeploy.com
+CO-0062,Orchard Tasks,orchardtasks.com,Project management,93,0.13,51,Public API,OAuth 2.0,OrchardTasks|orchardtasks.com
+CO-0063,Heron Payroll,heronpayroll.com,HR,335,0.34,491,No public API,,HeronPayroll|heronpayroll.com
+CO-0064,Oakum Wiki,oakumwiki.com,Docs & notes,274,0.09,288,Public API,API key,OakumWiki|oakumwiki.com
+CO-0065,Lumen CRM,lumencrm.com,CRM,28,0.27,116,Official MCP (local only),API key,LumenCRM|lumencrm.com
+CO-0066,Basalt Deploy,basaltdeploy.com,Developer tools,1898,-0.13,393,Official MCP (remote),OAuth 2.0,BasaltDeploy|basaltdeploy.com
+CO-0067,Oakum Shield,oakumshield.com,Security,1231,0.25,155,No public API,,OakumShield|oakumshield.com
+CO-0068,Northgate Shield,northgateshield.com,Security,27,0.03,222,Public API,OAuth 2.0,NorthgateShield|northgateshield.com
+CO-0069,Acme Canvas,acmecanvas.com,Design,6,0.15,174,Official MCP (remote),OAuth 2.0,AcmeCanvas|acmecanvas.com
+CO-0070,Tidewater Design,tidewaterdesign.com,Design,64,0.24,23,Official MCP (remote),API key,TidewaterDesign|tidewaterdesign.com
+CO-0071,Tidewater Metrics,tidewatermetrics.com,Analytics,485,0.28,1223,No public API,,TidewaterMetrics|tidewatermetrics.com
+CO-0072,Foxglove Social,foxglovesocial.com,Marketing,206,-0.01,203,Official MCP (remote),OAuth 2.0,FoxgloveSocial|foxglovesocial.com
+CO-0073,Granite Payroll,granitepayroll.com,HR,601,-0.04,273,Public API,OAuth 2.0,GranitePayroll|granitepayroll.com
+CO-0074,Harbor Helpdesk,harborhelpdesk.com,Support,46,0.28,171,Public API,API key,HarborHelpdesk|harborhelpdesk.com
+CO-0075,Prism Deploy,prismdeploy.com,Developer tools,482,0.23,6276,Official MCP (local only),API key,PrismDeploy|prismdeploy.com
+CO-0076,Ember Deploy,emberdeploy.com,Developer tools,1402,0.16,2181,Public API,API key,EmberDeploy|emberdeploy.com
+CO-0077,Jetty Helpdesk,jettyhelpdesk.com,Support,15,0.0,226,Public API,OAuth 2.0,JettyHelpdesk|jettyhelpdesk.com
+CO-0078,Ember Canvas,embercanvas.com,Design,160,0.06,419,Unknown,,EmberCanvas|embercanvas.com
+CO-0079,Ember Sales,embersales.com,CRM,58,0.16,481,Unknown,,EmberSales|embersales.com
+CO-0080,Lattice Desk,latticedesk.com,Support,55,0.11,228,Public API,API key,LatticeDesk|latticedesk.com
+CO-0081,Acme Billing,acmebilling.com,Payments,307,0.12,799,No public API,,AcmeBilling|acmebilling.com
+CO-0082,Indigo Sales,indigosales.com,CRM,24,-0.26,59,Unknown,,IndigoSales|indigosales.com
+CO-0083,Cinder Billing,cinderbilling.com,Payments,99,0.33,1151,Public API,API key,CinderBilling|cinderbilling.com
+CO-0084,Ember Payments,emberpayments.com,Payments,129,0.16,73,Public API,API key,EmberPayments|emberpayments.com
+CO-0085,Granite Wiki,granitewiki.com,Docs & notes,42,0.08,470,Official MCP (local only),OAuth 2.0,GraniteWiki|granitewiki.com
+CO-0086,Foxglove Vault,foxglovevault.com,Security,257,0.22,219,Public API,API key,FoxgloveVault|foxglovevault.com
+CO-0087,Elmstead Notes,elmsteadnotes.com,Docs & notes,63,0.05,45,Public API,OAuth 2.0,ElmsteadNotes|elmsteadnotes.com
+CO-0088,Vantage Wiki,vantagewiki.com,Docs & notes,113,0.2,1179,No public API,,VantageWiki|vantagewiki.com
+CO-0089,Zephyr Notes,zephyrnotes.com,Docs & notes,93,0.33,332,Official MCP (local only),OAuth 2.0,ZephyrNotes|zephyrnotes.com
+CO-0090,Dovetail Canvas,dovetailcanvas.com,Design,2278,0.15,552,Public API,OAuth 2.0,DovetailCanvas|dovetailcanvas.com
+CO-0091,Maple Metrics,maplemetrics.com,Analytics,236,0.14,383,Public API,OAuth 2.0,MapleMetrics|maplemetrics.com
+CO-0092,Jetty Projects,jettyprojects.com,Project management,8,0.06,74,Official MCP (remote),OAuth 2.0,JettyProjects|jettyprojects.com
+CO-0093,Saltmarsh Docs,saltmarshdocs.com,Docs & notes,38,0.2,95,Public API,OAuth 2.0,SaltmarshDocs|saltmarshdocs.com
+CO-0094,Zephyr CI,zephyrci.com,Developer tools,353,0.32,63,Public API,API key,ZephyrCI|zephyrci.com
+CO-0095,Basalt Canvas,basaltcanvas.com,Design,202,0.38,275,Public API,OAuth 2.0,BasaltCanvas|basaltcanvas.com
+CO-0096,Kiln Vault,kilnvault.com,Security,116,0.21,70,Public API,API key,KilnVault|kilnvault.com
+CO-0097,Tidewater Projects,tidewaterprojects.com,Project management,376,0.32,460,Public API,OAuth 2.0,TidewaterProjects|tidewaterprojects.com
+CO-0098,Willow People,willowpeople.com,HR,96,-0.17,131,Official MCP (local only),OAuth 2.0,WillowPeople|willowpeople.com
+CO-0099,Jetty Wiki,jettywiki.com,Docs & notes,1001,0.29,143,No public API,,JettyWiki|jettywiki.com
+CO-0100,Ember Helpdesk,emberhelpdesk.com,Support,69,0.55,329,Public API,OAuth 2.0,EmberHelpdesk|emberhelpdesk.com
+CO-0101,Gullwing Payroll,gullwingpayroll.com,HR,16,0.16,116,No public API,,GullwingPayroll|gullwingpayroll.com
+CO-0102,Cinder Projects,cinderprojects.com,Project management,240,0.02,821,Public API,OAuth 2.0,CinderProjects|cinderprojects.com
+CO-0103,Prism Identity,prismidentity.com,Security,42,0.37,128,Public API,OAuth 2.0,PrismIdentity|prismidentity.com
+CO-0104,Jetty Notes,jettynotes.com,Docs & notes,1138,0.18,2885,No public API,,JettyNotes|jettynotes.com
+CO-0105,Meridian Mail,meridianmail.com,Marketing,39,0.22,21,Public API,API key,MeridianMail|meridianmail.com
+CO-0106,Lumen Payments,lumenpayments.com,Payments,740,-0.27,121,Public API,OAuth 2.0,LumenPayments|lumenpayments.com
+CO-0107,Jetty Billing,jettybilling.com,Payments,209,0.1,200,Public API,API key,JettyBilling|jettybilling.com
+CO-0108,Cobalt Logs,cobaltlogs.com,Developer tools,399,0.25,479,Public API,OAuth 2.0,CobaltLogs|cobaltlogs.com
+CO-0109,Kiln Helpdesk,kilnhelpdesk.com,Support,96,0.01,53,Public API,OAuth 2.0,KilnHelpdesk|kilnhelpdesk.com
+CO-0110,Zephyr Tasks,zephyrtasks.com,Project management,72,0.13,292,Public API,OAuth 2.0,ZephyrTasks|zephyrtasks.com
+CO-0111,Basalt CI,basaltci.com,Developer tools,523,0.27,252,Public API,API key,BasaltCI|basaltci.com
+CO-0112,Dovetail Vault,dovetailvault.com,Security,193,0.13,340,Public API,OAuth 2.0,DovetailVault|dovetailvault.com
+CO-0113,Elmstead Pay,elmsteadpay.com,Payments,19,0.37,687,Official MCP (remote),API key,ElmsteadPay|elmsteadpay.com
+CO-0114,Cinder Social,cindersocial.com,Marketing,5,0.09,24,Public API,API key,CinderSocial|cindersocial.com
+CO-0115,Willow Logs,willowlogs.com,Developer tools,1415,-0.07,550,Official MCP (remote),API key,WillowLogs|willowlogs.com
+CO-0116,Oakum Desk,oakumdesk.com,Support,81,-0.08,112,Public API,OAuth 2.0,OakumDesk|oakumdesk.com
+CO-0117,Tidewater Identity,tidewateridentity.com,Security,208,-0.16,482,Unknown,,TidewaterIdentity|tidewateridentity.com
+CO-0118,Heron Sales,heronsales.com,CRM,61,0.03,366,Public API,OAuth 2.0,HeronSales|heronsales.com
+CO-0119,Juniper Mail,junipermail.com,Marketing,14,-0.04,170,Unknown,,JuniperMail|junipermail.com
+CO-0120,Gullwing Sales,gullwingsales.com,CRM,277,-0.08,670,Public API,API key,GullwingSales|gullwingsales.com
+CO-0121,Bluefin Boards,bluefinboards.com,Project management,1131,0.07,392,Public API,API key,BluefinBoards|bluefinboards.com
+CO-0122,Kestrel Studio,kestrelstudio.com,Design,287,0.07,1572,No public API,,KestrelStudio|kestrelstudio.com
+CO-0123,Kiln Tasks,kilntasks.com,Project management,5266,0.07,44,Public API,OAuth 2.0,KilnTasks|kilntasks.com
+CO-0124,Ember Projects,emberprojects.com,Project management,113,0.24,418,No public API,,EmberProjects|emberprojects.com
+CO-0125,Redwood Billing,redwoodbilling.com,Payments,394,0.17,186,Public API,API key,RedwoodBilling|redwoodbilling.com
+CO-0126,Fernhill Design,fernhilldesign.com,Design,13,0.17,74,Public API,OAuth 2.0,FernhillDesign|fernhilldesign.com
+CO-0127,Nimbus Docs,nimbusdocs.com,Docs & notes,1533,0.24,615,Public API,OAuth 2.0,NimbusDocs|nimbusdocs.com
+CO-0128,Saltmarsh Payroll,saltmarshpayroll.com,HR,810,0.08,38,Official MCP (remote),API key,SaltmarshPayroll|saltmarshpayroll.com
+CO-0129,Upland Campaigns,uplandcampaigns.com,Marketing,91,-0.15,24,Public API,API key,UplandCampaigns|uplandcampaigns.com
+CO-0130,Meridian Data,meridiandata.com,Data,5,0.27,138,Public API,OAuth 2.0,MeridianData|meridiandata.com
+CO-0131,Kiln HR,kilnhr.com,HR,478,0.55,524,Public API,OAuth 2.0,KilnHR|kilnhr.com
+CO-0132,Heron People,heronpeople.com,HR,465,0.25,1535,No public API,,HeronPeople|heronpeople.com
+CO-0133,Cinder Deploy,cinderdeploy.com,Developer tools,73,0.07,101,No public API,,CinderDeploy|cinderdeploy.com
+CO-0134,Willow Payments,willowpayments.com,Payments,78,0.07,290,Public API,API key,WillowPayments|willowpayments.com
+CO-0135,Fernhill Docs,fernhilldocs.com,Docs & notes,6,0.01,5,Official MCP (local only),OAuth 2.0,FernhillDocs|fernhilldocs.com
+CO-0136,Cobalt Studio,cobaltstudio.com,Design,111,0.33,153,Public API,API key,CobaltStudio|cobaltstudio.com
+CO-0137,Basalt Metrics,basaltmetrics.com,Analytics,644,-0.01,676,No public API,,BasaltMetrics|basaltmetrics.com
+CO-0138,Tidewater Helpdesk,tidewaterhelpdesk.com,Support,367,0.26,74,Public API,OAuth 2.0,TidewaterHelpdesk|tidewaterhelpdesk.com
+CO-0139,Acme Analytics,acmeanalytics.com,Analytics,27,-0.13,361,Public API,OAuth 2.0,AcmeAnalytics|acmeanalytics.com
+CO-0140,Saltmarsh Social,saltmarshsocial.com,Marketing,129,-0.25,31,Public API,OAuth 2.0,SaltmarshSocial|saltmarshsocial.com
+CO-0141,Dovetail Warehouse,dovetailwarehouse.com,Data,220,0.27,56,Public API,OAuth 2.0,DovetailWarehouse|dovetailwarehouse.com
+CO-0142,Kiln Wiki,kilnwiki.com,Docs & notes,161,0.11,332,Official MCP (remote),OAuth 2.0,KilnWiki|kilnwiki.com
+CO-0143,Acme Insights,acmeinsights.com,Analytics,459,-0.14,16,Public API,OAuth 2.0,AcmeInsights|acmeinsights.com
+CO-0144,Driftwood Pay,driftwoodpay.com,Payments,35,0.16,530,Official MCP (remote),API key,DriftwoodPay|driftwoodpay.com
+CO-0145,Alder Canvas,aldercanvas.com,Design,88,-0.01,202,Public API,OAuth 2.0,AlderCanvas|aldercanvas.com
+CO-0146,Willow Vault,willowvault.com,Security,2613,0.33,140,No public API,,WillowVault|willowvault.com
+CO-0147,Fernhill Shield,fernhillshield.com,Security,363,0.35,647,Public API,API key,FernhillShield|fernhillshield.com
+CO-0148,Maple Logs,maplelogs.com,Developer tools,239,-0.16,284,Public API,API key,MapleLogs|maplelogs.com
+CO-0149,Cinder Insights,cinderinsights.com,Analytics,1563,0.37,569,Public API,API key,CinderInsights|cinderinsights.com
+CO-0150,Zephyr Analytics,zephyranalytics.com,Analytics,197,-0.05,407,Public API,API key,ZephyrAnalytics|zephyranalytics.com
+CO-0151,Ember Studio,emberstudio.com,Design,138,0.45,712,No public API,,EmberStudio|emberstudio.com
+CO-0152,Pinecrest CRM,pinecrestcrm.com,CRM,210,0.11,60,Public API,API key,PinecrestCRM|pinecrestcrm.com
+CO-0153,Kestrel Billing,kestrelbilling.com,Payments,25,0.23,241,Public API,API key,KestrelBilling|kestrelbilling.com
+CO-0154,Harbor Data,harbordata.com,Data,598,0.31,337,Public API,OAuth 2.0,HarborData|harbordata.com
+CO-0155,Alder Deploy,alderdeploy.com,Developer tools,240,0.2,1363,Public API,API key,AlderDeploy|alderdeploy.com
+CO-0156,Prism Support,prismsupport.com,Support,201,0.11,115,Public API,OAuth 2.0,PrismSupport|prismsupport.com
+CO-0157,Redwood Canvas,redwoodcanvas.com,Design,61,0.07,249,No public API,,RedwoodCanvas|redwoodcanvas.com
+CO-0158,Saltmarsh Data,saltmarshdata.com,Data,30,0.38,33,Public API,OAuth 2.0,SaltmarshData|saltmarshdata.com
+CO-0159,Saltmarsh Boards,saltmarshboards.com,Project management,154,0.15,196,Official MCP (local only),OAuth 2.0,SaltmarshBoards|saltmarshboards.com
+CO-0160,Cinder Desk,cinderdesk.com,Support,258,-0.05,158,Unknown,,CinderDesk|cinderdesk.com
+CO-0161,Dovetail Studio,dovetailstudio.com,Design,42,0.38,1802,Public API,OAuth 2.0,DovetailStudio|dovetailstudio.com
+CO-0162,Acme Docs,acmedocs.com,Docs & notes,155,0.44,203,Unknown,,AcmeDocs|acmedocs.com
+CO-0163,Pinecrest CI,pinecrestci.com,Developer tools,12713,0.28,275,Public API,OAuth 2.0,PinecrestCI|pinecrestci.com
+CO-0164,Zephyr Logs,zephyrlogs.com,Developer tools,74,0.15,273,Public API,OAuth 2.0,ZephyrLogs|zephyrlogs.com
+CO-0165,Fernhill Mail,fernhillmail.com,Marketing,269,-0.19,625,Public API,API key,FernhillMail|fernhillmail.com
+CO-0166,Harbor Payments,harborpayments.com,Payments,136,0.02,653,Official MCP (remote),API key,HarborPayments|harborpayments.com
+CO-0167,Harbor Vault,harborvault.com,Security,65,0.13,265,Public API,OAuth 2.0,HarborVault|harborvault.com
+CO-0168,Driftwood Wiki,driftwoodwiki.com,Docs & notes,162,-0.19,228,Official MCP (remote),OAuth 2.0,DriftwoodWiki|driftwoodwiki.com
+CO-0169,Alder Identity,alderidentity.com,Security,28,0.19,754,Official MCP (remote),OAuth 2.0,AlderIdentity|alderidentity.com
+CO-0170,Willow Pay,willowpay.com,Payments,13,-0.0,59,Public API,OAuth 2.0,WillowPay|willowpay.com
+CO-0171,Driftwood Analytics,driftwoodanalytics.com,Analytics,95,0.03,66,Public API,API key,DriftwoodAnalytics|driftwoodanalytics.com
+CO-0172,Lumen Desk,lumendesk.com,Support,256,0.16,214,Public API,OAuth 2.0,LumenDesk|lumendesk.com
+CO-0173,Alder Billing,alderbilling.com,Payments,2655,-0.08,510,Public API,API key,AlderBilling|alderbilling.com
+CO-0174,Jetty Pay,jettypay.com,Payments,258,0.23,115,Public API,API key,JettyPay|jettypay.com
+CO-0175,Fernhill Desk,fernhilldesk.com,Support,1108,0.37,32,Public API,OAuth 2.0,FernhillDesk|fernhilldesk.com
+CO-0176,Granite HR,granitehr.com,HR,175,0.04,190,Unknown,,GraniteHR|granitehr.com
+CO-0177,Tidewater People,tidewaterpeople.com,HR,264,0.1,289,Public API,OAuth 2.0,TidewaterPeople|tidewaterpeople.com
+CO-0178,Harbor Insights,harborinsights.com,Analytics,758,0.19,733,No public API,,HarborInsights|harborinsights.com
+CO-0179,Kestrel Insights,kestrelinsights.com,Analytics,498,0.18,971,Public API,API key,KestrelInsights|kestrelinsights.com
+CO-0180,Cobalt CI,cobaltci.com,Developer tools,222,0.2,5,Public API,OAuth 2.0,CobaltCI|cobaltci.com
+CO-0181,Indigo Insights,indigoinsights.com,Analytics,13,0.22,229,Official MCP (local only),API key,IndigoInsights|indigoinsights.com
+CO-0182,Willow Projects,willowprojects.com,Project management,1011,0.52,365,Public API,API key,WillowProjects|willowprojects.com
+CO-0183,Heron Logs,heronlogs.com,Developer tools,178,-0.03,205,Public API,API key,HeronLogs|heronlogs.com
+CO-0184,Willow Sales,willowsales.com,CRM,103,0.3,216,No public API,,WillowSales|willowsales.com
+CO-0185,Redwood CRM,redwoodcrm.com,CRM,127,0.24,59,Public API,OAuth 2.0,RedwoodCRM|redwoodcrm.com
+CO-0186,Foxglove Boards,foxgloveboards.com,Project management,83,-0.1,349,Public API,API key,FoxgloveBoards|foxgloveboards.com
+CO-0187,Vantage Vault,vantagevault.com,Security,204,0.2,558,Public API,API key,VantageVault|vantagevault.com
+CO-0188,Redwood Shield,redwoodshield.com,Security,97,0.06,632,No public API,,RedwoodShield|redwoodshield.com
+CO-0189,Northgate Boards,northgateboards.com,Project management,935,0.12,568,Public API,OAuth 2.0,NorthgateBoards|northgateboards.com
+CO-0190,Zephyr Helpdesk,zephyrhelpdesk.com,Support,178,0.13,91,Public API,OAuth 2.0,ZephyrHelpdesk|zephyrhelpdesk.com
+CO-0191,Quarry Helpdesk,quarryhelpdesk.com,Support,149,0.2,542,Public API,OAuth 2.0,QuarryHelpdesk|quarryhelpdesk.com
+CO-0192,Foxglove CI,foxgloveci.com,Developer tools,252,0.39,135,No public API,,FoxgloveCI|foxgloveci.com
+CO-0193,Northgate Payroll,northgatepayroll.com,HR,34,0.15,109,No public API,,NorthgatePayroll|northgatepayroll.com
+CO-0194,Gullwing Support,gullwingsupport.com,Support,353,0.19,479,Public API,API key,GullwingSupport|gullwingsupport.com
+CO-0195,Gullwing Desk,gullwingdesk.com,Support,7,0.14,411,Official MCP (local only),OAuth 2.0,GullwingDesk|gullwingdesk.com
+CO-0196,Prism Helpdesk,prismhelpdesk.com,Support,73,0.22,95,Public API,API key,PrismHelpdesk|prismhelpdesk.com
+CO-0197,Oakum Warehouse,oakumwarehouse.com,Data,67,0.26,53,Public API,API key,OakumWarehouse|oakumwarehouse.com
+CO-0198,Vantage Sync,vantagesync.com,Data,171,0.01,76,Public API,OAuth 2.0,VantageSync|vantagesync.com
+CO-0199,Oakum Sync,oakumsync.com,Data,38,-0.07,123,No public API,,OakumSync|oakumsync.com
+CO-0200,Juniper Identity,juniperidentity.com,Security,4551,0.39,648,Official MCP (remote),OAuth 2.0,JuniperIdentity|juniperidentity.com
+CO-0201,Lumen Deploy,lumendeploy.com,Developer tools,276,0.11,1753,Public API,API key,LumenDeploy|lumendeploy.com
+CO-0202,Granite Canvas,granitecanvas.com,Design,33,0.22,1019,Public API,OAuth 2.0,GraniteCanvas|granitecanvas.com
+CO-0203,Dovetail Insights,dovetailinsights.com,Analytics,31,-0.13,46,Public API,OAuth 2.0,DovetailInsights|dovetailinsights.com
+CO-0204,Granite Shield,graniteshield.com,Security,7577,0.04,3917,Public API,API key,GraniteShield|graniteshield.com
+CO-0205,Northgate CRM,northgatecrm.com,CRM,271,0.16,155,Public API,OAuth 2.0,NorthgateCRM|northgatecrm.com
+CO-0206,Ember Wiki,emberwiki.com,Docs & notes,370,0.09,131,No public API,,EmberWiki|emberwiki.com
+CO-0207,Upland Payments,uplandpayments.com,Payments,191,0.03,1189,Official MCP (remote),OAuth 2.0,UplandPayments|uplandpayments.com
+CO-0208,Prism Analytics,prismanalytics.com,Analytics,722,0.24,733,Public API,OAuth 2.0,PrismAnalytics|prismanalytics.com
+CO-0209,Gullwing Helpdesk,gullwinghelpdesk.com,Support,395,0.0,1577,Official MCP (remote),API key,GullwingHelpdesk|gullwinghelpdesk.com
+CO-0210,Maple Projects,mapleprojects.com,Project management,101,-0.06,150,Official MCP (local only),OAuth 2.0,MapleProjects|mapleprojects.com
+CO-0211,Willow Insights,willowinsights.com,Analytics,725,0.2,93,Public API,OAuth 2.0,WillowInsights|willowinsights.com
+CO-0212,Cobalt Design,cobaltdesign.com,Design,51,0.1,136,Public API,OAuth 2.0,CobaltDesign|cobaltdesign.com
+CO-0213,Foxglove Logs,foxglovelogs.com,Developer tools,129,-0.22,68,Public API,OAuth 2.0,FoxgloveLogs|foxglovelogs.com
+CO-0214,Vantage Canvas,vantagecanvas.com,Design,1026,0.11,1963,No public API,,VantageCanvas|vantagecanvas.com
+CO-0215,Kestrel Deploy,kestreldeploy.com,Developer tools,131,0.14,2053,No public API,,KestrelDeploy|kestreldeploy.com
+CO-0216,Orchard People,orchardpeople.com,HR,69,0.14,459,Public API,API key,OrchardPeople|orchardpeople.com
+CO-0217,Nimbus Analytics,nimbusanalytics.com,Analytics,618,0.17,1132,Public API,API key,NimbusAnalytics|nimbusanalytics.com
+CO-0218,Fernhill Sync,fernhillsync.com,Data,394,0.16,290,Official MCP (remote),API key,FernhillSync|fernhillsync.com
+CO-0219,Oakum Identity,oakumidentity.com,Security,20,0.08,98,Official MCP (remote),OAuth 2.0,OakumIdentity|oakumidentity.com
+CO-0220,Foxglove HR,foxglovehr.com,HR,44,0.56,1741,Public API,OAuth 2.0,FoxgloveHR|foxglovehr.com
+CO-0221,Vantage CRM,vantagecrm.com,CRM,29,0.12,41,Public API,OAuth 2.0,VantageCRM|vantagecrm.com
+CO-0222,Gullwing HR,gullwinghr.com,HR,51,0.17,279,No public API,,GullwingHR|gullwinghr.com
+CO-0223,Upland Analytics,uplandanalytics.com,Analytics,491,0.0,696,Public API,OAuth 2.0,UplandAnalytics|uplandanalytics.com
+CO-0224,Acme CRM,acmecrm.com,CRM,95,0.24,168,No public API,,AcmeCRM|acmecrm.com
+CO-0225,Driftwood CI,driftwoodci.com,Developer tools,608,0.27,3985,No public API,,DriftwoodCI|driftwoodci.com
+CO-0226,Saltmarsh Vault,saltmarshvault.com,Security,26,0.39,37,Public API,API key,SaltmarshVault|saltmarshvault.com
+CO-0227,Ironleaf Projects,ironleafprojects.com,Project management,267,0.12,112,Public API,OAuth 2.0,IronleafProjects|ironleafprojects.com
+CO-0228,Nimbus People,nimbuspeople.com,HR,43,0.19,526,Public API,OAuth 2.0,NimbusPeople|nimbuspeople.com
+CO-0229,Ironleaf Wiki,ironleafwiki.com,Docs & notes,54,-0.3,29,No public API,,IronleafWiki|ironleafwiki.com
+CO-0230,Ember CRM,embercrm.com,CRM,27,0.37,139,Official MCP (remote),OAuth 2.0,EmberCRM|embercrm.com
+CO-0231,Dovetail Campaigns,dovetailcampaigns.com,Marketing,443,0.23,768,Public API,OAuth 2.0,DovetailCampaigns|dovetailcampaigns.com
+CO-0232,Northgate Docs,northgatedocs.com,Docs & notes,327,0.05,64,Public API,OAuth 2.0,NorthgateDocs|northgatedocs.com
+CO-0233,Vantage Notes,vantagenotes.com,Docs & notes,6,0.2,36,Unknown,,VantageNotes|vantagenotes.com
+CO-0234,Saltmarsh Projects,saltmarshprojects.com,Project management,329,0.4,1455,Public API,OAuth 2.0,SaltmarshProjects|saltmarshprojects.com
+CO-0235,Zephyr Sales,zephyrsales.com,CRM,70,0.32,205,Public API,OAuth 2.0,ZephyrSales|zephyrsales.com
+CO-0236,Indigo Identity,indigoidentity.com,Security,116,0.3,1531,No public API,,IndigoIdentity|indigoidentity.com
+CO-0237,Pinecrest People,pinecrestpeople.com,HR,226,0.03,689,Public API,OAuth 2.0,PinecrestPeople|pinecrestpeople.com
+CO-0238,Pinecrest Sales,pinecrestsales.com,CRM,75,0.31,217,Public API,API key,PinecrestSales|pinecrestsales.com
+CO-0239,Heron Pay,heronpay.com,Payments,138,-0.0,526,Public API,OAuth 2.0,HeronPay|heronpay.com
+CO-0240,Zephyr Payments,zephyrpayments.com,Payments,1276,0.39,238,Official MCP (remote),OAuth 2.0,ZephyrPayments|zephyrpayments.com

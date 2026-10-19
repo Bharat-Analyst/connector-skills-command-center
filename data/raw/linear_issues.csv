@@ -1,0 +1,63 @@
+issue_id,title,created_at,status,priority,assignee,customer_request_count,enterprise_customer_count,last_reply_at
+CON-101,Connector request: Jetty Wiki,2026-04-10,Backlog,,,2,1,2026-05-01
+CON-102,Connector request: Tidewater Helpdesk,2026-03-14,Triage,,,1,0,2026-04-02
+CON-103,Connector request: Ember Sales,2026-06-04,Backlog,,,7,2,2026-06-17
+CON-104,Connector request: Oakum Shield,2026-02-05,Backlog,Medium,Connector PM,4,2,
+CON-105,meridian insights integration?,2026-03-01,Todo,,Integrations Eng – Pod B,1,0,2026-03-07
+CON-106,Connector request: Nimbus Analytics,2026-05-05,Todo,,,4,1,
+CON-107,cinder deploy integration?,2026-04-02,Todo,,Integrations Eng – Pod A,1,1,2026-04-23
+CON-108,Connector request: Gullwing HR,2026-05-05,Backlog,,Connector PM,7,4,2026-05-07
+CON-109,cinder desk integration?,2026-07-02,Triage,High,,2,1,
+CON-110,zephyr payments integration?,2026-02-02,Backlog,,,8,2,
+CON-111,bluefin boards integration?,2026-02-02,Todo,,,2,0,2026-02-11
+CON-112,Connector request: Heron Payroll,2026-03-27,Triage,,,1,0,
+CON-113,Connector request: Gullwing Metrics,2026-07-11,Todo,High,,5,1,
+CON-114,Connector request: Gullwing Sales,2026-06-03,Backlog,,Integrations Eng – Pod A,8,1,2026-06-08
+CON-115,vantage wiki integration?,2026-05-12,Backlog,,Integrations Eng – Pod B,3,1,
+CON-116,Connector request: Ember Helpdesk,2026-07-04,Backlog,,Integrations Eng – Pod B,2,2,2026-07-17
+CON-117,Connector request: Maple Projects,2026-03-19,Backlog,,,7,3,
+CON-118,Connector request: Ember Projects,2026-03-18,Backlog,Low,Connector PM,7,1,
+CON-119,Connector request: Oakum Mail,2026-05-04,Triage,,,5,1,
+CON-120,Connector request: Acme Canvas,2026-08-16,Backlog,Low,Integrations Eng – Pod B,6,4,
+CON-121,Connector request: Quarry Payroll,2026-04-26,Backlog,,,8,3,
+CON-122,prism data integration?,2026-07-08,Todo,,Integrations Eng – Pod B,2,1,
+CON-123,indigo insights integration?,2026-06-03,Backlog,,,5,2,
+CON-124,Connector request: Pinecrest CRM,2026-05-04,Backlog,,,2,1,
+CON-125,dovetail insights integration?,2026-02-18,Triage,Low,Integrations Eng – Pod A,5,1,
+CON-126,oakum identity integration?,2026-02-16,Todo,,Integrations Eng – Pod A,8,2,2026-02-28
+CON-127,Connector request: Foxglove HR,2026-03-07,Triage,Low,Connector PM,4,1,
+CON-128,Connector request: Maple Notes,2026-05-15,Backlog,,Connector PM,6,1,2026-05-22
+CON-129,willow insights integration?,2026-04-20,Triage,,Integrations Eng – Pod A,6,1,
+CON-130,Connector request: Oakum CRM,2026-03-07,Backlog,Medium,,7,2,
+CON-131,ember tasks integration?,2026-06-25,Todo,,,5,3,
+CON-132,Connector request: Northgate Billing,2026-03-26,Backlog,Medium,,4,1,
+CON-133,Connector request: Willow People,2026-06-25,Backlog,,,5,3,
+CON-134,Connector request: Heron Sales,2026-02-24,Todo,,Connector PM,1,0,
+CON-135,Connector request: Lumen CRM,2026-03-06,Backlog,High,Integrations Eng – Pod A,8,1,
+CON-136,harbor helpdesk integration?,2026-06-26,Backlog,,Integrations Eng – Pod A,4,2,2026-07-23
+CON-137,ironleaf wiki integration?,2026-07-29,Backlog,Medium,Integrations Eng – Pod A,3,2,2026-07-30
+CON-138,foxglove vault integration?,2026-04-11,Triage,,,6,1,
+CON-139,Connector request: Indigo Wiki,2026-07-13,Backlog,Low,Integrations Eng – Pod A,2,1,
+CON-140,acme studio integration?,2026-02-20,Backlog,High,Integrations Eng – Pod B,2,0,
+CON-141,alder canvas integration?,2026-04-12,Backlog,,,4,1,
+CON-142,tidewater people integration?,2026-06-09,Triage,,,1,0,
+CON-143,Connector request: Upland Campaigns,2026-02-03,Triage,High,,2,1,
+CON-144,Connector request: Cinder Design,2026-05-28,Triage,High,,3,1,2026-06-09
+CON-145,Connector request: Tidewater Payroll,2026-07-14,Triage,,,3,1,2026-07-26
+CON-146,Connector request: Acme CRM,2026-07-30,Todo,,Connector PM,2,0,
+CON-147,granite wiki integration?,2026-07-19,Triage,,,5,2,
+CON-148,cobalt design integration?,2026-01-17,Triage,,,8,2,2026-02-10
+CON-149,Connector request: Cinder Billing,2026-08-15,Backlog,,Integrations Eng – Pod B,2,1,
+CON-150,tidewater identity integration?,2026-07-03,Triage,,Integrations Eng – Pod B,2,1,
+CON-151,alder identity integration?,2026-01-06,Backlog,,,6,2,
+CON-152,acme payroll integration?,2026-03-25,Backlog,High,,5,1,
+CON-153,basalt canvas integration?,2026-03-09,Triage,,Integrations Eng – Pod A,7,3,
+CON-154,harbor insights integration?,2026-05-21,Triage,High,,4,0,2026-06-07
+CON-155,Connector request: Foxglove Boards,2026-07-08,Backlog,Low,Integrations Eng – Pod B,7,1,
+CON-156,Connector request: Willow Sales,2026-06-22,Todo,,,6,3,2026-07-16
+CON-157,fernhill shield integration?,2026-02-25,Todo,High,,3,1,
+CON-158,Connector request: Kestrel Deploy,2026-05-28,Backlog,,,1,1,2026-06-26
+CON-159,willow pay integration?,2026-05-15,Todo,Low,Connector PM,3,0,2026-05-19
+CON-160,driftwood canvas integration?,2026-01-25,Triage,High,Integrations Eng – Pod A,4,2,
+CON-161,willow vault integration?,2026-01-24,Triage,,,7,3,
+CON-162,Connector request: Foxglove CI,2026-05-28,Backlog,Medium,Connector PM,2,0,2026-06-21

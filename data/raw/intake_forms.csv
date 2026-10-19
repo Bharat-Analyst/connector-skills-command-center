@@ -1,0 +1,168 @@
+submission_id,submitted_at,submitter_email,requester_org,plan,tool_requested,use_case,blocked_deal_arr
+F-0001,2026-08-24 10:05,admin@oakumsystems.com,Oakum Systems,Team,Willow Deploy,open incidents from alerts,0
+F-0002,2026-08-24 11:28,admin@kestrelbank.com,Kestrel Bank,Enterprise,willowvault.com,look up user permissions,0
+F-0003,2026-08-24 16:56,admin@uplandretail.com,Upland Retail,Team,WillowVault,summarize alerts,0
+F-0004,2026-08-25 08:35,admin@pinecrestco.com,Pinecrest Co,Enterprise,fernhill hr,answer policy questions,0
+F-0005,2026-08-25 08:46,admin@prismlabs.com,Prism Labs,Team,Willow Deploy,explain a failed build,0
+F-0006,2026-08-25 12:15,admin@aldermedia.com,Alder Media,Free,Willow Vault,look up user permissions,0
+F-0007,2026-08-25 13:47,admin@prismgroup.com,Prism Group,Team,Willow Vault,review access requests,0
+F-0008,2026-08-25 16:54,admin@fernhilllabs.com,Fernhill Labs,Team,FoxgloveLogs,open incidents from alerts,0
+F-0009,2026-08-26 08:18,admin@saltmarshworks.com,Saltmarsh Works,Team,AlderBilling,look up failed payments,0
+F-0010,2026-08-26 11:50,admin@harborgroup.com,Harbor Group,Team,PinecrestCI,open incidents from alerts,0
+F-0011,2026-08-26 17:53,admin@acmepartners.com,Acme Partners,Enterprise,harborpayments.com,summarize churned subscriptions,0
+F-0012,2026-08-27 15:13,admin@elmsteadworks.com,Elmstead Works,Free,willowvault.com,look up user permissions,0
+F-0013,2026-08-28 10:51,admin@uplandsystems.com,Upland Systems,Enterprise,jetty notes,search team docs,0
+F-0014,2026-08-28 12:30,admin@elmsteadretail.com,Elmstead Retail,Free,Willow Deploy,explain a failed build,0
+F-0015,2026-08-28 18:09,admin@acmelabs.com,Acme Labs,Enterprise,embertasks.com,find blocked tickets,0
+F-0016,2026-08-31 10:27,admin@cinderbank.com,Cinder Bank,Team,Tidewater People,draft onboarding plans,0
+F-0017,2026-08-31 14:18,admin@bluefinlabs.com,Bluefin Labs,Team,willowdeploy.com,read deploy logs,0
+F-0018,2026-08-31 14:42,admin@granitesystems.com,Granite Systems,Enterprise,willow vault,look up user permissions,0
+F-0019,2026-08-31 16:58,admin@redwoodhealth.com,Redwood Health,Team,pinecrest ci,open incidents from alerts,0
+F-0020,2026-09-01 14:08,admin@meridianbank.com,Meridian Bank,Team,our internal wiki,look up user permissions,0
+F-0021,2026-09-01 15:11,admin@northgategroup.com,Northgate Group,Team,willowvault.com,look up user permissions,0
+F-0022,2026-09-01 15:42,admin@vantageworks.com,Vantage Works,Team,Bluefin HR,answer policy questions,0
+F-0023,2026-09-01 16:00,admin@pinecrestgroup.com,Pinecrest Group,Free,orchard tasks,summarize sprint status,0
+F-0024,2026-09-01 16:21,admin@tidewaterhealth.com,Tidewater Health,Team,pinecrestci.com,open incidents from alerts,0
+F-0025,2026-09-01 16:23,admin@bluefinbank.com,Bluefin Bank,Team,willowdeploy.com,read deploy logs,0
+F-0026,2026-09-01 18:31,admin@dovetailco.com,Dovetail Co,Free,Willow Vault,review access requests,0
+F-0027,2026-09-02 09:11,admin@pinecrestco.com,Pinecrest Co,Team,basaltmetrics.com,ask questions about dashboards,0
+F-0028,2026-09-02 16:00,admin@uplandgroup.com,Upland Group,Free,jettynotes.com,search team docs,0
+F-0029,2026-09-02 18:54,admin@quarryco.com,Quarry Co,Enterprise,bluefin hr,answer policy questions,0
+F-0030,2026-09-03 09:28,admin@quarryretail.com,Quarry Retail,Enterprise,Fernhill Sync,describe a schema,0
+F-0031,2026-09-03 09:37,admin@lumenlabs.com,Lumen Labs,Enterprise,WillowLogs,read deploy logs,0
+F-0032,2026-09-03 11:39,admin@alderworks.com,Alder Works,Team,AlderBilling,summarize churned subscriptions,0
+F-0033,2026-09-03 13:07,admin@cinderbank.com,Cinder Bank,Free,harbordata.com,describe a schema,0
+F-0034,2026-09-03 18:33,admin@cinderpartners.com,Cinder Partners,Free,Juniper Deploy,explain a failed build,0
+F-0035,2026-09-04 10:13,admin@vantageco.com,Vantage Co,Enterprise,pinecrestci.com,open incidents from alerts,0
+F-0036,2026-09-04 12:16,admin@meridianco.com,Meridian Co,Enterprise,cinderbilling.com,look up failed payments,0
+F-0037,2026-09-04 15:02,admin@nimbusgroup.com,Nimbus Group,Team,willowdeploy.com,open incidents from alerts,0
+F-0038,2026-09-04 17:32,admin@willowbank.com,Willow Bank,Team,willowvault.com,look up user permissions,0
+F-0039,2026-09-07 11:38,admin@kestrelco.com,Kestrel Co,Team,cobaltwarehouse.com,describe a schema,0
+F-0040,2026-09-07 14:59,admin@willowbank.com,Willow Bank,Team,willow vault,review access requests,0
+F-0041,2026-09-07 15:15,admin@basaltgroup.com,Basalt Group,Team,Jetty Notes,turn notes into a spec,0
+F-0042,2026-09-07 16:45,admin@mapleretail.com,Maple Retail,Enterprise,emberpayments.com,reconcile payouts,0
+F-0043,2026-09-07 17:21,admin@kilnco.com,Kiln Co,Team,northgate billing,reconcile payouts,0
+F-0044,2026-09-07 17:32,admin@harborsystems.com,Harbor Systems,Team,JettyNotes,keep docs in sync,0
+F-0045,2026-09-08 09:44,admin@willowworks.com,Willow Works,Enterprise,AlderBilling,reconcile payouts,0
+F-0046,2026-09-08 11:00,admin@aldersystems.com,Alder Systems,Enterprise,LarkspurPay,summarize churned subscriptions,0
+F-0047,2026-09-08 12:04,admin@cobaltpartners.com,Cobalt Partners,Free,willow deploy,open incidents from alerts,0
+F-0048,2026-09-09 09:49,admin@heronmedia.com,Heron Media,Team,saltmarshdesk.com,find recurring issues,0
+F-0049,2026-09-09 09:58,admin@foxglovesystems.com,Foxglove Systems,Enterprise,Jetty Notes,turn notes into a spec,0
+F-0050,2026-09-09 13:32,admin@mapleco.com,Maple Co,Team,prismdata.com,describe a schema,0
+F-0051,2026-09-09 13:47,admin@herongroup.com,Heron Group,Enterprise,Willow Deploy,read deploy logs,0
+F-0052,2026-09-09 15:53,admin@foxgloveretail.com,Foxglove Retail,Team,elmstead notes,keep docs in sync,0
+F-0053,2026-09-09 16:30,admin@graniteretail.com,Granite Retail,Team,jetty notes,search team docs,0
+F-0054,2026-09-09 18:49,admin@bluefingroup.com,Bluefin Group,Team,foxgloveidentity.com,review access requests,0
+F-0055,2026-09-10 13:15,admin@prismpartners.com,Prism Partners,Team,willow deploy,read deploy logs,0
+F-0056,2026-09-10 16:19,admin@uplandpartners.com,Upland Partners,Enterprise,AlderBilling,look up failed payments,0
+F-0057,2026-09-10 16:56,admin@kestrelretail.com,Kestrel Retail,Team,pinecrestci.com,read deploy logs,0
+F-0058,2026-09-11 09:30,admin@juniperco.com,Juniper Co,Free,PrismAnalytics,ask questions about dashboards,0
+F-0059,2026-09-11 10:30,admin@cinderco.com,Cinder Co,Team,Willow Vault,summarize alerts,0
+F-0060,2026-09-11 14:02,admin@juniperretail.com,Juniper Retail,Enterprise,jetty notes,keep docs in sync,0
+F-0061,2026-09-11 14:53,admin@alderco.com,Alder Co,Team,pinecrest ci,explain a failed build,0
+F-0062,2026-09-11 17:12,admin@quarrysystems.com,Quarry Systems,Free,Heron Pay,reconcile payouts,0
+F-0063,2026-09-11 18:28,admin@acmehealth.com,Acme Health,Team,pinecrestci.com,explain a failed build,0
+F-0064,2026-09-14 08:16,admin@basaltgroup.com,Basalt Group,Team,pinecrestci.com,explain a failed build,0
+F-0065,2026-09-14 09:23,admin@saltmarshretail.com,Saltmarsh Retail,Team,willow vault,summarize alerts,0
+F-0066,2026-09-14 13:08,admin@bluefinsystems.com,Bluefin Systems,Team,Willow Vault,review access requests,0
+F-0067,2026-09-15 11:48,admin@cindermedia.com,Cinder Media,Team,oakumwarehouse.com,describe a schema,0
+F-0068,2026-09-15 12:21,admin@junipersystems.com,Juniper Systems,Team,FoxgloveLogs,explain a failed build,0
+F-0069,2026-09-15 15:42,admin@dovetaillabs.com,Dovetail Labs,Free,cinder notes,keep docs in sync,0
+F-0070,2026-09-15 15:45,admin@vantageco.com,Vantage Co,Enterprise,willowdeploy.com,open incidents from alerts,0
+F-0071,2026-09-15 16:03,admin@tidewatermedia.com,Tidewater Media,Team,acmewiki.com,search team docs,0
+F-0072,2026-09-16 08:01,admin@kestrelgroup.com,Kestrel Group,Free,willowdeploy.com,read deploy logs,0
+F-0073,2026-09-16 09:50,admin@cindermedia.com,Cinder Media,Team,AlderBilling,look up failed payments,0
+F-0074,2026-09-16 11:57,admin@willowworks.com,Willow Works,Team,northgate boards,summarize sprint status,0
+F-0075,2026-09-16 14:12,admin@indigomedia.com,Indigo Media,Team,jettyhelpdesk.com,find recurring issues,0
+F-0076,2026-09-16 15:45,admin@juniperretail.com,Juniper Retail,Free,WillowVault,look up user permissions,0
+F-0077,2026-09-16 16:24,admin@elmsteadhealth.com,Elmstead Health,Free,Bluefin HR,look up PTO balances,0
+F-0078,2026-09-16 17:57,admin@herongroup.com,Heron Group,Team,acmebilling.com,summarize churned subscriptions,0
+F-0079,2026-09-17 09:42,admin@kestrelpartners.com,Kestrel Partners,Team,JettyNotes,keep docs in sync,0
+F-0080,2026-09-17 10:39,admin@indigogroup.com,Indigo Group,Free,JettyNotes,turn notes into a spec,0
+F-0081,2026-09-18 09:39,admin@oakumpartners.com,Oakum Partners,Team,driftwoodwiki.com,turn notes into a spec,0
+F-0082,2026-09-18 11:41,admin@nimbusworks.com,Nimbus Works,Free,jettynotes.com,turn notes into a spec,0
+F-0083,2026-09-21 09:37,admin@northgateco.com,Northgate Co,Team,Willow Deploy,read deploy logs,0
+F-0084,2026-09-21 09:57,admin@meridianmedia.com,Meridian Media,Team,willow deploy,open incidents from alerts,0
+F-0085,2026-09-21 11:13,admin@fernhillgroup.com,Fernhill Group,Free,Willow Deploy,open incidents from alerts,0
+F-0086,2026-09-21 15:49,admin@pinecrestworks.com,Pinecrest Works,Team,alder billing,look up failed payments,0
+F-0087,2026-09-21 15:59,admin@indigohealth.com,Indigo Health,Enterprise,JettyNotes,search team docs,0
+F-0088,2026-09-21 17:55,admin@harborpartners.com,Harbor Partners,Team,Tidewater Payroll,draft onboarding plans,0
+F-0089,2026-09-21 18:29,admin@cobaltbank.com,Cobalt Bank,Free,meridianmail.com,draft campaign emails,0
+F-0090,2026-09-22 14:41,admin@ironleafhealth.com,Ironleaf Health,Team,alderdeploy.com,open incidents from alerts,0
+F-0091,2026-09-23 08:00,admin@ironleafhealth.com,Ironleaf Health,Enterprise,jettynotes.com,search team docs,0
+F-0092,2026-09-23 12:28,admin@saltmarshco.com,Saltmarsh Co,Team,jettynotes.com,turn notes into a spec,0
+F-0093,2026-09-23 15:58,admin@bluefinbank.com,Bluefin Bank,Enterprise,willowvault.com,review access requests,0
+F-0094,2026-09-24 08:29,admin@quarryworks.com,Quarry Works,Free,alderbilling.com,look up failed payments,0
+F-0095,2026-09-24 09:42,admin@granitegroup.com,Granite Group,Team,jettynotes.com,turn notes into a spec,0
+F-0096,2026-09-25 14:33,admin@acmeretail.com,Acme Retail,Team,vantagemail.com,schedule posts,0
+F-0097,2026-09-25 16:27,admin@harborco.com,Harbor Co,Free,JettyNotes,keep docs in sync,0
+F-0098,2026-09-28 09:44,admin@bluefinretail.com,Bluefin Retail,Team,Jetty Notes,turn notes into a spec,0
+F-0099,2026-09-28 09:50,admin@foxglovelabs.com,Foxglove Labs,Enterprise,harborvault.com,summarize alerts,0
+F-0100,2026-09-28 10:00,admin@jettyworks.com,Jetty Works,Enterprise,Brightpath,pull weekly KPIs into a report,0
+F-0101,2026-09-28 12:11,admin@juniperco.com,Juniper Co,Team,WillowVault,summarize alerts,0
+F-0102,2026-09-29 08:49,admin@pinecrestbank.com,Pinecrest Bank,Free,oakum mail,schedule posts,0
+F-0103,2026-09-29 13:00,admin@pinecrestco.com,Pinecrest Co,Enterprise,Pinecrest CI,read deploy logs,0
+F-0104,2026-09-29 13:03,admin@redwoodbank.com,Redwood Bank,Free,WillowVault,look up user permissions,0
+F-0105,2026-09-29 16:57,admin@northgatehealth.com,Northgate Health,Enterprise,oakummail.com,report campaign results,0
+F-0106,2026-09-30 09:59,admin@alderbank.com,Alder Bank,Enterprise,Cinder Desk,find recurring issues,0
+F-0107,2026-09-30 10:59,admin@willowgroup.com,Willow Group,Free,our internal wiki,reconcile payouts,0
+F-0108,2026-09-30 14:59,admin@orchardhealth.com,Orchard Health,Team,Alder Billing,summarize churned subscriptions,0
+F-0109,2026-09-30 17:43,admin@cindergroup.com,Cinder Group,Free,maplemetrics.com,pull weekly KPIs into a report,0
+F-0110,2026-10-01 10:38,admin@alderretail.com,Alder Retail,Enterprise,Oakum Desk,summarize open tickets,0
+F-0111,2026-10-01 16:37,admin@acmegroup.com,Acme Group,Team,jettynotes.com,turn notes into a spec,0
+F-0112,2026-10-01 16:45,admin@willowco.com,Willow Co,Team,Jetty Notes,keep docs in sync,0
+F-0113,2026-10-01 17:09,admin@nimbusworks.com,Nimbus Works,Enterprise,alderbilling.com,reconcile payouts,0
+F-0114,2026-10-01 17:13,admin@ironleafpartners.com,Ironleaf Partners,Team,Vantage Wiki,search team docs,0
+F-0115,2026-10-02 11:52,admin@tidewaterpartners.com,Tidewater Partners,Enterprise,Willow Vault,look up user permissions,0
+F-0116,2026-10-05 10:00,admin@uplandretail.com,Upland Retail,Team,brightpath.io,explain a metric drop,0
+F-0117,2026-10-05 13:33,admin@jettylabs.com,Jetty Labs,Team,tidewater people,draft onboarding plans,0
+F-0118,2026-10-05 15:03,admin@cindergroup.com,Cinder Group,Enterprise,jettynotes.com,search team docs,0
+F-0119,2026-10-05 18:04,admin@oakumsystems.com,Oakum Systems,Free,willow deploy,open incidents from alerts,0
+F-0120,2026-10-06 09:03,admin@bluefinbank.com,Bluefin Bank,Team,driftwoodanalytics.com,explain a metric drop,0
+F-0121,2026-10-06 12:24,admin@dovetailbank.com,Dovetail Bank,Team,elmsteadpay.com,look up failed payments,0
+F-0122,2026-10-06 12:30,admin@dovetailpartners.com,Dovetail Partners,Team,jettynotes.com,turn notes into a spec,0
+F-0123,2026-10-06 14:42,admin@graniteworks.com,Granite Works,Team,IndigoHelpdesk,draft replies to tickets,0
+F-0124,2026-10-06 15:51,admin@kilnbank.com,Kiln Bank,Free,jetty notes,keep docs in sync,0
+F-0125,2026-10-06 18:40,admin@redwoodsystems.com,Redwood Systems,Free,Jetty Notes,search team docs,0
+F-0126,2026-10-07 10:18,admin@redwoodsystems.com,Redwood Systems,Enterprise,elmstead notes,keep docs in sync,0
+F-0127,2026-10-07 12:31,admin@uplandco.com,Upland Co,Enterprise,harbor vault,summarize alerts,0
+F-0128,2026-10-07 12:38,admin@harborco.com,Harbor Co,Team,Alder Billing,look up failed payments,0
+F-0129,2026-10-07 12:54,admin@elmsteadlabs.com,Elmstead Labs,Enterprise,jettynotes.com,turn notes into a spec,0
+F-0130,2026-10-07 13:46,admin@aldersystems.com,Alder Systems,Free,nimbus payments,summarize churned subscriptions,0
+F-0131,2026-10-07 14:03,admin@nimbushealth.com,Nimbus Health,Enterprise,AcmeInsights,explain a metric drop,0
+F-0132,2026-10-08 08:34,admin@bluefinworks.com,Bluefin Works,Free,jettynotes.com,keep docs in sync,0
+F-0133,2026-10-08 08:57,admin@pinecrestmedia.com,Pinecrest Media,Team,acme wiki,search team docs,0
+F-0134,2026-10-08 11:00,admin@elmsteadco.com,Elmstead Co,Enterprise,whatever CRM the customer has,explain a metric drop,0
+F-0135,2026-10-08 11:03,admin@nimbusgroup.com,Nimbus Group,Team,pinecrestci.com,open incidents from alerts,0
+F-0136,2026-10-08 11:09,admin@juniperretail.com,Juniper Retail,Team,ZephyrAnalytics,explain a metric drop,0
+F-0137,2026-10-08 11:33,admin@pinecrestgroup.com,Pinecrest Group,Enterprise,vantagenotes.com,search team docs,0
+F-0138,2026-10-08 11:56,admin@saltmarshco.com,Saltmarsh Co,Enterprise,cinderbilling.com,look up failed payments,0
+F-0139,2026-10-08 12:05,admin@basaltco.com,Basalt Co,Enterprise,Willow Deploy,read deploy logs,0
+F-0140,2026-10-09 08:02,admin@basaltpartners.com,Basalt Partners,Team,alderbilling.com,summarize churned subscriptions,0
+F-0141,2026-10-09 11:00,admin@oakumworks.com,Oakum Works,Enterprise,Larkspur,reconcile payouts,0
+F-0142,2026-10-09 11:23,admin@quarryco.com,Quarry Co,Team,nimbuspayments.com,summarize churned subscriptions,0
+F-0143,2026-10-09 12:32,admin@oakumhealth.com,Oakum Health,Team,willowvault.com,summarize alerts,0
+F-0144,2026-10-09 16:42,admin@harborgroup.com,Harbor Group,Team,JettyHelpdesk,find recurring issues,0
+F-0145,2026-10-09 16:52,admin@fernhilllabs.com,Fernhill Labs,Enterprise,embercanvas.com,describe a design file,0
+F-0146,2026-10-09 17:00,admin@cindermedia.com,Cinder Media,Team,jettynotes.com,search team docs,0
+F-0147,2026-10-12 08:12,admin@fernhilllabs.com,Fernhill Labs,Team,driftwoodwiki.com,search team docs,0
+F-0148,2026-10-12 12:33,admin@alderlabs.com,Alder Labs,Team,FernhillMail,schedule posts,0
+F-0149,2026-10-12 13:22,admin@cobaltretail.com,Cobalt Retail,Enterprise,JettyNotes,turn notes into a spec,0
+F-0150,2026-10-12 18:12,admin@maplebank.com,Maple Bank,Enterprise,MapleSocial,draft campaign emails,0
+F-0151,2026-10-13 09:30,admin@heronco.com,Heron Co,Free,Pebblework,search team docs,0
+F-0152,2026-10-13 10:53,admin@elmsteadpartners.com,Elmstead Partners,Free,willowvault.com,summarize alerts,0
+F-0153,2026-10-13 13:19,admin@bluefinmedia.com,Bluefin Media,Team,Willow Vault,summarize alerts,0
+F-0154,2026-10-13 14:02,admin@saltmarshmedia.com,Saltmarsh Media,Team,Bluefin HR,draft onboarding plans,0
+F-0155,2026-10-13 14:28,admin@redwoodretail.com,Redwood Retail,Team,alderbilling.com,look up failed payments,0
+F-0156,2026-10-14 10:00,admin@maplelabs.com,Maple Labs,Enterprise,BrightPath Analytics,pull weekly KPIs into a report,0
+F-0157,2026-10-14 11:35,admin@indigogroup.com,Indigo Group,Team,willowvault.com,summarize alerts,0
+F-0158,2026-10-14 15:05,admin@uplandhealth.com,Upland Health,Enterprise,gullwingcanvas.com,export assets,0
+F-0159,2026-10-15 11:20,admin@lumenretail.com,Lumen Retail,Free,jettyhr.com,answer policy questions,0
+F-0160,2026-10-15 12:51,admin@meridianpartners.com,Meridian Partners,Enterprise,NorthgateShield,look up user permissions,0
+F-0161,2026-10-15 14:50,admin@indigoco.com,Indigo Co,Free,willowdeploy.com,read deploy logs,0
+F-0162,2026-10-15 17:08,admin@saltmarshbank.com,Saltmarsh Bank,Team,willow vault,review access requests,0
+F-0163,2026-10-16 11:55,admin@gullwinglabs.com,Gullwing Labs,Team,ElmsteadNotes,search team docs,0
+F-0164,2026-10-16 12:00,admin@orchardhealth.com,Orchard Health,Team,fernhillmail.com,draft campaign emails,0
+F-0165,2026-10-16 12:43,admin@orchardmedia.com,Orchard Media,Team,IndigoWiki,turn notes into a spec,0
+F-0166,2026-10-16 16:01,admin@embermedia.com,Ember Media,Team,vantagecanvas.com,export assets,0
+F-0167,2026-10-16 16:35,admin@elmsteadpartners.com,Elmstead Partners,Team,Willow Vault,review access requests,0

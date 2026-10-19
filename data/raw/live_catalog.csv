@@ -1,0 +1,71 @@
+connector_id,connector_name,category,launched_on
+CN-001,Juniper Identity,Security,2026-07-31
+CN-002,Gullwing Canvas,Design,2026-07-29
+CN-003,Driftwood Analytics,Analytics,2026-01-19
+CN-004,Acme Warehouse,Data,2026-08-31
+CN-005,Northgate CRM,CRM,2025-03-03
+CN-006,Northgate Docs,Docs & notes,2026-02-09
+CN-007,Pinecrest People,HR,2025-03-22
+CN-008,Lattice Desk,Support,2026-08-06
+CN-009,Kestrel Billing,Payments,2026-03-17
+CN-010,Zephyr CI,Developer tools,2026-07-25
+CN-011,Bluefin Mail,Marketing,2026-01-10
+CN-012,Saltmarsh Vault,Security,2025-04-16
+CN-013,Gullwing Support,Support,2025-03-15
+CN-014,Tidewater Design,Design,2025-09-04
+CN-015,Lumen Payments,Payments,2026-04-21
+CN-016,Nimbus Docs,Docs & notes,2025-05-24
+CN-017,Granite Sync,Data,2026-06-21
+CN-018,Saltmarsh Data,Data,2025-07-13
+CN-019,Elmstead Pay,Payments,2025-12-03
+CN-020,Prism Support,Support,2025-06-22
+CN-021,Lumen Analytics,Analytics,2025-11-16
+CN-022,Lumen Design,Design,2025-11-09
+CN-023,Kiln Shield,Security,2025-03-04
+CN-024,Acme Wiki,Docs & notes,2026-01-12
+CN-025,Granite Notes,Docs & notes,2026-05-15
+CN-026,Lumen Vault,Security,2026-08-07
+CN-027,Kiln Tasks,Project management,2025-09-02
+CN-028,Driftwood Pay,Payments,2026-07-07
+CN-029,Cinder Social,Marketing,2026-07-06
+CN-030,Elmstead Notes,Docs & notes,2026-09-05
+CN-031,Basalt Deploy,Developer tools,2025-09-25
+CN-032,Dovetail Canvas,Design,2026-06-20
+CN-033,Foxglove Logs,Developer tools,2026-01-11
+CN-034,Pinecrest CI,Developer tools,2025-04-02
+CN-035,Jetty Billing,Payments,2025-07-30
+CN-036,Vantage Sync,Data,2026-03-12
+CN-037,Foxglove Identity,Security,2025-05-29
+CN-038,Acme Analytics,Analytics,2025-10-30
+CN-039,Prism Helpdesk,Support,2026-05-08
+CN-040,Vantage CRM,CRM,2025-05-23
+CN-041,Willow Payments,Payments,2025-12-04
+CN-042,Harbor Payments,Payments,2025-06-29
+CN-043,Fernhill HR,HR,2025-12-26
+CN-044,Prism Analytics,Analytics,2025-07-13
+CN-045,Oakum Warehouse,Data,2026-08-23
+CN-046,Acme Insights,Analytics,2025-04-12
+CN-047,Cinder Projects,Project management,2026-08-22
+CN-048,Bluefin HR,HR,2026-05-18
+CN-049,Cobalt CI,Developer tools,2026-06-23
+CN-050,Prism Payroll,HR,2026-06-20
+CN-051,Maple Logs,Developer tools,2025-06-14
+CN-052,Ember CRM,CRM,2026-08-04
+CN-053,Kiln Wiki,Docs & notes,2026-01-27
+CN-054,Saltmarsh Desk,Support,2026-08-21
+CN-055,Meridian Mail,Marketing,2026-07-05
+CN-056,Zephyr Helpdesk,Support,2026-01-19
+CN-057,Lumen Social,Marketing,2025-09-26
+CN-058,Quarry Design,Design,2025-05-05
+CN-059,Oakum Desk,Support,2025-04-26
+CN-060,Gullwing Helpdesk,Support,2025-10-05
+CN-061,Vantage Mail,Marketing,2026-05-29
+CN-062,Oakum Wiki,Docs & notes,2025-12-08
+CN-063,Lattice Design,Design,2025-11-25
+CN-064,Granite Shield,Security,2025-07-15
+CN-065,Cobalt Warehouse,Data,2026-01-11
+CN-066,Prism Identity,Security,2026-02-21
+CN-067,Willow Projects,Project management,2026-09-02
+CN-068,Dovetail Warehouse,Data,2026-04-13
+CN-069,Quarry Boards,Project management,2026-02-04
+CN-070,Granite Docs,Docs & notes,2026-07-23
