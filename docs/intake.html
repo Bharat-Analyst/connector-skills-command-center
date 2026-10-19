@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intake &amp; Triage</title>
   <meta name="description" content="Weekly connector triage: dedupe, weighted priority score, build / partner / decline / need info, owners, replies and Linear.">
-  <link rel="stylesheet" href="assets/style.css?v=2026101903">
+  <link rel="stylesheet" href="assets/style.css?v=2026101904">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
 </head>
 <body>
@@ -55,7 +55,7 @@
         <h3>Does it pick the connectors that got used?</h3>
         <div class="grid grid-2" id="model-kpis" style="margin-bottom:8px"></div>
         <div id="calib" class="chart" style="height:250px" role="img" aria-label="Bar chart: share of past launches that reached adoption, by the tier today's score would have given them."></div>
-        <p class="howto"><strong>How to read this:</strong> we scored <span id="bt-n"></span> past launches with today's weights. Each bar is the share that reached 50+ weekly active orgs by day 90. If the weights are sensible, higher tiers adopt more often.</p>
+        <p class="howto"><strong>How to read this:</strong> we scored <span id="bt-n"></span> connectors launched in the past with today's weights, then checked what really happened to them. <strong>Cards:</strong> take one connector that got used and one that didn't; how often does the method rank the used one higher? <strong>Bars:</strong> the share in each tier that reached 50+ organizations using it weekly by day 90. Higher tiers really do get used more.</p>
       </div>
     </div>
     <div class="card" style="margin-top:12px">
@@ -72,7 +72,7 @@
     <p class="howto"><strong>How to read this:</strong> the pipeline writes <a href="files/linear_import.csv">linear_import.csv</a> in Linear's import shape. Existing issues keep their ID and get a priority, owner and status; new tools get new issues. Build briefs for Urgent and High builds go to engineering (<a href="files/brief-brightpath-analytics.md">example</a>).</p>
   </main>
 
-  <script src="assets/common.js?v=2026101903"></script>
+  <script src="assets/common.js?v=2026101904"></script>
   <script>
   (async () => {
     CC.init("intake.html");
@@ -185,12 +185,12 @@
     ]);
     document.getElementById("bt-n").textContent = SC.n;
     document.getElementById("model-kpis").innerHTML =
-      CC.kpi("Backtest AUC: weighted score", SC.auc.toFixed(2), `${SC.n} past launches`) +
-      CC.kpi("Backtest AUC: “most asks wins”", SC.baseline_auc.toFixed(2), "ranking by request count alone");
+      CC.kpi("Our score picks the right one", CC.pct(SC.auc), `tested on ${SC.n} past launches`) +
+      CC.kpi("“Most asks wins” picks the right one", CC.pct(SC.baseline_auc), "ranking by request count alone · a coin flip is 50%");
     CC.plot("calib", [{ type: "bar", x: SC.by_tier.map((b) => b.tier), y: SC.by_tier.map((b) => b.adoption_rate),
       text: SC.by_tier.map((b) => `${CC.pct(b.adoption_rate)} of ${b.n}`), textposition: "outside", cliponaxis: false,
       marker: { color: CC.css("--accent") }, hovertemplate: "%{x}: %{text}<extra></extra>" }],
-      { margin: { l: 48, r: 12, t: 16, b: 40 }, yaxis: { title: "Reached adoption", tickformat: ".0%", range: [0, 1] } });
+      { margin: { l: 48, r: 12, t: 16, b: 40 }, yaxis: { title: "Got used (50+ orgs weekly)", tickformat: ".0%", range: [0, 1] } });
     const C = D.config;
     document.getElementById("rubric").innerHTML = `
       <div class="table-wrap"><table><thead><tr><th>Tier</th><th>Rule</th><th>What happens</th></tr></thead><tbody>

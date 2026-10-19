@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Connector &amp; Skills Command Center</title>
   <meta name="description" content="A weekly, measurable pipeline for connector requests, open-source skill ports and marketplace listing quality.">
-  <link rel="stylesheet" href="assets/style.css?v=2026101903">
+  <link rel="stylesheet" href="assets/style.css?v=2026101904">
 </head>
 <body>
   <header class="site-header">
@@ -55,7 +55,7 @@
     </table></div>
   </main>
 
-  <script src="assets/common.js?v=2026101903"></script>
+  <script src="assets/common.js?v=2026101904"></script>
   <script>
   (async () => {
     CC.init("index.html");
@@ -91,7 +91,7 @@
         featured: `“${bpAsks.slice(0, 4).map((r) => r.tool_text.length > 40 ? r.tool_text.slice(0, 40) + "…" : r.tool_text).join("”, “")}” → one issue, ${bp.issue_id}.`,
         jd: ["Deduplicate requests against the live catalog and active backlog issues"] },
       { name: "Score", type: "decision", page: "intake.html",
-        what: `Each tool gets a 0–100 priority score: a weighted average of customers asking (${CC.pct(W.customers)}), online traction (${CC.pct(W.traction)}), Enterprise share (${CC.pct(W.enterprise)}), company size (${CC.pct(W.size)}) and growth (${CC.pct(W.growth)}). Checked on ${I.score.n} past launches, it picks the connectors that got used better than “most asks wins” (AUC ${I.score.auc.toFixed(2)} vs ${I.score.baseline_auc.toFixed(2)}). The score sets the tier.`,
+        what: `Each tool gets a 0–100 priority score: a weighted average of customers asking (${CC.pct(W.customers)}), online traction (${CC.pct(W.traction)}), Enterprise share (${CC.pct(W.enterprise)}), company size (${CC.pct(W.size)}) and growth (${CC.pct(W.growth)}). Tested on ${I.score.n} past launches, it picks the connector that got used ${CC.pct(I.score.auc)} of the time, against ${CC.pct(I.score.baseline_auc)} for “most asks wins”. The score sets the tier.`,
         featured: `Brightpath Analytics scores ${bp.priority_score}/100 (top reasons: ${bp.top_reasons.join(", ").toLowerCase()}) → ${bp.tier}.`,
         jd: ["company size, growth trajectory, online traction, customer context, and API/MCP availability", "Urgent / High / Medium / Low using a standard rubric"] },
       { name: "Decide and reply", type: "decision", page: "intake.html",

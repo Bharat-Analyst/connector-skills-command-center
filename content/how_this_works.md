@@ -94,8 +94,8 @@ The two signals that add the most points are shown as each tool's top reasons. `
 
 The weights are a judgment call, so we check them against history. We scored 260 connectors we launched before with today's weights and asked whether each reached 50+ weekly active orgs 90 days after launch.
 
-- **AUC 0.74.** A random adopted connector outscores a random non-adopted one 74% of the time.
-- **Baseline AUC 0.62** for "most asks wins", ranking by request count alone.
+- **Picks the right one 74% of the time.** Take one connector that got used and one that didn't: the score ranks the used one higher 74% of the time (AUC 0.74; a coin flip is 50%).
+- **"Most asks wins" gets 62%** (AUC 0.62), ranking by request count alone.
 - **By tier:** 19% of past launches that would have been Low reached adoption, 46% of Medium, 74% of High and 80% of Urgent.
 
 If a quarterly check shows a tier no longer separates winners from the rest, we adjust the weights.
